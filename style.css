@@ -1,0 +1,42 @@
+.jumbotron {
+  padding: 0;
+}
+
+.hero {
+  padding: 4rem 2rem;
+  padding-bottom: 1rem;
+}
+
+.survey {
+  display: none;
+}
+
+.form .container {
+  max-width: 30rem;
+}
+
+.register {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.email-input {
+  flex: 2 1 20rem;
+  margin-bottom: 1rem;
+}
+
+.sign-up {
+  flex: 1 1 7rem;
+  text-align: center;
+}
+
+.thank-you {
+  display: none;
+  color: red;
+}
+
+.survey .container iframe {
+  width: 100%;
+  min-height: 30rem;
+}
