@@ -32,32 +32,46 @@
         <hr class="my-4">
         <p>When you register you'll have ...</p>
 
-        <form class="form js-form">
-          <div class="container">
-            <div class="register form-group row">
-              <div class="email-input">
-                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-              </div>
-  
-              <div class="sign-up">
-                <button type="submit" class="btn btn-primary">Sign me up!</button>
-              </div>
-            </div>
-          </div>
-        </form>
-        
-        <p class="thank-you">Thank you for signing up. Please fill out the form below.</p>
+        <button type="button" class="btn btn-primary js-jump-to-survey">I want to apply</button>
       </div>
     </section>
   </div>
   
-  <section class="survey">
+
+  <section class="survey js-survey-container">
     <div class="container">
-      <iframe src="https://www.surveymonkey.com/r/Z9YDLVP" frameborder="0"></iframe>
+      <h3>How to Apply</h3>
+
+      <p>enter your email, then answer the email that will pop out</p>
+
+      <p class="thank-you js-success">Thank you for signing up. Please fill out the form below.</p>
+
+      <form class="form js-form">
+        <div class="container">
+          <div class="register form-group row">
+            <div class="email-input">
+              <input class="form-control" id="inputEmail3" placeholder="Email">
+            </div>
+
+            <div class="sign-up">
+              <button type="submit" class="btn btn-primary">Sign me up!</button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="survey__frame js-survey">
+      </div>
     </div>
   </section>
+
+  <footer class="footer jumbotron">
+    <div class="container">
+      Footer. All rights reserved.
+    </div>
+  </footer>
   
-  <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/2.0.3/velocity.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/velocity-animate@1.5/velocity.min.js"></script>
   <script src="/script.js"></script>
 </body>
 </html>

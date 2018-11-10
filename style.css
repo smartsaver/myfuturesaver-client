@@ -1,3 +1,12 @@
+html, body {
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 .jumbotron {
   padding: 0;
 }
@@ -5,10 +14,8 @@
 .hero {
   padding: 4rem 2rem;
   padding-bottom: 1rem;
-}
-
-.survey {
-  display: none;
+  min-height: 40rem;
+  min-height: 93vh;
 }
 
 .form .container {
@@ -39,4 +46,17 @@
 .survey .container iframe {
   width: 100%;
   min-height: 30rem;
+  height: 30rem;
+}
+
+.survey__frame {
+  display: none;
+  background-color: #999999;
+}
+
+.footer {
+  flex: 1;
+  margin: 0;
+  padding: 2rem 1rem;
+  min-height: 7rem;
 }
