@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SmartSAVER.org</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <script defer src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{{style}}">
+</head>
+
+<body>
+  <div class="jumbotron">
+    <nav class="navbar navbar-light">
+      <a class="navbar-brand" href="#">
+        Welcome
+      </a>
+    </nav>
+
+    <section class="hero">
+      <div class="container-fluid">
+        <h1 class="display-4">Pilot Program</h1>
+        <p class="lead">This is how it works</p>
+        <hr class="my-4">
+        <p>When you register you'll have ...</p>
+
+        <button type="button" class="btn btn-primary js-jump-to-survey">I want to apply</button>
+      </div>
+    </section>
+  </div>
+  
+
+  <section class="survey js-survey-container" id="#step-1">
+    <div class="container">
+      <h3>How to Apply</h3>
+
+      <p>enter your email, then answer the email that will pop out</p>
+
+      <p class="thank-you js-success">Thank you for signing up. Please fill out the form below.</p>
+
+      <form class="form js-form">
+        <div class="container">
+          <div class="register form-group row">
+            <div class="email-input">
+              <input class="form-control" id="inputEmail3" placeholder="Email">
+            </div>
+
+            <div class="sign-up">
+              <button type="submit" class="btn btn-primary">Sign me up!</button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="survey__frame js-survey">
+      </div>
+    </div>
+  </section>
+
+  <section class="program">
+    <div class="container">
+      <h3>Fill in the pilot</h3>
+
+      <p>...Fill it here</p>
+
+      <iframe class="program__frame" src="https://www.smartsaver.org/startmyresp/" frameborder="0"></iframe>
+    </div>
+  </section>
+
+  <footer class="footer jumbotron">
+    <div class="container">
+      Footer. All rights reserved.
+    </div>
+  </footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5/velocity.min.js"></script>
+  <script src="{{script}}"></script>
+</body>
+</html>
