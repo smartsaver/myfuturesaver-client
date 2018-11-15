@@ -1,9 +1,18 @@
+require('dotenv')
 const express = require('express');
-const server = express();
-const port = 3000;
+const app = express();
+const nunjucks = require('nunjucks');
+const port = parseInt(process.env.PORT, 10) || 3000;
 
-server.get('/', (req, res) => res.send('Hello World!'));
+nunjucks.configure('src/views', {
+  autoescape: false,
+  express: app
+});
 
-server.listen(port, () =>
-  console.log(`Example app listening on port ${port}!`)
+app.set('view engine', 'njk');
+
+app.get('/', (req, res) => res.render('hello'));
+
+app.listen(port, () =>
+  console.log(`Server listening on port ${port}...`)
 );
