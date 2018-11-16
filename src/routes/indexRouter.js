@@ -5,6 +5,7 @@ const router = express.Router();
 router.get('/', (_, res) => {
   const { staticUrl } = expressConfig;
   res.render('index/index', {
+    logo: `${staticUrl}/images/logo-small.png`,
     script: `${staticUrl}/index/script.js`,
     style: `${staticUrl}/index/style.css`
   });

@@ -1,72 +1,45 @@
-{% extends '../templates/homeTemplate' %}
+{% extends '../templates/homeTemplate.html' %}
 
 {% block title %}SmartSAVER.org{% endblock %}
 
 {% block meta %}<link rel="stylesheet" href="{{ style }}">{% endblock %}
 
 {% block body %}
-  <div class="jumbotron">
-    <nav class="navbar navbar-light">
-      <a class="navbar-brand" href="#">
-        Welcome
-      </a>
-    </nav>
-
-    <section class="hero">
-      <div class="container-fluid">
-        <h1 class="display-4">Pilot Program</h1>
-        <p class="lead">This is how it works</p>
-        <hr class="my-4">
-        <p>When you register you'll have ...</p>
-
-        <button type="button" class="btn btn-primary js-jump-to-survey">I want to apply</button>
-      </div>
-    </section>
-  </div>
-  
-
-  <section class="survey js-survey-container" id="#step-1">
+  <nav class="navbar navbar-expand-md navbar-dark">
     <div class="container">
-      <h3>How to Apply</h3>
+      <a class="navbar-brand navbar-brand__link" href="#"><img class="img-fluid" src="{{ logo }}" alt="SmartSaver.org Logo"></a>
 
-      <p>enter your email, then answer the email that will pop out</p>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-      <p class="thank-you js-success">Thank you for signing up. Please fill out the form below.</p>
+      <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link navbar-item__link" href="#">4-step Process</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-item__link" href="#">Applying</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-item__link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-      <form class="form js-form">
-        <div class="container">
-          <div class="register form-group row">
-            <div class="email-input">
-              <input class="form-control" id="inputEmail3" placeholder="Email">
-            </div>
-
-            <div class="sign-up">
-              <button type="submit" class="btn btn-primary">Sign me up!</button>
-            </div>
-          </div>
+  <header class="header d-flex">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <h1>Education is the key to brighter future.</h1>
         </div>
-      </form>
-
-      <div class="survey__frame js-survey">
+        <div class="col-sm">
+          One of three columns
+        </div>
       </div>
     </div>
-  </section>
-
-  <section class="program">
-    <div class="container">
-      <h3>Fill in the pilot</h3>
-
-      <p>...Fill it here</p>
-
-      <iframe class="program__frame" src="https://www.smartsaver.org/startmyresp/" frameborder="0"></iframe>
-    </div>
-  </section>
-
-  <footer class="footer jumbotron">
-    <div class="container">
-      Footer. All rights reserved.
-    </div>
-  </footer>
-
+  </header>
   <script src="{{ script }}"></script>
 {% endblock %}

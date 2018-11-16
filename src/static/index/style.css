@@ -1,62 +1,51 @@
-html, body {
+html,
+body {
   min-height: 100vh;
 }
 
+html,
 body {
   display: flex;
   flex-direction: column;
 }
 
-.jumbotron {
-  padding: 0;
-}
-
-.hero {
-  padding: 4rem 2rem;
-  padding-bottom: 1rem;
-  min-height: 40rem;
-  min-height: 93vh;
-}
-
-.form .container {
-  max-width: 30rem;
-}
-
-.register {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.email-input {
-  flex: 2 1 20rem;
-  margin-bottom: 1rem;
-}
-
-.sign-up {
-  flex: 1 1 7rem;
-  text-align: center;
-}
-
-.thank-you {
-  display: none;
-  color: red;
-}
-
-.survey .container iframe {
-  width: 100%;
-  min-height: 30rem;
-  height: 30rem;
-}
-
-.survey__frame {
-  display: none;
-  background-color: #999999;
-}
-
-.footer {
+body {
   flex: 1;
-  margin: 0;
-  padding: 2rem 1rem;
-  min-height: 7rem;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-family: 'Century Gothic', Arial, sans-serif;
+}
+
+.navbar-brand__link {
+  width: 9rem;
+  padding: 0 0 0.3rem 0;
+}
+
+.navbar {
+  background: rgb(0, 59, 89);
+}
+
+.navbar
+.nav-item
+.navbar-item__link {
+  color: rgb(255, 255, 255);
+}
+
+.navbar
+.nav-item .navbar-item__link:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.header {
+  min-height: 15rem;
+  background-color: #efefef;
 }
