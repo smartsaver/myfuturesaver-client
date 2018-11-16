@@ -34,18 +34,18 @@ a {
   background: rgb(0, 59, 89);
 }
 
-.navbar
-.nav-item
-.navbar-item__link {
+.navbar .nav-item .navbar-item__link {
   color: rgb(255, 255, 255);
 }
 
-.navbar
-.nav-item .navbar-item__link:hover {
+.navbar .nav-item .navbar-item__link:hover {
   color: rgba(255, 255, 255, 0.8);
 }
 
 .header {
-  min-height: 15rem;
   background-color: #efefef;
+}
+
+.header__container .row {
+  width: 100%;
 }

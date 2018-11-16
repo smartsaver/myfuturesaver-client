@@ -1,4 +1,4 @@
-{% extends '../templates/homeTemplate.html' %}
+{% extends '../templates/homeTemplate.njk' %}
 
 {% block title %}SmartSAVER.org{% endblock %}
 
@@ -30,13 +30,13 @@
   </nav>
 
   <header class="header d-flex">
-    <div class="container">
-      <div class="row">
+    <div class="header__container container d-flex">
+      <div class="row mx-auto">
         <div class="col-sm">
           <h1>Education is the key to brighter future.</h1>
         </div>
-        <div class="col-sm">
-          One of three columns
+        <div class="header__image-container col-md d-md-block position-relative">
+          <img class="img-fluid" src="{{ headerImage }}" alt="2 Kids Smiling Photo">
         </div>
       </div>
     </div>
