@@ -42,10 +42,39 @@ a {
   color: rgba(255, 255, 255, 0.8);
 }
 
+/* Header details  */
+
 .header {
   background-color: #efefef;
 }
 
-.header__container .row {
+@media (max-width: 767px) {
+  .header {
+    background-image: url('/static/images/header-image-no-fade.jpg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+}
+
+.header__content {
+  max-width: 80rem;
+}
+
+@media (max-width: 767px) {
+  .header__content {
+    z-index: 1;
+  }
+}
+
+.header__content .row {
   width: 100%;
+  margin: 0 auto;
+}
+
+.header-overlay.position-absolute {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-color: #ffffff82;
 }

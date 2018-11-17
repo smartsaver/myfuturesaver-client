@@ -29,17 +29,20 @@
     </div>
   </nav>
 
-  <header class="header d-flex">
-    <div class="header__container container d-flex">
-      <div class="row mx-auto">
+  <header class="header d-flex position-relative">
+    <div class="header__content">
+      <div class="row">
         <div class="col-sm">
-          <h1>Education is the key to brighter future.</h1>
+          <div class="container-fluid">
+            <h2>Education is the key to brighter future.</h2>
+          </div>
         </div>
-        <div class="header__image-container col-md d-md-block position-relative">
-          <img class="img-fluid" src="{{ headerImage }}" alt="2 Kids Smiling Photo">
+        <div class="header-image__container col-md d-none d-md-block">
+          <img class="img-fluid" src="{{ headerImageDesktop }}" alt="2 Kids Smiling Photo">
         </div>
       </div>
     </div>
+    <span class="header-overlay position-absolute d-block d-md-none"></span>
   </header>
   <script src="{{ script }}"></script>
 {% endblock %}
