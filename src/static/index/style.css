@@ -1,3 +1,7 @@
+:root {
+  --primary-color: #003b59;
+}
+
 html,
 body {
   min-height: 100vh;
@@ -23,6 +27,16 @@ h6,
 p,
 a {
   font-family: 'Century Gothic', Arial, sans-serif;
+  letter-spacing: 0.02rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-color, #003b59);
 }
 
 .navbar-brand__link {
@@ -31,34 +45,34 @@ a {
 }
 
 .navbar {
-  background: rgb(0, 59, 89);
+  background-color: var(--primary-color, #003b59);
 }
 
-.navbar .nav-item .navbar-item__link {
-  color: rgb(255, 255, 255);
+.navbar 
+.nav-item 
+.navbar-item__link {
+  color: #ffffff;
 }
 
-.navbar .nav-item .navbar-item__link:hover {
-  color: rgba(255, 255, 255, 0.8);
+.navbar 
+.nav-item 
+.navbar-item__link:hover {
+  color: #ffffffcc;
 }
 
 /* Header details  */
-
 .header {
-  background-color: #efefef;
+  min-height: 23rem;
+  height: 30rem;
+  height: 100vh;
 }
 
-@media (max-width: 767px) {
-  .header {
-    background-image: url('/static/images/header-image-no-fade.jpg');
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-  }
-}
+/* header contents containers layout */
 
 .header__content {
-  max-width: 80rem;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 @media (max-width: 767px) {
@@ -69,12 +83,69 @@ a {
 
 .header__content .row {
   width: 100%;
+  height: 100%;
   margin: 0 auto;
 }
 
-.header-overlay.position-absolute {
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  background-color: #ffffff82;
+/* mobile background image will on mobile only  */
+@media (max-width: 767px) {
+  .header {
+    background: url('/static/images/header-image-no-fade.jpg') no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
+
+  /* overlay that is visible on mobile */
+  .header-overlay {
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: #003b5950;
+  }
+}
+
+/* overlay, only visible on desktop  */
+
+.header-image__container
+.header-overlay {
+  top: 0;
+  right: 0;
+  background-color: #ffffff21
+}
+
+@media (min-width: 768px) {
+  .header-image__container {
+    background: url('/static/images/header-image-fade-left.png') no-repeat;
+    background-size: cover;
+    background-position: left;
+    background-position-y: top;
+  }
+}
+
+/* title changes on mobile and desktop */
+
+.header__title {
+  font-size: 2.3rem;
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .header__title,
+  .header__subtitle,
+  .header__title-body {
+    color: white;
+    text-shadow: 1px 2px 7px black;
+  }
+}
+
+.title__container {
+  align-items: center;
+  justify-content: center;
+}
+
+.header__title-body {
+  padding-top: 2rem;
+  color: 
 }
