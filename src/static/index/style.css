@@ -1,5 +1,7 @@
 :root {
-  --primary-color: #003b59;
+  --color--primary: #003b59;
+  --color--warning: #fabc09;
+  --color--warning-active: #f1b509;
   --container-max-width: 1440px;
 }
 
@@ -27,7 +29,9 @@ h5,
 h6,
 p,
 a {
-  font-family: 'Century Gothic', Arial, sans-serif;
+  font-family: 'Century Gothic', Arial, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
   letter-spacing: 0.02rem;
 }
 
@@ -38,16 +42,34 @@ h4,
 h5,
 h6,
 p {
-  color: var(--primary-color, #003b59);
+  color: var(--color--primary, #003b59);
 }
 
+/* button overrides for the website theme */
+.button--warning {
+  background-color: var(--color--warning, #fabc09);
+  border-color: var(--color--warning, #fabc09);
+  color: white;
+  font-size: 1.05rem;
+}
+
+.button--warning:hover {
+  color: white;
+}
+
+.button--warning:active {
+  background-color: var(--color--warning, #f1b509);
+  border-color: var(--color--warning, #f1b509);
+}
+
+/* navbar styling */
 .navbar-brand__link {
   width: 9rem;
   padding: 0 0 0.3rem 0;
 }
 
 .navbar {
-  background-color: var(--primary-color, #003b59);
+  background-color: var(--color--primary, #003b59);
 }
 
 .navbar .nav-item .navbar-item__link {
@@ -61,7 +83,7 @@ p {
 /* Header details  */
 .header {
   min-height: 30rem;
-  min-height: 100vh;
+  min-height: 95vh;
 }
 
 /* set desktop min height lower */
@@ -73,19 +95,19 @@ p {
 
 /* header contents containers layout */
 
-.header__content {
+.header__container {
   width: 100%;
   max-width: var(--container-max-width, 1440px);
   margin: 0 auto;
 }
 
 @media (max-width: 767px) {
-  .header__content {
+  .header__container {
     z-index: 1;
   }
 }
 
-.header__content .row {
+.header__container .row {
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -139,8 +161,15 @@ p {
 
 .header__title-body {
   padding-top: 2rem;
+  padding-bottom: 3rem;
   font-size: 1.18rem;
-  font-family: Arial, sans-serif;
+}
+
+/* title body on desktop */
+@media (min-width: 768px) {
+  .header__title-body {
+    margin-top: auto;
+  }
 }
 
 /* text shadow on desktop */
@@ -153,7 +182,7 @@ p {
 @media (max-width: 767px) {
   .header__title,
   .header__subtitle,
-  .header__title-body {
+  .header__title-body p {
     color: white;
     text-shadow: 1px 2px 7px black;
   }
