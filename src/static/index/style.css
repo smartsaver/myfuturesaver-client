@@ -1,5 +1,6 @@
 :root {
   --primary-color: #003b59;
+  --container-max-width: 1440px;
 }
 
 html,
@@ -63,11 +64,18 @@ p {
   min-height: 100vh;
 }
 
+/* set desktop min height lower */
+@media (min-width: 768px) {
+  .header {
+    min-height: 31rem;
+  }
+}
+
 /* header contents containers layout */
 
 .header__content {
   width: 100%;
-  max-width: 1440px;
+  max-width: var(--container-max-width, 1440px);
   margin: 0 auto;
 }
 
