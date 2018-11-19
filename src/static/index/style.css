@@ -239,12 +239,23 @@ h6 {
 
 .section#steps-to-apply::before {
   content: '';
-    display: block;
-    position: absolute;
-    background-color: var(--color--secondary, #2f97da);
-    width: 7px;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  display: block;
+  position: absolute;
+  background-color: var(--color--secondary, #2f97da);
+  width: 7px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* step section styling */
+.step {
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
+  text-align: center;
+}
+
+.step img.img-fluid {
+  max-height: 10rem;
 }
