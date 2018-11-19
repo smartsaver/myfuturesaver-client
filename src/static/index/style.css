@@ -1,5 +1,6 @@
 :root {
   --color--primary: #003b59;
+  --color--secondary: #2f97da;
   --color--warning: #fabc09;
   --color--warning-active: #f1b509;
   --container-max-width: 1440px;
@@ -229,4 +230,21 @@ h6 {
 .content h5,
 .content h6 {
   margin-bottom: 1.3rem;
+}
+
+/* special sections styling */
+.section#steps-to-apply {
+  background-color: white;
+}
+
+.section#steps-to-apply::before {
+  content: '';
+    display: block;
+    position: absolute;
+    background-color: var(--color--secondary, #2f97da);
+    width: 7px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }

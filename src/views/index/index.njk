@@ -11,7 +11,7 @@
     <div class="container">
       <a class="navbar-brand navbar-brand__link" href="#"><img class="img-fluid" src="{{ logo }}" alt="SmartSaver.org Logo"></a>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -21,7 +21,7 @@
             <a class="nav-link navbar-item__link" href="#claim">Claim</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link navbar-item__link" href="#">How-to's</a>
+            <a class="nav-link navbar-item__link" href="#steps-to-apply">Steps to Apply</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle navbar-item__link" href="#" id="applying-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -68,28 +68,66 @@
     <span class="header-overlay position-absolute d-block d-md-none"></span>
   </header>
 
-  <section id="claim" class="section">
-    <div class="section__container content">
-      <div class="row">
-        <header class="col-md-4"><h3>Two things you can claim for your children</h3></header>
+  <main>
+    <section id="claim" class="section">
+      <div class="section__container content">
+        <div class="row">
+          <header class="col-md-4"><h2>Two things you can claim for your children</h2></header>
 
-        <div class="col-md-8">
-          {{ content.claim }}
+          <div class="col-md-8">
+            {{ content.claim }}
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="who-can-participate" class="section">
-    <div class="section__container content">
-      <div class="row">
-        <header class="col-md-4"><h3>Who can participate?</h3></header>
+    <section id="who-can-participate" class="section">
+      <div class="section__container content">
+        <div class="row">
+          <header class="col-md-4"><h2>Who can participate?</h2></header>
 
-        <div class="col-md-8">
-          {{ content.whoCanParticipate }}
+          <div class="col-md-8">
+            {{ content.whoCanParticipate }}
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section id="steps-to-apply" class="section position-relative">
+      <div class="section__container content">
+        <div class="row">
+          <header class="col-sm-12">
+            <h2>4-step  Accelerator Process</h2>
+            {{ content.stepsToApply }}
+          </header>
+
+          <div class="col-sm-12">
+            <div class="row steps__container">
+              <div class="col-md-6">
+                <div class="row">
+                  <article class="col-sm-6">
+                    1
+                  </article>
+                  <article class="col-sm-6">
+                    2
+                  </article>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="row">
+                  <article class="col-sm-6">
+                    3
+                  </article>
+                  <article class="col-sm-6">
+                    4
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
   <script src="{{ script }}"></script>
 {% endblock %}
