@@ -16,10 +16,21 @@
       <div class="collapse navbar-collapse" id="navbar-content">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link navbar-item__link" href="#">4-step Process</a>
+            <a class="nav-link navbar-item__link" href="#">Claim</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link navbar-item__link" href="#">Applying</a>
+            <a class="nav-link navbar-item__link" href="#">How-to's</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle navbar-item__link" href="#" id="applying-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Apply Online
+            </a>
+            <div class="dropdown-menu" aria-labelledby="applying-dropdown">
+              <a class="dropdown-item" href="#">Terms of Agreement</a>
+              <a class="dropdown-item" href="#">Email</a>
+              <a class="dropdown-item" href="#">Information Survey</a>
+              <a class="dropdown-item" href="#">RESP Survey</a>
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link navbar-item__link" href="#">Contact</a>
@@ -30,7 +41,7 @@
   </nav>
 
   <header class="header d-flex position-relative">
-    <div class="header__container">
+    <div class="header__container section__container">
       <div class="row">
         <div class="col-sm d-flex">
           <div class="title__container container-fluid d-md-flex flex-column">
@@ -54,5 +65,11 @@
     </div>
     <span class="header-overlay position-absolute d-block d-md-none"></span>
   </header>
+
+  <section id="claim" class="section">
+    <div class="section__container">
+      <h3>Two things you can claim for your children</h3>
+    </div>
+  </section>
   <script src="{{ script }}"></script>
 {% endblock %}
