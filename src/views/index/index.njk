@@ -68,15 +68,27 @@
     <span class="header-overlay position-absolute d-block d-md-none"></span>
   </header>
 
-  <section id="claim" class="section d-flex flex-column justify-content-center">
+  <section id="claim" class="section">
     <div class="section__container content">
-      {{ content.claim }}
+      <div class="row">
+        <header class="col-md-4"><h3>Two things you can claim for your children</h3></header>
+
+        <div class="col-md-8">
+          {{ content.claim }}
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="who-can-participate" class="section">
     <div class="section__container content">
-      {{ content.whoCanParticipate }} 
+      <div class="row">
+        <header class="col-md-4"><h3>Who can participate?</h3></header>
+
+        <div class="col-md-8">
+          {{ content.whoCanParticipate }}
+        </div>
+      </div>
     </div>
   </section>
   <script src="{{ script }}"></script>
