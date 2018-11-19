@@ -63,6 +63,8 @@ Please take a moment to read and accept the [terms of agreement.](http://www.sma
   `),
   termsOfAgreement: processMarkdown(`
 \`\`\`
+TERMS OF AGREEMENT
+
 A. My participation in this program is entirely voluntary.
 
 B. I give SmartSAVER permission to:
@@ -75,8 +77,18 @@ B. I give SmartSAVER permission to:
 
   iv. Help me to apply for my child's/children's Canada Learning Bond (CLB) and Canada Education Savings Grant (CESG)
 
-C. I can withdraw my consent any time before March 31, 2019 by writing to SmartSAVER at
-info@smartsaver.org. 
+C. I can withdraw my consent any time before March 31, 2019 by writing to SmartSAVER at info@smartsaver.org. 
+
+
+*NOTE:
+We collect your information for two reasons: 
+
+1. To ensure the financial institution you choose has everything they need to make the process of opening your child’s/children’s RESP/s as easy for you as possible. Only your financial institution receives your identifiable personal information such as your name and contact information. (Researchers do not). 
+
+2. To learn how to help more families like yours to start saving for their child’s/children’s education. The information shared with researchers is a random summary of all the participants in the program and does not include names or individual records.
+
+
+If you do not agree to the pilot participant terms, you are not eligible to participate. You can still open an RESP and start saving for your child’s/children’s education. Visit: smartsaver.org.
 \`\`\`
   `),
 };
