@@ -24,11 +24,11 @@
             <a class="nav-link navbar-item__link" href="#steps-to-apply">Steps to Apply</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle navbar-item__link" href="#" id="applying-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle navbar-item__link" href="#" id="applyOnlineDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Apply Online
             </a>
-            <div class="dropdown-menu" aria-labelledby="applying-dropdown">
-              <a class="dropdown-item" href="#">Terms of Agreement</a>
+            <div class="dropdown-menu" aria-labelledby="applyOnlineDropdown">
+              <a class="dropdown-item" href="#terms-of-agreement">Terms of Agreement</a>
               <a class="dropdown-item" href="#">Email</a>
               <a class="dropdown-item" href="#">Information Survey</a>
               <a class="dropdown-item" href="#">RESP Survey</a>
@@ -100,7 +100,6 @@
             <h2>4-step  Accelerator Process</h2>
             {{ content.stepsToApply.intro }}
           </header>
-
           <div class="col-sm-12">
             <div class="row steps__container">
               <div class="col-xl-6">
@@ -125,8 +124,24 @@
               </div>
             </div>
           </div>
+          <footer class="col-sm-12">
+            {{ content.stepsToApply.footer }}
+          </footer>
         </div>
       </div>
+    </section>
+
+    <section id="apply-online" class="section content">
+      <div class="section__container">
+        <section id="terms-of-agreement" class="terms__section">
+          <h2>Participate in the Pilot: Online Application</h2>
+          {{ content.applyOnline.intro }}
+
+          <article class="container-fluid box">
+            {{ content.applyOnline.termsOfAgreement }}
+          </div>
+        </section>
+      </div> 
     </section>
   </main>
   <script src="{{ script }}"></script>

@@ -259,3 +259,21 @@ h6 {
 .step img.img-fluid {
   max-height: 10rem;
 }
+
+/* apply online section styling */
+#apply-online {
+  background-color: #c8ecff;
+}
+
+.terms__section .box {
+  padding: 1rem;
+  max-height: 21rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 7px 1px #0000008c;
+  background-color: #f7f7f7;
+  overflow: auto;
+}
+
+.terms__section pre {
+  white-space: pre-wrap;
+}

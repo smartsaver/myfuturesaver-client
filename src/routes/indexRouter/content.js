@@ -50,12 +50,42 @@ It can take up to 2 months to receive the Canada Learning Bond in your RESP. Whe
 
 Eligible families could receive a financial gift of $500! (Please note: A family can receive $500 only once, whether they are applying for one or more children.)
   `, stepOptions),
+  footer: processMarkdown(`
+_Remember, children who are eligible for the Canada Learning Bond can receive a matching grant of 40% for every dollar deposited into their RESPs. That’s a bonus of 40 cents on top of every dollar that you contribute!_
+
+__Questions?__ Call us at 1-855-737-7252 or email [info@smartsaver.org](mailto:info@smartsaver.org)
+  `),
+};
+
+const applyOnline = {
+  intro: processMarkdown(`
+Please take a moment to read and accept the [terms of agreement.](http://www.smartsaver.org/privacy.shtml)
+  `),
+  termsOfAgreement: processMarkdown(`
+\`\`\`
+A. My participation in this program is entirely voluntary.
+
+B. I give SmartSAVER permission to:
+
+  i. Disclose my personal information for the purposes set out in SmartSAVER’s Privacy Policy to a Registered Education Savings Plans provider, and further I consent to the provider contacting me by phone or email to arrange an appointment to open an RESP and disclosing my personal information to Human Resources and Skills Development Canada. For more information about SmartSAVER’s privacy policy, please visit: http://www.smartsaver.org/privacy.shtml.
+
+  ii. Collect, own, hold, and retain the right to the information that I provide.
+
+  iii. Share my data anonymously with researchers for the purpose of studying the SmartSaver program. This means my name and any other identifying information won’t be shared. SmartSAVER may contact me in the future to ask me to complete additional survey questions. It is up to my discretion to respond or not. 
+
+  iv. Help me to apply for my child's/children's Canada Learning Bond (CLB) and Canada Education Savings Grant (CESG)
+
+C. I can withdraw my consent any time before March 31, 2019 by writing to SmartSAVER at
+info@smartsaver.org. 
+\`\`\`
+  `),
 };
 
 const content = {
   claim,
   whoCanParticipate,
-  stepsToApply
+  stepsToApply,
+  applyOnline
 };
 
 module.exports = content;
