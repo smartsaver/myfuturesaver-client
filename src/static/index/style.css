@@ -199,10 +199,34 @@ h6 {
 /* section styling */
 .section {
   padding: 2rem 1.5rem;
+  min-height: 25rem;
+}
+
+.section:nth-child(2n + 1) {
+  background-color: #efefef48;
 }
 
 .section__container {
   width: 100%;
   max-width: var(--container-max-width, 1440px);
   margin: 0 auto;
+}
+
+/* content styling */
+.content {
+  font-size: 1.25rem;
+  color: var(--color--primary, #003b59);
+}
+
+.content li + li {
+  margin-top: 1rem;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  margin-bottom: 1.3rem;
 }
