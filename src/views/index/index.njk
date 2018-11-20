@@ -146,7 +146,7 @@
             {{ content.applyOnline.termsOfAgreement }}
           </article>
 
-          <form id="terms-of-agreement-form" class="py-4">
+          <form method="POST" id="terms-of-agreement-form" class="py-4 js-terms-of-agreement-form">
             <div class="form-check form-group">
               <input class="form-check-input" type="checkbox" value="true" id="agree-checkbox" name="agree-checkbox">
               <label class="form-check-label" for="agree-checkbox">
@@ -155,6 +155,9 @@
             </div>
             <button type="submit" class="btn button--primary">Submit</button>
           </form>
+
+          <div class="alert d-none js-terms-of-agreement-alert my-4" role="alert">
+          </div>
         </section>
       </div> 
     </section>
@@ -165,10 +168,10 @@
 
         {{ content.applyOnline.email.intro }}
 
-        <form id="email-form" class="py-2 element--covered">
+        <form id="email-form" class="py-2 element--covered js-application-form js-email-form">
           <div class="form-group row">
             <div class="col-sm-6 pt-2">
-              <input type="email" class="form-control" id="email-field" name="email-field" placeholder="Email">
+              <input type="email" class="form-control" id="email-field" name="email-field" placeholder="Email" required>
             </div>
             <div class="col-sm-6 pt-2">
               <button type="submit" class="btn button--primary">Submit</button>
@@ -193,7 +196,7 @@
         <h3>Online Application Step 2: Fill out information</h3>
         {{ content.applyOnline.informationSurvey.intro }}
 
-        <div class="information-survey__container element--covered">
+        <div class="information-survey__container element--covered js-application-form">
           <iframe class="survey" src="{{ informationSurveyUrl }}" frameborder="0"></iframe>
 
           <span class="overlay help help--warning">
@@ -212,7 +215,7 @@
         <h3>Online Application Step 3: Apply for no-cost RESP and CLB account</h3>
         {{ content.applyOnline.respSurvey.intro }}
 
-        <div class="resp-survey__container element--covered">
+        <div class="resp-survey__container element--covered js-application-form">
           <iframe class="survey" src="{{ respSurveyUrl }}" frameborder="0"></iframe>
 
           <span class="overlay help help--warning">

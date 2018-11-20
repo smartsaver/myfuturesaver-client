@@ -25,13 +25,18 @@ function Effects() {
 document.addEventListener("DOMContentLoaded", function runScripts() {
   var effects = new Effects();
   var navLinkList = document.querySelectorAll('.js-nav-link');
+  var termsOfAgreementForm = document.querySelector('.js-terms-of-agreement-form');
 
   // enable popover
   $(function() {
     $('[data-toggle="popover"]').popover();
   });
 
+  // hookup click selectors for the nav link
   navLinkList.forEach(handleNavLink);
+
+  // hookup termsOfAgreement submit
+  termsOfAgreementForm.addEventListener('submit', handleTermsOfAgreementSubmit);
 
   function handleNavLink(navLink) {
     navLink.addEventListener('click', handleNavLinkClick);
@@ -46,4 +51,35 @@ document.addEventListener("DOMContentLoaded", function runScripts() {
       history.pushState({}, "", containerId);
     }
   }
-});
+
+  function handleTermsOfAgreementSubmit(event) {
+    event.preventDefault();
+    var userDidAgree = event.target['agree-checkbox'].checked;
+    if(userDidAgree) {
+      insertSuccessMessage();
+      fadeOutTermsOfAgreementForm();
+      enableAllApplicationForm();
+    }
+
+    function insertSuccessMessage() {
+      var alert = document.querySelector('.js-terms-of-agreement-alert');
+      alert.textContent = 'Thank you. You may now fill out the application forms.';
+      // fade in alert message
+      alert.classList.add('alert-success');
+      alert.classList.remove('d-none');
+      $(alert)
+        .velocity("fadeIn", { duration: 1500 });
+    }
+
+    function fadeOutTermsOfAgreementForm() {
+      $(event.target).velocity("fadeOut", { duration: 100 })
+    }
+
+    function enableAllApplicationForm() {
+      var applicationFormList = document.querySelectorAll('.js-application-form');
+      applicationFormList.forEach(function(applicationForm) {
+        applicationForm.classList.remove('element--covered');
+      });
+    }
+  }
+})
