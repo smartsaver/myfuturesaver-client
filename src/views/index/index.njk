@@ -30,10 +30,14 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="applyOnlineDropdown">
               <a class="dropdown-item" href="#terms-of-agreement">Terms of Agreement</a>
-              <a class="dropdown-item" href="#email-section">Email</a>
-              <a class="dropdown-item" href="#">Information Survey</a>
-              <a class="dropdown-item" href="#">RESP Survey</a>
+              <a class="dropdown-item" href="#email-survey">Email</a>
+              <a class="dropdown-item" href="#information-survey">Information Survey</a>
+              <a class="dropdown-item" href="#resp-survey">RESP Survey</a>
+              <a class="dropdown-item" href="#bmo">BMO Participants</a>
             </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar-item__link" href="#faq">FAQ</a>
           </li>
           <li class="nav-item">
             <a class="nav-link navbar-item__link" href="#">Contact</a>
@@ -155,8 +159,8 @@
       </div> 
     </section>
 
-    <section id="email-section" class="section">
-      <div class="section__container">
+    <section id="email-survey" class="section">
+      <div class="section__container content">
         <h3>Online Application Step 1: Enter email</h3>
 
         {{ content.applyOnline.email.intro }}
@@ -183,5 +187,87 @@
         </div>
       </div>
     </section>
+
+    <section class="section content" id="information-survey">
+      <div class="section__container">
+        <h3>Online Application Step 2: Fill out information</h3>
+        {{ content.applyOnline.informationSurvey.intro }}
+
+        <div class="information-survey__container element--covered">
+          <iframe class="survey" src="{{ informationSurveyUrl }}" frameborder="0"></iframe>
+
+          <span class="overlay help help--warning">
+            Read and agree to the terms of agreement before proceeding.
+          </span>
+        </div>
+
+        <footer class="py-4">
+          {{ content.applyOnline.informationSurvey.footer }}
+        </footer>
+      </div>
+    </section>
+
+    <section class="section content" id="resp-survey">
+      <div class="section__container">
+        <h3>Online Application Step 3: Apply for no-cost RESP and CLB account</h3>
+        {{ content.applyOnline.respSurvey.intro }}
+
+        <div class="resp-survey__container element--covered">
+          <iframe class="survey" src="{{ respSurveyUrl }}" frameborder="0"></iframe>
+
+          <span class="overlay help help--warning">
+            Read and agree to the terms of agreement before proceeding.
+          </span>
+        </div>
+
+        <footer class="py-4">
+          {{ content.applyOnline.informationSurvey.footer }}
+        </footer>
+      </div>
+    </section>
+
+    <section id="bmo" class="section content">
+      <div class="section__container">
+        <div class="row">
+          <div class="col-sm-12">
+            <h3>Attention Bank of Montreal (BMO) applicants!</h3>
+          </div>
+          <div class="col-md-6 col-lg-4 pb-4">
+            <img class="img-fluid" src="/static/images/bmo-logo.jpg" alt="Bank Of Montreal">
+          </div>
+          <div class="col-md-6 col-lg-8">
+            {{ content.bmo.intro }}
+            <a class="btn button--warning" href="{{ content.bmo.download }}" target="_blank" rel="noopenner noreferrer"><i class="fa fa-download"></i> Download PDF</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section content d-flex flex-column justify-content-center">
+      <div class="section__container">
+        <div class="row">
+          <div class="col-md-4">
+            <h2>FAQ's</h2>
+          </div>
+          <div class="col-md-8">
+            {{ content.faq.intro }}
+            <a href="{{ content.faq.download }}" class="btn button--primary" target="_blank" rel="noopenner noreferrer"><i class="fa fa-download"></i> Download FAQ's</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer section">
+    <div class="section__container">
+      <div class="row">
+        <div class="col-md-6">
+
+        </div>
+        <div class="col-md-6">
+          
+        </div>
+      </div> 
+    </div>
+  </footer>
 {% endblock %}

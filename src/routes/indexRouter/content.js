@@ -53,7 +53,7 @@ Eligible families could receive a financial gift of $500! (Please note: A family
   footer: processMarkdown(`
 _Remember, children who are eligible for the Canada Learning Bond can receive a matching grant of 40% for every dollar deposited into their RESPs. That’s a bonus of 40 cents on top of every dollar that you contribute!_
 
-__Questions?__ Call us at 1-855-737-7252 or email [info@smartsaver.org](mailto:info@smartsaver.org)
+__Questions?__ Call us at 1-855-737-7252 or email info@smartsaver.org
   `),
 };
 
@@ -97,14 +97,56 @@ Please provide your email address so we can send you information about the next 
     `),
     helpWhyEmail: 'We use email to send you reminders of where you are in the process and what’s coming next. If you don’t have access to an email of your own, consider asking a friend or support worker if you can use theirs. ',
     helpNoEmail: 'You can participate in the pilot by contacting with ACORN Canada at 1-866-991-0025.'
-  }
+  },
+  informationSurvey: {
+    intro: processMarkdown(`
+You'll be amazed at how quickly your child's/children's education savings will add up.
+
+Please answer the following pilot survey. This should only take you a few minutes.
+
+___Remember!___ 
+_You're participation in this pilot is entirely voluntary. If you change your mind, please notify us by phone at 1-855-737-7252 or by email at info@smartsaver.org before March 31, 2019._
+    `),
+    footer: processMarkdown(`__Questions?__ Call us at 1-855-737-7252 or email info@smartsaver.org`),
+  },
+  respSurvey: {
+    intro: processMarkdown(`
+__Let’s start Step 1 of the pilot!__
+
+___Remember!___ You can open a no-cost RESP and apply for your child’s/children’s education savings without contributing any of your own money, but that you can always choose to add your own money, let’s say $5 from a birthday gift from an aunt or uncle. That money will help your child’s education savings to grow!
+    `),
+  },
 };
+
+const bmo = {
+  intro: processMarkdown(`
+BMO families must complete an additional form to permit BMO to deposit the $500 gift from SmartSAVER directly into your child’s RESP.
+
+Please __download__, __fill out__ and __sign__ the BMO Gift form now. Then email it as an attachment to SmartSAVER as soon as possible. Email to: info@smartsaver.org.
+
+__Not a Bank of Montreal (BMO) family?__
+
+You’ve completed Step 1 in the pilot process! You will receive an email confirming your application to open a no-cost RESP and apply for the Canada Learning Bond for your child. 
+
+__Questions?__ Read our frequently asked questions, or call us at 1-855-737-7252 or by email at info@smartsaver.org.
+  `),
+  download: '/download/?file=562 Fillable (Sep 10_2018)_V2'
+};
+
+const faq = {
+  intro: processMarkdown(`
+Questions? Read our frequently asked questions, or call us at 1-855-737-7252 or by email at info@smartsaver.org.
+  `),
+  download: '/download/?file=Accelerator Pilot Participant FAQs_FNL.pdf'
+}
 
 const content = {
   claim,
   whoCanParticipate,
   stepsToApply,
-  applyOnline
+  applyOnline,
+  bmo,
+  faq
 };
 
 module.exports = content;

@@ -8,6 +8,8 @@ router.get('/', (_, res) => {
   res.render('index/index', {
     logo: `${staticUrl}/images/logo-small.png`,
     content,
+    informationSurveyUrl: 'https://www.surveymonkey.com/r/Z9YDLVP',
+    respSurveyUrl: 'https://www.smartsaver.org/startmyresp/',
     script: `${staticUrl}/index/script.js`,
     style: `${staticUrl}/index/style.css`
   })
