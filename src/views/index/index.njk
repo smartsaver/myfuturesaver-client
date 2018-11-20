@@ -4,6 +4,7 @@
 
 {% block meta %}
   <link rel="stylesheet" href="{{ style }}">
+  <script defer src="{{ script }}"></script>
 {% endblock %}
 
 {% block body %}
@@ -29,7 +30,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="applyOnlineDropdown">
               <a class="dropdown-item" href="#terms-of-agreement">Terms of Agreement</a>
-              <a class="dropdown-item" href="#">Email</a>
+              <a class="dropdown-item" href="#email-section">Email</a>
               <a class="dropdown-item" href="#">Information Survey</a>
               <a class="dropdown-item" href="#">RESP Survey</a>
             </div>
@@ -54,7 +55,7 @@
 
             <div class="header__title-body">
               <p>There are two things you can do now to help your child to reach their potential <span class="highlight">(without costing you a dime!)</span></p>
-              <a class="btn button--warning" href="#">
+              <a class="btn button--warning" href="#claim">
                 Show me how
               </a>
             </div>
@@ -140,9 +141,47 @@
           <article class="container-fluid box">
             {{ content.applyOnline.termsOfAgreement }}
           </article>
+
+          <form id="terms-of-agreement-form" class="py-4">
+            <div class="form-check form-group">
+              <input class="form-check-input" type="checkbox" value="true" id="agree-checkbox" name="agree-checkbox">
+              <label class="form-check-label" for="agree-checkbox">
+                I agree in the terms of agreement.
+              </label>
+            </div>
+            <button type="submit" class="btn button--primary">Submit</button>
+          </form>
         </section>
       </div> 
     </section>
+
+    <section id="email-section" class="section">
+      <div class="section__container">
+        <h3>Online Application Step 1: Enter email</h3>
+
+        {{ content.applyOnline.email.intro }}
+
+        <form id="email-form" class="py-2 element--covered">
+          <div class="form-group row">
+            <div class="col-sm-6 pt-2">
+              <input type="email" class="form-control" id="email-field" name="email-field" placeholder="Email">
+            </div>
+            <div class="col-sm-6 pt-2">
+              <button type="submit" class="btn button--primary">Submit</button>
+            </div>
+          </div>
+          <span class="overlay help help--warning">
+            Read and agree to the terms of agreement before proceeding.
+          </span>
+        </form>
+        
+        <div class="email-form__help">
+          <a data-toggle="popover" data-placement="top" data-content="{{ content.applyOnline.email.helpWhyEmail }}">Why do you need my email?</a>
+        </div>
+        <div class="email-form__help">
+          <a class"btn btn-link" data-toggle="popover" data-placement="top" data-content="{{ content.applyOnline.email.helpNoEmail }}">Don't have an email address?</a>
+        </div>
+      </div>
+    </section>
   </main>
-  <script src="{{ script }}"></script>
 {% endblock %}

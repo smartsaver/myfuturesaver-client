@@ -1,5 +1,6 @@
 :root {
   --color--primary: #003b59;
+  --color--primary-active: #004669;
   --color--secondary: #2f97da;
   --color--warning: #fabc09;
   --color--warning-active: #f1b509;
@@ -56,6 +57,18 @@ h6 {
 }
 
 /* button overrides for the website theme */
+.button--primary {
+  background-color: var(--color--primary, #003b59);
+  border-color: var(--color--primary, #003b59);
+  color: white;
+  font-size: 1.05rem;
+}
+
+.button--primary:active {
+  background-color: var(--color--primary-active, #004669);
+  border-color: var(--color--primary-active, #004669);
+}
+
 .button--warning {
   background-color: var(--color--warning, #fabc09);
   border-color: var(--color--warning, #fabc09);
@@ -63,13 +76,14 @@ h6 {
   font-size: 1.05rem;
 }
 
+/* override boostrap styling of btn hover */
 .button--warning:hover {
   color: white;
 }
 
 .button--warning:active {
-  background-color: var(--color--warning, #f1b509);
-  border-color: var(--color--warning, #f1b509);
+  background-color: var(--color--warning-active, #f1b509);
+  border-color: var(--color--warning-active, #f1b509);
 }
 
 /* navbar styling */
@@ -200,7 +214,7 @@ h6 {
 /* section styling */
 .section {
   padding: 2rem 1.5rem;
-  min-height: 25rem;
+  min-height: 10rem;
 }
 
 .section:nth-child(2n + 1) {
@@ -262,7 +276,7 @@ h6 {
 
 /* apply online section styling */
 #apply-online {
-  background-color: #c8ecff;
+  background-color: #ffcf40;
 }
 
 .terms__section .box {
@@ -276,4 +290,49 @@ h6 {
 
 .terms__section pre {
   white-space: pre-wrap;
+}
+
+/* email form popover styling */
+.email-form__help a[data-toggle="popover"] {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.email-form__help a[data-toggle="popover"]:hover {
+  color: #007bff;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+/* covering elements and overlay styling */
+.element--covered {
+  position: relative;
+}
+
+.overlay {
+  display: none;
+}
+
+.element--covered .overlay {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00000099;
+  border-radius: 0.4rem;
+}
+
+.overlay.help {
+  padding: 1rem;
+  color: white;
+  text-shadow: 1px 1px 9px rgba(0, 0, 0, 0.301);
+}
+
+.overlay.help.help--warning {
+  color: var(--color--warning, #fabc09);
 }

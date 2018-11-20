@@ -91,6 +91,13 @@ We collect your information for two reasons:
 If you do not agree to the pilot participant terms, you are not eligible to participate. You can still open an RESP and start saving for your child’s/children’s education. Visit: smartsaver.org.
 \`\`\`
   `),
+  email: {
+    intro: processMarkdown(`
+Please provide your email address so we can send you information about the next steps in the pilot process.
+    `),
+    helpWhyEmail: 'We use email to send you reminders of where you are in the process and what’s coming next. If you don’t have access to an email of your own, consider asking a friend or support worker if you can use theirs. ',
+    helpNoEmail: 'You can participate in the pilot by contacting with ACORN Canada at 1-866-991-0025.'
+  }
 };
 
 const content = {

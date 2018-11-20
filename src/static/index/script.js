@@ -1,29 +1,10 @@
-var form = document.querySelector('.js-form');
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+});
 
-var jumpToSurvey = document.querySelector('.js-jump-to-survey');
-
-form.addEventListener('submit', handleFormSubmit);
-
-jumpToSurvey.addEventListener('click', handleScrollToSurvey);
-
-function handleFormSubmit(event) {
-  event.preventDefault();
-  var survey = document.querySelector('.js-survey');
-  survey.innerHTML = `
-  <iframe src="https://www.surveymonkey.com/r/Z9YDLVP" frameborder="0"></iframe>
-  `;
-
-  fadeIn(survey);
-
-  showThanksAndHideEmail();
-}
-
-function showThanksAndHideEmail() {
-  var success = document.querySelector('.js-success');
-
-  fadeIn(success);
-  fadeOut(form);
-}
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
 
 function handleScrollToSurvey() {
   var container = document.querySelector('.js-survey-container');
