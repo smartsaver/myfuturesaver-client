@@ -4,13 +4,13 @@
 
 {% block meta %}
   <link rel="stylesheet" href="{{ style }}">
-  <script defer src="{{ script }}"></script>
+  <script type="text/javascript" defer src="{{ script }}"></script>
 {% endblock %}
 
 {% block body %}
   <nav class="navbar navbar-expand-md navbar-dark">
     <div class="container">
-      <a class="navbar-brand navbar-brand__link" href="#"><img class="img-fluid" src="{{ logo }}" alt="SmartSaver.org Logo"></a>
+      <a class="navbar-brand navbar-brand__link" href="/"><img class="img-fluid" src="{{ logo }}" alt="SmartSaver.org Logo"></a>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -19,28 +19,28 @@
       <div class="collapse navbar-collapse" id="navbar-content">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link navbar-item__link" href="#claim">Claim</a>
+            <a class="nav-link js-nav-link navbar-item__link" href="#claim">Claim</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link navbar-item__link" href="#steps-to-apply">Steps to Apply</a>
+            <a class="nav-link js-nav-link navbar-item__link" href="#steps-to-apply">Steps to Apply</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle navbar-item__link" href="#" id="applyOnlineDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Apply Online
             </a>
             <div class="dropdown-menu" aria-labelledby="applyOnlineDropdown">
-              <a class="dropdown-item" href="#terms-of-agreement">Terms of Agreement</a>
-              <a class="dropdown-item" href="#email-survey">Email</a>
-              <a class="dropdown-item" href="#information-survey">Information Survey</a>
-              <a class="dropdown-item" href="#resp-survey">RESP Survey</a>
-              <a class="dropdown-item" href="#bmo">BMO Participants</a>
+              <a class="dropdown-item js-nav-link" href="#terms-of-agreement">Terms of Agreement</a>
+              <a class="dropdown-item js-nav-link" href="#email-survey">Email</a>
+              <a class="dropdown-item js-nav-link" href="#information-survey">Information Survey</a>
+              <a class="dropdown-item js-nav-link" href="#resp-survey">RESP Survey</a>
+              <a class="dropdown-item js-nav-link" href="#bmo">BMO Participants</a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link navbar-item__link" href="#faq">FAQ</a>
+            <a class="nav-link js-nav-link navbar-item__link" href="#faq">FAQ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link navbar-item__link" href="#">Contact</a>
+            <a class="nav-link js-nav-link navbar-item__link" href="#">Contact</a>
           </li>
         </ul>
       </div>
@@ -59,7 +59,7 @@
 
             <div class="header__title-body">
               <p>There are two things you can do now to help your child to reach their potential <span class="highlight">(without costing you a dime!)</span></p>
-              <a class="btn button--warning" href="#claim">
+              <a class="btn button--warning js-nav-link" href="#claim">
                 Show me how
               </a>
             </div>
