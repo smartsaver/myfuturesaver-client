@@ -130,14 +130,14 @@ You’ve completed Step 1 in the pilot process! You will receive an email confir
 
 __Questions?__ Read our frequently asked questions, or call us at 1-855-737-7252 or by email at info@smartsaver.org.
   `),
-  download: '/download/?file=562 Fillable (Sep 10_2018)_V2'
+  download: '/download/562 Fillable (Sep 10_2018)_V2.pdf'
 };
 
 const faq = {
   intro: processMarkdown(`
 Questions? Read our frequently asked questions, or call us at 1-855-737-7252 or by email at info@smartsaver.org.
   `),
-  download: '/download/?file=Accelerator Pilot Participant FAQs_FNL.pdf'
+  download: '/download/Accelerator Pilot Participant FAQs_FNL.pdf'
 }
 
 const content = {

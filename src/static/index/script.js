@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function runScripts() {
   var effects = new Effects();
   var navLinkList = document.querySelectorAll('.js-nav-link');
   var termsOfAgreementForm = document.querySelector('.js-terms-of-agreement-form');
+  var emailForm = document.querySelector('.js-email-form');
 
   // enable popover
   $(function() {
@@ -34,9 +35,10 @@ document.addEventListener("DOMContentLoaded", function runScripts() {
 
   // hookup click selectors for the nav link
   navLinkList.forEach(handleNavLink);
-
   // hookup termsOfAgreement submit
   termsOfAgreementForm.addEventListener('submit', handleTermsOfAgreementSubmit);
+  // email form submit
+  emailForm.addEventListener('submit', handleEmailFormSubmit);
 
   function handleNavLink(navLink) {
     navLink.addEventListener('click', handleNavLinkClick);
@@ -81,5 +83,18 @@ document.addEventListener("DOMContentLoaded", function runScripts() {
         applicationForm.classList.remove('element--covered');
       });
     }
+  }
+
+  function handleEmailFormSubmit(event) {
+    event.preventDefault();
+    var emailField = event.target['email-field'];
+    var emailButton = emailForm.querySelector('button');
+    //disable field and button
+    emailField.disabled = true;
+    emailButton.disabled = true;
+    // post to server
+    axios.post('/api/email/subscribe', {
+      email: emailField.value
+    });
   }
 })
