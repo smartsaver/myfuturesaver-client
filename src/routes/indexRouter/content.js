@@ -59,17 +59,16 @@ __Questions?__ Call us at 1-855-737-7252 or email info@smartsaver.org
 
 const applyOnline = {
   intro: processMarkdown(`
-Please take a moment to read and accept the [terms of agreement.](http://www.smartsaver.org/privacy.shtml)
+Please take a moment to read and accept the terms of agreement.
   `),
   termsOfAgreement: processMarkdown(`
-\`\`\`
 TERMS OF AGREEMENT
 
 A. My participation in this program is entirely voluntary.
 
 B. I give SmartSAVER permission to:
 
-  i. Disclose my personal information for the purposes set out in SmartSAVER’s Privacy Policy to a Registered Education Savings Plans provider, and further I consent to the provider contacting me by phone or email to arrange an appointment to open an RESP and disclosing my personal information to Human Resources and Skills Development Canada. For more information about SmartSAVER’s privacy policy, please visit: http://www.smartsaver.org/privacy.shtml.
+  i. Disclose my personal information for the purposes set out in SmartSAVER’s Privacy Policy to a Registered Education Savings Plans provider, and further I consent to the provider contacting me by phone or email to arrange an appointment to open an RESP and disclosing my personal information to Human Resources and Skills Development Canada. For more information about SmartSAVER’s privacy policy, please visit: [http://www.smartsaver.org/privacy.shtml](http://www.smartsaver.org/privacy.shtml).
 
   ii. Collect, own, hold, and retain the right to the information that I provide.
 
@@ -88,8 +87,7 @@ We collect your information for two reasons:
 2. To learn how to help more families like yours to start saving for their child’s/children’s education. The information shared with researchers is a random summary of all the participants in the program and does not include names or individual records.
 
 
-If you do not agree to the pilot participant terms, you are not eligible to participate. You can still open an RESP and start saving for your child’s/children’s education. Visit: smartsaver.org.
-\`\`\`
+If you do not agree to the pilot participant terms, you are not eligible to participate. You can still open an RESP and start saving for your child’s/children’s education. Visit: [smartsaver.org.](http://smartsaver.org)
   `),
   email: {
     intro: processMarkdown(`
