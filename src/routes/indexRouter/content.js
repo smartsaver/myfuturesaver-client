@@ -102,10 +102,16 @@ You'll be amazed at how quickly your child's/children's education savings will a
 
 Please answer the following pilot survey. This should only take you a few minutes.
 
+Once you complete the survey a __DONE__ button will appear. Scroll down to the next section below: __RESP and CLB Application.__
+
 ___Remember!___ 
 _You're participation in this pilot is entirely voluntary. If you change your mind, please notify us by phone at 1-855-737-7252 or by email at info@smartsaver.org before March 31, 2019._
     `),
-    footer: processMarkdown(`__Questions?__ Call us at 1-855-737-7252 or email info@smartsaver.org`),
+    footer: processMarkdown(`
+__Questions?__ Call us at 1-855-737-7252 or email info@smartsaver.org
+
+Did you complete the survey by clicking the __DONE__ button? Scroll down to the next section __below__: RESP and CLB Application. 
+    `),
   },
   respSurvey: {
     intro: processMarkdown(`
@@ -113,6 +119,7 @@ __Let’s start Step 1 of the pilot!__
 
 ___Remember!___ You can open a no-cost RESP and apply for your child’s/children’s education savings without contributing any of your own money, but that you can always choose to add your own money, let’s say $5 from a birthday gift from an aunt or uncle. That money will help your child’s education savings to grow!
     `),
+    footer: processMarkdown('__Questions?__ Call us at 1-855-737-7252 or email info@smartsaver.org')
   },
 };
 

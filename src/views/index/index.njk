@@ -183,10 +183,12 @@
         </form>
         
         <div class="email-form__help">
-          <a data-toggle="popover" data-placement="top" data-content="{{ content.applyOnline.email.helpWhyEmail }}">Why do you need my email?</a>
+          <strong>Why do you need my email?</strong>
+          {{ content.applyOnline.email.helpWhyEmail }}
         </div>
-        <div class="email-form__help">
-          <a class"btn btn-link" data-toggle="popover" data-placement="top" data-content="{{ content.applyOnline.email.helpNoEmail }}">Don't have an email address?</a>
+        <div class="email-form__help mt-4">
+          <strong>Don't have an email address?</strong>
+          {{ content.applyOnline.email.helpNoEmail }}
         </div>
       </div>
     </section>
@@ -224,7 +226,7 @@
         </div>
 
         <footer class="py-4">
-          {{ content.applyOnline.informationSurvey.footer }}
+          {{ content.applyOnline.respSurvey.footer }}
         </footer>
       </div>
     </section>
