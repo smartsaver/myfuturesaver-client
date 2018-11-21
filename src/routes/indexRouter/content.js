@@ -145,13 +145,23 @@ Questions? Read our frequently asked questions, or call us at 1-855-737-7252 or 
   download: '/download/Accelerator Pilot Participant FAQs_FNL.pdf'
 }
 
+const footer = {
+  intro: processMarkdown('Copyright SmartSAVER.org © 2018. All Rights Reserved.'),
+  footer: processMarkdown(`
+#### Contact Us
+info@smartsaver.org
+1-855-RESP-CLB (1-855-737-7252)
+  `)
+}
+
 const content = {
   claim,
   whoCanParticipate,
   stepsToApply,
   applyOnline,
   bmo,
-  faq
+  faq,
+  footer
 };
 
 module.exports = content;

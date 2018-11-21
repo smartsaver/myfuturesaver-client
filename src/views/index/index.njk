@@ -40,7 +40,7 @@
             <a class="nav-link js-nav-link navbar-item__link" href="#faq">FAQ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-nav-link navbar-item__link" href="#">Contact</a>
+            <a class="nav-link js-nav-link navbar-item__link" href="#footer">Contact</a>
           </li>
         </ul>
       </div>
@@ -168,19 +168,12 @@
 
         {{ content.applyOnline.email.intro }}
 
-        <form id="email-form" class="py-2 element--covered js-application-form js-email-form">
-          <div class="form-group row">
-            <div class="col-sm-6 pt-2">
-              <input type="email" class="form-control" id="email-field" name="email-field" placeholder="Email" required>
-            </div>
-            <div class="col-sm-6 pt-2">
-              <button type="submit" class="btn button--primary">Submit</button>
-            </div>
-          </div>
+        <div class="element--covered js-application-form">
+          {% include "./mailchimpSurvey.njk" %}
           <span class="overlay help help--warning">
             Read and agree to the terms of agreement before proceeding.
           </span>
-        </form>
+        </div>
         
         <div class="email-form__help">
           <strong>Why do you need my email?</strong>
@@ -263,11 +256,15 @@
     </section>
   </main>
 
-  <footer class="footer section">
+  <footer class="footer section" id="footer">
     <div class="section__container">
       <div class="row">
-        <div class="col-md-12">
-          Copyright &copy SmartSAVER.org 2018. All Rights Reserved.
+        <div class="col-md-6">
+          <img class="img-fluid mb-2" src="{{ logo }}" alt="SmartSaver">
+          {{ content.footer.intro }}
+        </div>
+        <div class="col-md-6">
+          {{ content.footer.footer }}
         </div>
       </div> 
     </div>
