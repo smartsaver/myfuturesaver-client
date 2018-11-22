@@ -3,7 +3,7 @@ const stepOptions = require('../../libs/marked/stepOptions');
 
 const claim = processMarkdown(`
 1. __Claim you child's Canada Learning Bond (CLB)__ - a federal grant of $500 to $2,000 to eligible families to help with the cost of a child's education after high school. 
-2. __Participate in this pilot__ - you could receive an extra $500 from SmartSAVER to eligible families! _(Please note: A family can receive $500 only once, whether they are applying for one or more children.)_
+2. __Participate in this pilot__ - you could receive an extra $500 from SmartSAVER for CLB-eligible families! _(Please note: A family can receive $500 only once, whether they are applying for one or more children.)_
     `);
 
 const whoCanParticipate = processMarkdown(`
@@ -16,7 +16,7 @@ __Parent (Primary Caregiver):__
 * Annual net family income under $46,000
 * Has a Social Insurance Number. 
 * Has filed taxes (for at least one year of the child's life).
-    `);
+  `);
 
 const stepsToApply = {
   intro: processMarkdown(`
@@ -94,7 +94,7 @@ If you do not agree to the pilot participant terms, you are not eligible to part
 Please provide your email address so we can send you information about the next steps in the pilot process.
     `),
     helpWhyEmail: 'We use email to send you reminders of where you are in the process and what’s coming next. If you don’t have access to an email of your own, consider asking a friend or support worker if you can use theirs. ',
-    helpNoEmail: 'You can participate in the pilot by contacting with ACORN Canada at 1-866-991-0025.'
+    helpNoEmail: 'You can participate in the pilot by contacting ACORN Canada at 1-866-991-0025.'
   },
   informationSurvey: {
     intro: processMarkdown(`
