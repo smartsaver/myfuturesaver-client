@@ -4,6 +4,7 @@
   --color--secondary: #2f97da;
   --color--warning: #fabc09;
   --color--warning-active: #f1b509;
+  --color--error: #f05545;
   --container-max-width: 1440px;
 }
 
@@ -34,7 +35,9 @@ h4,
 h5,
 h6,
 p,
-a {
+a,
+div,
+section {
   font-family: 'Century Gothic', Arial, -apple-system, BlinkMacSystemFont,
     'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol';
@@ -46,7 +49,9 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+div,
+section {
   color: var(--color--primary, #003b59);
 }
 
@@ -174,10 +179,19 @@ h6 {
   }
 }
 
-/* title on mobile and desktop */
 .title__container {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  width: 100%;
+  padding: 3rem 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* title on desktop and above */
+@media (min-width: 768px) {
+  .title__container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 
 .header__title {
@@ -224,6 +238,14 @@ h6 {
   min-height: 10rem;
 }
 
+/* section styling on desktop and above */
+@media (min-width: 768px) {
+  .section {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
 .section:nth-child(2n + 1) {
   background-color: #efefef6e;
 }
@@ -237,7 +259,6 @@ h6 {
 /* content styling */
 .content {
   font-size: 1.25rem;
-  color: var(--color--primary, #003b59);
 }
 
 .content li + li {
@@ -299,19 +320,6 @@ h6 {
   white-space: pre-wrap;
 }
 
-/* email form popover styling */
-.email-form__help a[data-toggle="popover"] {
-  color: #007bff;
-  text-decoration: none;
-  background-color: transparent;
-}
-
-.email-form__help a[data-toggle="popover"]:hover {
-  color: #007bff;
-  text-decoration: underline;
-  background-color: transparent;
-}
-
 /* covering elements and overlay styling */
 .element--covered {
   position: relative;
@@ -330,18 +338,16 @@ h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #00000099;
-  border-radius: 0.4rem;
+  background-color: #eeeeee;
+  background-color: #eeeeeeb3;
 }
 
 .overlay.help {
   padding: 1rem;
-  color: white;
-  text-shadow: 1px 1px 9px rgba(0, 0, 0, 0.301);
 }
 
-.overlay.help.help--warning {
-  color: var(--color--warning, #fabc09);
+.overlay.help.help--error {
+  color: var(--color--error, #f05545);
 }
 
 /* bmo section styling */

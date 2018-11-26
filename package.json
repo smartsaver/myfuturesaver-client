@@ -18,7 +18,9 @@
   },
   "scripts": {
     "start": "NODE_ENV=production forever start --minUptime 1000 --spinSleepTime 1000 -a --uid smartsaver server.js",
-    "dev": "nodemon --config ./nodemon.json ./server.js"
+    "dev": "nodemon --config ./nodemon.json ./server.js",
+    "restart": "NODE_ENV=production forever restart --minUptime 1000 --spinSleepTime 1000 -a smartsaver",
+    "stop": "forever stop smartsaver"
   },
   "keywords": [
     "node",
