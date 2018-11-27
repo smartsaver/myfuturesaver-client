@@ -1,0 +1,23 @@
+<section id="email-survey" class="section">
+  <div class="section__container content">
+    <h3>Enter Email</h3>
+
+    {{ content.applyOnline.email.intro }}
+
+    <div class="element--covered js-application-form">
+      {% include "./mailchimpSurvey.njk" %}
+      <span class="overlay help help--error">
+        Read and agree to the terms of agreement before proceeding.
+      </span>
+    </div>
+    
+    <div class="email-form__help">
+      <strong>Why do you need my email?</strong>
+      {{ content.applyOnline.email.helpWhyEmail }}
+    </div>
+    <div class="email-form__help mt-4">
+      <strong>Don't have an email address?</strong>
+      {{ content.applyOnline.email.helpNoEmail }}
+    </div>
+  </div>
+</section>

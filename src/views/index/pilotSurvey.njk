@@ -1,0 +1,18 @@
+<section class="section content" id="pilot-questionnaire">
+  <div class="section__container">
+    <h3>Pilot Questionnaire</h3>
+    {{ content.applyOnline.informationSurvey.intro }}
+
+    <div class="information-survey__container element--covered js-application-form">
+      <iframe class="survey" src="{{ informationSurveyUrl }}" frameborder="0"></iframe>
+
+      <span class="overlay help help--error">
+        Read and agree to the terms of agreement before proceeding.
+      </span>
+    </div>
+
+    <footer class="py-4">
+      {{ content.applyOnline.informationSurvey.footer }}
+    </footer>
+  </div>
+</section>

@@ -8,265 +8,29 @@
 {% endblock %}
 
 {% block body %}
-  <nav class="navbar navbar-expand-md navbar-dark">
-    <div class="container">
-      <a class="navbar-brand navbar-brand__link" href="/"><img class="img-fluid" src="{{ logo }}" alt="SmartSaver.org Logo"></a>
+  {% include "./navbar.njk" %}
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbar-content">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link js-nav-link navbar-item__link" href="#claim">Claim</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-nav-link navbar-item__link" href="#steps-to-apply">Steps to Apply</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle navbar-item__link" href="#" id="applyOnlineDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Apply Online
-            </a>
-            <div class="dropdown-menu" aria-labelledby="applyOnlineDropdown">
-              <a class="dropdown-item js-nav-link" href="#terms-of-agreement">Terms of Agreement</a>
-              <a class="dropdown-item js-nav-link" href="#email-survey">Email</a>
-              <a class="dropdown-item js-nav-link" href="#information-survey">Pilot Questionnaire</a>
-              <a class="dropdown-item js-nav-link" href="#resp-survey">RESP/CLB Application</a>
-              <a class="dropdown-item js-nav-link" href="#bmo">BMO Participants</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-nav-link navbar-item__link" href="#faq">FAQ</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-nav-link navbar-item__link" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <header class="header d-flex position-relative">
-    <div class="header__container section__container">
-      <div class="row">
-        <div class="col-sm d-flex">
-          <div class="title__container d-md-flex flex-column">
-            <h2 class="header__title">Education is the key to brighter future.</h2>
-            <h3 class="header__subtitle">
-              Sending your child to higher education can be expensive.
-            </h3>
-
-            <div class="header__title-body">
-              <p>There are two things you can do now to help your child to reach their potential <span class="highlight">(without costing you a dime!)</span></p>
-              <a class="btn button--warning js-nav-link" href="#claim">
-                Show me how
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="header-image__container col-md d-none d-md-block position-relative">
-          <span class="header-overlay position-absolute"></span>
-        </div>
-      </div>
-    </div>
-    <span class="header-overlay position-absolute d-block d-md-none"></span>
-  </header>
+  {% include "./header.njk" %}
 
   <main>
-    <section id="claim" class="section">
-      <div class="section__container content">
-        <div class="row">
-          <header class="col-md-4"><h2>Two things you can claim for your children</h2></header>
+    {% include "./claim.njk" %}
 
-          <div class="col-md-8">
-            {{ content.claim }}
-          </div>
-        </div>
-      </div>
-    </section>
+    {% include "./stepsToApply.njk" %}
 
-    <section id="who-can-participate" class="section">
-      <div class="section__container content">
-        <div class="row">
-          <header class="col-md-4"><h2>Who can participate?</h2></header>
+    {% include "./applyOnline.njk" %}
 
-          <div class="col-md-8">
-            {{ content.whoCanParticipate }}
-          </div>
-        </div>
-      </div>
-    </section>
+    {% include "./emailSurvey.njk" %}
 
-    <section id="steps-to-apply" class="section position-relative">
-      <div class="section__container content">
-        <div class="row">
-          <header class="col-sm-12">
-            <h2>4-step Process*</h2>
-            {{ content.stepsToApply.intro }}
-          </header>
-          <div class="col-sm-12">
-            <div class="row steps__container">
-              <div class="col-xl-6">
-                <div class="row">
-                  <article class="col-sm-6 step">
-                    {{ content.stepsToApply.step1 }}
-                  </article>
-                  <article class="col-sm-6 step">
-                    {{ content.stepsToApply.step2 }}
-                  </article>
-                </div>
-              </div>
-              <div class="col-xl-6">
-                <div class="row">
-                  <article class="col-sm-6 step">
-                    {{ content.stepsToApply.step3 }}
-                  </article>
-                  <article class="col-sm-6 step">
-                    {{ content.stepsToApply.step4 }}
-                  </article>
-                </div>
-              </div>
-            </div>
-          </div>
-          <footer class="col-sm-12">
-            {{ content.stepsToApply.footer }}
-          </footer>
-        </div>
-      </div>
-    </section>
+    {% include "./pilotSurvey.njk" %}
 
-    <section id="apply-online" class="section content">
-      <div class="section__container">
-        <section id="terms-of-agreement" class="terms__section">
-          <h2>Participate in the Pilot</h2>
-          {{ content.applyOnline.intro }}
+    {% include "./respSurvey.njk" %}
 
-          <article class="container-fluid box">
-            {{ content.applyOnline.termsOfAgreement }}
-          </article>
+    {% include "./bmo.njk" %}
 
-          <form method="POST" id="terms-of-agreement-form" class="py-4 js-terms-of-agreement-form">
-            <div class="form-check form-group">
-              <input class="form-check-input" type="checkbox" value="true" id="agree-checkbox" name="agree-checkbox">
-              <label class="form-check-label" for="agree-checkbox">
-                I agree in the terms of agreement.
-              </label>
-            </div>
-            <button type="submit" class="btn button--primary">Submit</button>
-          </form>
+    {% include "./wealthSimple.njk" %}
 
-          <div class="alert d-none js-terms-of-agreement-alert my-4" role="alert">
-          </div>
-        </section>
-      </div> 
-    </section>
-
-    <section id="email-survey" class="section">
-      <div class="section__container content">
-        <h3>Enter Email</h3>
-
-        {{ content.applyOnline.email.intro }}
-
-        <div class="element--covered js-application-form">
-          {% include "./mailchimpSurvey.njk" %}
-          <span class="overlay help help--error">
-            Read and agree to the terms of agreement before proceeding.
-          </span>
-        </div>
-        
-        <div class="email-form__help">
-          <strong>Why do you need my email?</strong>
-          {{ content.applyOnline.email.helpWhyEmail }}
-        </div>
-        <div class="email-form__help mt-4">
-          <strong>Don't have an email address?</strong>
-          {{ content.applyOnline.email.helpNoEmail }}
-        </div>
-      </div>
-    </section>
-
-    <section class="section content" id="information-survey">
-      <div class="section__container">
-        <h3>Pilot Questionnaire</h3>
-        {{ content.applyOnline.informationSurvey.intro }}
-
-        <div class="information-survey__container element--covered js-application-form">
-          <iframe class="survey" src="{{ informationSurveyUrl }}" frameborder="0"></iframe>
-
-          <span class="overlay help help--error">
-            Read and agree to the terms of agreement before proceeding.
-          </span>
-        </div>
-
-        <footer class="py-4">
-          {{ content.applyOnline.informationSurvey.footer }}
-        </footer>
-      </div>
-    </section>
-
-    <section class="section content" id="resp-survey">
-      <div class="section__container">
-        <h3>RESP and CLB Application</h3>
-        {{ content.applyOnline.respSurvey.intro }}
-
-        <div class="resp-survey__container element--covered js-application-form">
-          <iframe class="survey" src="{{ respSurveyUrl }}" frameborder="0"></iframe>
-
-          <span class="overlay help help--error">
-            Read and agree to the terms of agreement before proceeding.
-          </span>
-        </div>
-
-        <footer class="py-4">
-          {{ content.applyOnline.respSurvey.footer }}
-        </footer>
-      </div>
-    </section>
-
-    <section id="bmo" class="section content">
-      <div class="section__container">
-        <div class="row">
-          <div class="col-sm-12">
-            <h3>Attention Bank of Montreal (BMO) applicants!</h3>
-          </div>
-          <div class="col-md-6 col-lg-4 pb-4">
-            <img class="img-fluid" src="/static/images/bmo-logo.jpg" alt="Bank Of Montreal">
-          </div>
-          <div class="col-md-6 col-lg-8">
-            {{ content.bmo.intro }}
-            <a class="btn button--warning" href="{{ content.bmo.download }}"><i class="fa fa-download"></i> Download Fillable</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq" class="section content d-flex flex-column justify-content-center">
-      <div class="section__container">
-        <div class="row">
-          <div class="col-md-4">
-            <h2>FAQ's</h2>
-          </div>
-          <div class="col-md-8">
-            {{ content.faq.intro }}
-            <a href="{{ content.faq.download }}" class="btn button--primary"><i class="fa fa-download"></i> Download FAQ's</a>
-          </div>
-        </div>
-      </div>
-    </section>
+    {% include "./faq.njk" %}
   </main>
 
-  <footer class="footer section" id="contact">
-    <div class="section__container">
-      <div class="row">
-        <div class="col-md-6">
-          <img class="img-fluid mb-2" src="{{ logo }}" alt="SmartSaver">
-          {{ content.footer.intro }}
-        </div>
-        <div class="col-md-6">
-          {{ content.footer.footer }}
-        </div>
-      </div> 
-    </div>
-  </footer>
+  {% include "./footer.njk" %}
 {% endblock %}
