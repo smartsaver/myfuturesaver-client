@@ -302,8 +302,8 @@ h6 {
   max-height: 10rem;
 }
 
-/* apply online section styling */
-#apply-online {
+/* terms and condition section styling */
+#terms-of-agreement {
   background-color: #ffcf40;
 }
 
@@ -367,6 +367,21 @@ h6 {
 
 #bmo.content a {
   color: var(--color--warning, #fabc09);
+}
+
+/* wealthsimple section styling */
+#wealthsimple {
+  background-color: white;
+}
+
+#wealthsimple.content h1,
+#wealthsimple.content h2,
+#wealthsimple.content h3,
+#wealthsimple.content h4,
+#wealthsimple.content h5,
+#wealthsimple.content h6,
+#wealthsimple.content p {
+  color: #272727 !important;
 }
 
 /* FAQ's section styling */

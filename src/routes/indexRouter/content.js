@@ -121,6 +121,11 @@ ___Remember!___ You can open a no-cost RESP and apply for your child’s/childre
     `),
     footer: processMarkdown('__Questions?__ Call us at 1-855-737-7252 or email info@smartsaver.org')
   },
+  notParticipant: processMarkdown(`
+You’ve completed Step 1 in the pilot process! You will receive an email confirming your application to open a no-cost RESP and apply for the Canada Learning Bond for your child.
+
+__Questions?__ Read our frequently asked questions, or call us at 1-855-737-7252 or by email at info@smartsaver.org.
+  `),
 };
 
 const bmo = {
@@ -128,14 +133,19 @@ const bmo = {
 BMO families must complete an additional form to permit BMO to deposit the $500 gift from SmartSAVER directly into your child’s RESP.
 
 Please __download__, __fill out__ and __sign__ the BMO Gift form now. Then email it as an attachment to SmartSAVER as soon as possible. Email to: info@smartsaver.org.
-
-__Not a Bank of Montreal (BMO) family?__
-
-You’ve completed Step 1 in the pilot process! You will receive an email confirming your application to open a no-cost RESP and apply for the Canada Learning Bond for your child. 
-
-__Questions?__ Read our frequently asked questions, or call us at 1-855-737-7252 or by email at info@smartsaver.org.
   `),
   download: '/download/562 Fillable (Sep 10_2018)_V2.pdf'
+};
+
+const wealthsimple = {
+  intro: processMarkdown(`
+The Wealthsimple RESP application is completed entirely online. The application covers the mandatory banking questions designed to ensure families have a clear understanding of the product they are selecting. Once the application has been successfully completed online, the RESP is opened.
+  `)
+};
+
+const sponsors = {
+  bmo,
+  wealthsimple
 };
 
 const faq = {
@@ -143,7 +153,7 @@ const faq = {
 Questions? Read our frequently asked questions, or call us at 1-855-737-7252 or by email at info@smartsaver.org.
   `),
   download: '/download/Accelerator Pilot Participant FAQs_FNL.pdf'
-}
+};
 
 const footer = {
   intro: processMarkdown('Copyright SmartSAVER.org © 2018. All Rights Reserved.'),
@@ -152,14 +162,14 @@ const footer = {
 info@smartsaver.org
 1-855-RESP-CLB (1-855-737-7252)
   `)
-}
+};
 
 const content = {
   claim,
   whoCanParticipate,
   stepsToApply,
   applyOnline,
-  bmo,
+  sponsors,
   faq,
   footer
 };
