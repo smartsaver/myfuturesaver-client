@@ -123,8 +123,6 @@ ___Remember!___ You can open a no-cost RESP and apply for your child’s/childre
   },
   notParticipant: processMarkdown(`
 You’ve completed Step 1 in the pilot process! You will receive an email confirming your application to open a no-cost RESP and apply for the Canada Learning Bond for your child.
-
-__Questions?__ Read our frequently asked questions, or call us at 1-855-737-7252 or by email at info@smartsaver.org.
   `),
 };
 
