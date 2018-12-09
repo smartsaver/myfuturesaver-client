@@ -302,6 +302,24 @@ h6 {
   max-height: 10rem;
 }
 
+.steps-note__body p {
+  margin: 0;
+}
+
+.steps-note__image-container {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .steps-note__image-container {
+    text-align: right;
+  }
+}
+
+.steps-note__container img {
+  max-height: 5rem;
+}
+
 /* terms and condition section styling */
 #terms-of-agreement {
   background-color: #ffcf40;
