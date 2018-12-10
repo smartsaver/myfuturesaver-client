@@ -4,7 +4,7 @@
   },
   "watch": [
     "src/",
-    "server.js"
+    "./app.js"
   ],
   "ignore": [
     ".git",

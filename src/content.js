@@ -1,5 +1,7 @@
-const processMarkdown = require('../../libs/marked');
-const stepOptions = require('../../libs/marked/stepOptions');
+const processMarkdown = require('./libs/marked');
+const stepOptions = require('./libs/marked/stepOptions');
+const imageDirectory = '/images';
+const downloadDirectory = '/download';
 
 const claim = processMarkdown(`
 1. __Claim your child's Canada Learning Bond (CLB)__ - a federal grant of $500 to $2,000 to eligible families to help with the cost of a child's education after high school. 
@@ -25,28 +27,28 @@ const stepsToApply = {
 You can sign up in 4 easy steps that take place over the course of about 70 days. Each step can be completed quickly – most will take no more than a few minutes of your time.
   `),
   step1: processMarkdown(`
-![Apply](/static/images/step1.png)
+![Apply](${imageDirectory}/step1.png)
 
 ### 1. Apply
 
 Go on-line or call to start the process of opening your child's RESP and apply for the Canada Learning Bond. You will not be charged any fees can start the account with $0.
   `, stepOptions),
   step2: processMarkdown(`
-![Finalize](/static/images/step2.png)
+![Finalize](${imageDirectory}/step2.png)
 
 ### 2. Finalize
 
 Complete the process with your chosen financial institution. You will provide your ID, including you and your child's Social Insurance Number (SIN) and sign your application.
   `, stepOptions),
   step3: processMarkdown(`
-![Confirm](/static/images/step3.png)
+![Confirm](${imageDirectory}/step3.png)
 
 ### 3. Confirm
 
 Show us that you've received the Canada Learning Bond. Submit your RESP or CESP Statement of Account.
   `, stepOptions),
   step4: processMarkdown(`
-![Receive](/static/images/step4.png)
+![Receive](${imageDirectory}/step4.png)
 
 ### 4. Receive
 
@@ -133,13 +135,15 @@ BMO families must complete an additional form to permit BMO to deposit the gift 
 
 Please __download__, __fill out__ and __sign__ the BMO Gift form now. Then email it as an attachment to SmartSAVER as soon as possible. Email to: info@smartsaver.org.
   `),
-  download: '/download/562 Fillable (Sep 10_2018)_V2.pdf'
+  logo: `${imageDirectory}/bmo-logo.jpg`,
+  download: `${downloadDirectory}/562 Fillable (Sep 10_2018)_V2.pdf`
 };
 
 const wealthsimple = {
   intro: processMarkdown(`
 The Wealthsimple RESP application is completed entirely online. The application covers the mandatory banking questions designed to ensure families have a clear understanding of the product they are selecting. Once the application has been successfully completed online, the RESP is opened.
-  `)
+  `),
+  logo: `${imageDirectory}/wealthsimple-logo.png`,
 };
 
 const sponsors = {
@@ -151,11 +155,12 @@ const faq = {
   intro: processMarkdown(`
 Questions? Read our frequently asked questions, or call us at 1-855-737-7252 or by email at info@smartsaver.org.
   `),
-  download: '/download/Accelerator Pilot Participant FAQs_FNL.pdf'
+  download: `${downloadDirectory}/Accelerator Pilot Participant FAQs_FNL.pdf`
 };
 
 const footer = {
   intro: processMarkdown('Copyright SmartSAVER.org © 2018. All Rights Reserved.'),
+  image: `${imageDirectory}/wealthsimple-logo.png`,
   footer: processMarkdown(`
 #### Contact Us
 info@smartsaver.org

@@ -1,0 +1,20 @@
+{% extends '../templates/errorTemplate.njk' %}
+
+{% block title %}Page Not Found{% endblock %}
+
+{% block meta %} 
+<link rel="stylesheet" href="/stylesheets/index.css">
+{% endblock %}
+
+{% block body %}
+  {% include "./navbar.njk" %}
+
+  <main>
+    <div class="container py-4">
+      <h1>Page not found</h1>
+
+      <a href="/">Go to home page</a>
+    </div>
+  </main>
+
+{% endblock %}

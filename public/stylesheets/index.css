@@ -146,7 +146,7 @@ h6 {
 /* mobile background image will on mobile only  */
 @media (max-width: 767px) {
   .header {
-    background: url('/static/images/header-image-no-fade.jpg') no-repeat;
+    background: url('/images/header-image-no-fade.jpg') no-repeat;
     background-size: cover;
     background-position: top;
   }
@@ -172,7 +172,7 @@ h6 {
 
 @media (min-width: 768px) {
   .header-image__container {
-    background: url('/static/images/header-image-fade-left.png') no-repeat;
+    background: url('/images/header-image-fade-left.png') no-repeat;
     background-size: cover;
     background-position: left;
     background-position-y: top;
