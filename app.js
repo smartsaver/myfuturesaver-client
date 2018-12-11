@@ -1,4 +1,5 @@
 var createError = require('http-errors');
+var helmet = require('helmet');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
@@ -8,6 +9,15 @@ const nunjucks = require('nunjucks');
 var indexRouter = require('./src/routes/index');
 
 var app = express();
+
+// helmet / security headers
+app.use(helmet());
+const sixtyDaysInSeconds = 5184000;
+app.use(
+  helmet.hsts({
+    maxAge: sixtyDaysInSeconds
+  })
+);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'src/views'));
