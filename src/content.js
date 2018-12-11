@@ -110,7 +110,7 @@ Please answer the following survey. This should only take you a few minutes.
 Once you complete the survey a __DONE__ button will appear. Scroll down to the next section below: __RESP and CLB Application.__
 
 ___Remember!___ 
-_You're participation is entirely voluntary. If you change your mind, please notify us by phone at 1-855-737-7252 or by email at info@smartsaver.org before March 31, 2019._
+_Your participation is entirely voluntary. If you change your mind, please notify us by phone at 1-855-737-7252 or by email at info@smartsaver.org before March 31, 2019._
     `),
     footer: processMarkdown(`
 __Questions?__ Call us at 1-855-737-7252 or email info@smartsaver.org
