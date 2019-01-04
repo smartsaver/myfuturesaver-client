@@ -1,8 +1,10 @@
+/* eslint-disable no-undef */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `MyFutureSaver`,
+    description: `Education is the key to brighter future.
+    Sending your child to higher education can be expensive. There are two things you can do now to help your child to reach their potential (without costing you a dime!)`,
+    author: `SmartSAVER`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
