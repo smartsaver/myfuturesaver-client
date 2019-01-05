@@ -147,10 +147,12 @@ class NavbarContainer extends Component {
 
   render() {
     return (
-      <Navbar
-        isActive={this.state.isActive}
-        onBurgerClick={this.handleOnBurgerClick}
-      />
+      <header>
+        <Navbar
+          isActive={this.state.isActive}
+          onBurgerClick={this.handleOnBurgerClick}
+        />
+      </header>
     )
   }
 }

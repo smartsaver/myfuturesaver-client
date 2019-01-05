@@ -2,6 +2,10 @@
   background-color: #003b59 !important;
 }
 
+.navbar-brand .navbar-item img {
+  max-height: 2.3rem;
+}
+
 .Navbar--blue .navbar-brand .navbar-item:hover {
   background-color: #014263 !important;
 }
