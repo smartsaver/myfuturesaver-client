@@ -1,6 +1,8 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import Section from '../section'
+import Section from '../../section'
+import StepsList from './stepsList'
+
 import './stepsToApply.css'
 
 const StepsToApplyContainer = () => {
@@ -33,6 +35,12 @@ const StepsToApply = ({ data }) => {
 
         <div className="column is-12">
           <div className="content" dangerouslySetInnerHTML={{ __html: html }} />
+        </div>
+
+        <div className="column is-12 Steps__container">
+          <div className="columns is-multiline">
+            <StepsList />
+          </div>
         </div>
       </div>
     </Section>

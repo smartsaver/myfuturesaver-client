@@ -17,3 +17,7 @@
   right: 0;
   bottom: 0;
 }
+
+.Steps__container .content h3 {
+  color: #003b59;
+}
