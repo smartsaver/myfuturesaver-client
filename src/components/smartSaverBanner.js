@@ -20,7 +20,7 @@ const SmartSaverBanner = () => {
                 There are two things you can do now to help your child to reach
                 their potential (without costing you a dime!)
               </p>
-              <a href="/#" className="button" role="button">
+              <a href="/#claim" className="button" role="button">
                 Show Me How
               </a>
             </div>

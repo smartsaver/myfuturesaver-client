@@ -7,7 +7,7 @@ const FooterContainer = () => (
   <StaticQuery
     query={graphql`
       query {
-        markdownRemark(frontmatter: { title: { eq: "footer" } }) {
+        markdownRemark(frontmatter: { filePath: { eq: "footer" } }) {
           html
         }
       }

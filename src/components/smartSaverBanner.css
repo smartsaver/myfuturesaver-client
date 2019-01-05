@@ -11,18 +11,22 @@
 
 .Banner__container {
   max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.SmartSaverBanner,
 .Banner__container,
-.Title__column,
-.columns {
+.Banner__container .Title__column,
+.SmartSaverBanner .columns {
   height: 94vh;
 }
 
 @media (min-width: 769px) {
+  .SmartSaverBanner,
   .Banner__container,
-  .Title__column,
-  .columns {
+  .Banner__container .Title__column,
+  .SmartSaverBanner .columns {
     height: 31rem;
     max-height: 31rem;
   }
@@ -48,18 +52,20 @@
 }
 
 .Title__column {
-  padding: 3rem;
+  padding: 3rem 4rem;
 }
 
 .Title__column h1,
 .Title__column p {
   color: whitesmoke;
+  text-shadow: 1px 2px 7px black;
 }
 
 @media (min-width: 769px) {
   .Title__column h1,
   .Title__column p {
     color: #003b59;
+    text-shadow: 1px 2px 4px #0000001f;
   }
 }
 

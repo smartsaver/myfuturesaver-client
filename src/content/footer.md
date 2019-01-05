@@ -1,5 +1,5 @@
 ---
-title: 'footer'
+filePath: 'footer'
 ---
 
 [info@smartsaver.org](mailto:info@smartsaver.org)
