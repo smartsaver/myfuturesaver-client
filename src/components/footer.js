@@ -1,8 +1,24 @@
 import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 import './footer.css'
 import logo from '../images/logo-small.png'
 
-const Footer = () => {
+const FooterContainer = () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        markdownRemark(frontmatter: { title: { eq: "footer" } }) {
+          html
+        }
+      }
+    `}
+    render={data => <Footer data={data} />}
+  />
+)
+
+const Footer = ({ data }) => {
+  const { markdownRemark } = data
+  const { html } = markdownRemark
   return (
     <footer className="footer Footer--blue">
       <div className="container">
@@ -13,8 +29,10 @@ const Footer = () => {
           </div>
           <div className="column is-half">
             <h3 className="title is-3">Contact Us</h3>
-            <a href="mailto:">info@smartsaver.org</a>
-            <p>1-855-RESP-CLB (1-855-737-7252)</p>
+            <div
+              className="content"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
           </div>
         </div>
       </div>
@@ -22,4 +40,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default FooterContainer
