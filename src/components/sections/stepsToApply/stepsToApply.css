@@ -21,3 +21,17 @@
 .Steps__container .content h3 {
   color: #003b59;
 }
+
+.Step img {
+  max-height: 13rem;
+}
+
+@media (min-width: 769px) {
+  .Step img {
+    max-height: 9rem;
+  }
+}
+
+.Step__content {
+  margin-top: 1rem;
+}

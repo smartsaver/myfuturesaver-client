@@ -1,24 +1,9 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
 import './footer.css'
 import logo from '../images/logo-small.png'
+import { footer } from '../content'
 
-const FooterContainer = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        markdownRemark(frontmatter: { filePath: { eq: "footer" } }) {
-          html
-        }
-      }
-    `}
-    render={data => <Footer data={data} />}
-  />
-)
-
-const Footer = ({ data }) => {
-  const { markdownRemark } = data
-  const { html } = markdownRemark
+const Footer = () => {
   return (
     <footer className="footer Footer--blue">
       <div className="container">
@@ -31,7 +16,7 @@ const Footer = ({ data }) => {
             <h3 className="title is-3">Contact Us</h3>
             <div
               className="content"
-              dangerouslySetInnerHTML={{ __html: html }}
+              dangerouslySetInnerHTML={{ __html: footer.footer }}
             />
           </div>
         </div>
@@ -40,4 +25,4 @@ const Footer = ({ data }) => {
   )
 }
 
-export default FooterContainer
+export default Footer

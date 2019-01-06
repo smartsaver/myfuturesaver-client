@@ -1,13 +1,12 @@
-const marked = require('marked');
-const defaultOption = require('./defaultOption');
+import marked from 'marked'
+import defaultOption from './defaultOption'
 
-const renderer = new marked.Renderer();
+const renderer = new marked.Renderer()
 renderer.image = (href, title, text) => `
-  <img class="img-fluid" src="${href}" alt="${text}" />
-`;
+  <img class="image" src="${href}" alt="${text}" />
+`
 
-
-module.exports = {
+export default {
   ...defaultOption,
-  renderer
-};
+  renderer,
+}

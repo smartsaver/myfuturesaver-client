@@ -1,5 +1,5 @@
-import processMarkdown from './libs/marked'
-import stepOptions from './libs/marked/stepOptions'
+import processMarkdown from '../libs/marked'
+import stepOptions from '../libs/marked/stepOptions'
 const imageDirectory = '/public/images'
 const downloadDirectory = '/public/download'
 
@@ -182,10 +182,19 @@ const footer = {
   ),
   image: `${imageDirectory}/wealthsimple-logo.png`,
   footer: processMarkdown(`
-#### Contact Us
 info@smartsaver.org
 1-855-RESP-CLB (1-855-737-7252)
   `),
+}
+
+export {
+  claim,
+  whoCanParticipate,
+  stepsToApply,
+  applyOnline,
+  sponsors,
+  faq,
+  footer,
 }
 
 const content = {
@@ -197,5 +206,4 @@ const content = {
   faq,
   footer,
 }
-
 export default content

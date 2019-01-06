@@ -1,10 +1,10 @@
-const marked = require('marked');
-const defaultOption = require('./defaultOption');
+import marked from 'marked'
+import defaultOption from './defaultOption'
 
 const processMarkdown = (text, options = defaultOption) => {
-  if (!text) return '';
+  if (!text) return ''
 
-  return marked(text, options);
-};
+  return marked(text, options)
+}
 
-module.exports = processMarkdown;
+export default processMarkdown
