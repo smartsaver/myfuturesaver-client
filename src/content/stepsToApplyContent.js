@@ -54,6 +54,14 @@ const stepsToApplyContent = {
   content: processMarkdown(`
 You can sign up in 4 easy steps that take place over the course of about 70 days. Each step can be completed quickly – most will take no more than a few minutes of your time.
   `),
+  note: processMarkdown(`
+__* The entire process can take 2 months to complete due to processing times.__
+  `),
+  footer: processMarkdown(`
+_Remember, children who are eligible for the Canada Learning Bond can receive an additional matching grant of 40% for every dollar deposited into their RESPs. That’s a bonus of 40 cents on top of every dollar that you contribute!_
+
+__Questions?__ Call us at 1-855-737-7252 or email info@smartsaver.org
+  `),
 }
 
 export { stepsList }

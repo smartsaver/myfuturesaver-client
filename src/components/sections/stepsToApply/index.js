@@ -1,25 +1,13 @@
 import React from 'react'
 import Section from '../../section'
-import stepsToApplyContent, {
-  stepsList,
-} from '../../../content/stepsToApplyContent'
+import stepsToApplyContent from '../../../content/stepsToApplyContent'
+import StepsList from './stepsList'
+import logo from '../../../images/logo-for-white.jpg'
 
 import './stepsToApply.css'
 
-const Step = ({ content, title, image }) => {
-  return (
-    <article key={title} className="Step column is-6 content has-text-centered">
-      <img src={image} alt={title} />
-      <div
-        className="Step__content"
-        dangerouslySetInnerHTML={{ __html: content }}
-      />
-    </article>
-  )
-}
-
 const StepsToApply = () => {
-  const { title, content } = stepsToApplyContent
+  const { title, content, note, footer } = stepsToApplyContent
   return (
     <Section className="Section--blue StepsToApply" name="steps-to-apply">
       <div className="columns is-multiline">
@@ -35,37 +23,25 @@ const StepsToApply = () => {
         </div>
 
         <div className="column is-12 Steps__container">
-          <div className="columns is-multiline">
-            <div className="column is-6">
-              <div className="columns">
-                <Step
-                  title={stepsList[0].title}
-                  content={stepsList[0].content}
-                  image={stepsList[0].image}
-                />
-                <Step
-                  title={stepsList[1].title}
-                  content={stepsList[1].content}
-                  image={stepsList[1].image}
-                />
-              </div>
-            </div>
-            <div className="column is-6">
-              <div className="columns">
-                <Step
-                  title={stepsList[2].title}
-                  content={stepsList[2].content}
-                  image={stepsList[2].image}
-                />
-                <Step
-                  title={stepsList[3].title}
-                  content={stepsList[3].content}
-                  image={stepsList[3].image}
-                />
-              </div>
+          <StepsList />
+        </div>
+
+        <div className="column is-12">
+          <div className="columns">
+            <div
+              className="column is-8 Note__content"
+              dangerouslySetInnerHTML={{ __html: note }}
+            />
+            <div className="column is-4 has-text-centered">
+              <img src={logo} className="Note__logo" alt="SmartSAVER" />
             </div>
           </div>
         </div>
+
+        <div
+          className="column is-12 content"
+          dangerouslySetInnerHTML={{ __html: footer }}
+        />
       </div>
     </Section>
   )
