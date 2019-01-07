@@ -6,14 +6,20 @@ class ListOfForms extends Component {
     isTermsOfAgreementAccepted: false,
   }
 
-  handleTermsOfAgreementSubmit = () => {
-    // console.log('submitted the form')
+  handleTermsOfAgreementSubmit = event => {
+    event.preventDefault()
+    this.setState({
+      isTermsOfAgreementAccepted: event.target.termsOfAgreementCheckbox.checked,
+    })
   }
 
   render() {
     return (
       <div className="ListOfForms">
-        <TermsOfAgreementForm onSubmit={this.handleTermsOfAgreementSubmit} />
+        <TermsOfAgreementForm
+          isAccepted={this.state.isTermsOfAgreementAccepted}
+          onSubmit={this.handleTermsOfAgreementSubmit}
+        />
       </div>
     )
   }
