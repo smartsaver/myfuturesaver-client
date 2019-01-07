@@ -1,0 +1,21 @@
+.Footer--blue {
+  background-color: #003b59;
+}
+
+.Footer--blue,
+.Footer--blue h1,
+.Footer--blue h2,
+.Footer--blue h3,
+.Footer--blue h4,
+.Footer--blue h5,
+.Footer--blue h6,
+.Footer--blue p,
+.Footer--blue div,
+.Footer--blue section,
+.Footer--blue article {
+  color: whitesmoke;
+}
+
+.Footer--blue a {
+  color: #fabc09;
+}

@@ -1,0 +1,103 @@
+.SmartSaverBanner,
+.Banner__container {
+  min-height: 31rem;
+}
+
+@media (max-width: 768px) {
+  .SmartSaverBanner {
+    position: relative;
+  }
+}
+
+.Banner__container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.SmartSaverBanner,
+.Banner__container,
+.Banner__container .Title__column,
+.SmartSaverBanner .columns {
+  height: 94vh;
+}
+
+@media (min-width: 769px) {
+  .SmartSaverBanner,
+  .Banner__container,
+  .Banner__container .Title__column,
+  .SmartSaverBanner .columns {
+    height: 31rem;
+    max-height: 31rem;
+  }
+}
+
+.Banner__overlay {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .Banner__overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #003b59;
+    opacity: 0.3;
+  }
+}
+
+.Title__column {
+  padding: 3rem 4rem;
+}
+
+.Title__column h1,
+.Title__column p {
+  color: whitesmoke;
+  text-shadow: 1px 2px 7px black;
+}
+
+@media (min-width: 769px) {
+  .Title__column h1,
+  .Title__column p {
+    color: #003b59;
+    text-shadow: 1px 2px 4px #0000001f;
+  }
+}
+
+.Title__footer {
+  margin-top: 3rem;
+}
+
+.Title__footer .button {
+  background-color: #fabc09;
+  border-color: #fabc09;
+  color: whitesmoke;
+}
+
+@media (max-width: 768px) {
+  /* put a cover image only on mobile and below */
+  .ColumnWithMobileImage {
+    background: url('../../images/header-image-no-fade.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .SmartSaverBanner .columns {
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 769px) {
+  .SmartSaverBanner .ColumnWithImage {
+    background: url('../../images/header-image-fade-left.png') no-repeat;
+    background-size: cover;
+    background-position: left;
+    background-position-y: top;
+  }
+}

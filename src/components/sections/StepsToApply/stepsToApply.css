@@ -1,0 +1,47 @@
+.StepsToApply.Section {
+  background: white;
+}
+
+.StepsToApply {
+  position: relative;
+}
+
+.StepsToApply::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: var(--color--secondary, #2f97da);
+  width: 7px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.Steps__container .content h3 {
+  color: #003b59;
+}
+
+.Step img {
+  max-height: 13rem;
+}
+
+@media (min-width: 769px) {
+  .Step img {
+    max-height: 9rem;
+  }
+}
+
+.Step__content {
+  margin-top: 1rem;
+}
+
+.StepsToApply img.Note__logo {
+  max-height: 5rem;
+}
+
+.Note__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

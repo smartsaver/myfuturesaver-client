@@ -1,0 +1,8 @@
+.TermsOfAgreement {
+  background-color: #ffcf40;
+}
+
+.TermsOfAgreement .box {
+  max-height: 35rem;
+  overflow: auto;
+}
