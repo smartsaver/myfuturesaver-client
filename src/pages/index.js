@@ -8,6 +8,7 @@ import SEO from '../components/seo'
 import ClaimSection from '../components/sections/claim'
 import ParticipateSection from '../components/sections/participate'
 import StepsToApplySection from '../components/sections/stepsToApply'
+import ListOfFormsSection from '../components/sections/listOfForms'
 
 const IndexPage = () => (
   <HomeLayout>
@@ -16,6 +17,7 @@ const IndexPage = () => (
     <ClaimSection />
     <ParticipateSection />
     <StepsToApplySection />
+    <ListOfFormsSection />
   </HomeLayout>
 )
 

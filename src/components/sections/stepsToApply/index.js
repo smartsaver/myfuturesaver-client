@@ -14,18 +14,15 @@ const StepsToApply = () => {
         <div className="column is-12">
           <h2 className="title">{title}</h2>
         </div>
-
         <div className="column is-12">
           <div
             className="content"
             dangerouslySetInnerHTML={{ __html: content }}
           />
         </div>
-
         <div className="column is-12 Steps__container">
           <StepsList />
         </div>
-
         <div className="column is-12">
           <div className="columns">
             <div
@@ -37,7 +34,6 @@ const StepsToApply = () => {
             </div>
           </div>
         </div>
-
         <div
           className="column is-12 content"
           dangerouslySetInnerHTML={{ __html: footer }}
