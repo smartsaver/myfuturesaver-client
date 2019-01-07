@@ -1,5 +1,5 @@
 import React from 'react'
-import Section from '../../section'
+import Section from '../../Section'
 import stepsToApplyContent from '../../../content/stepsToApplyContent'
 import StepsList from './stepsList'
 import logo from '../../../images/logo-for-white.jpg'

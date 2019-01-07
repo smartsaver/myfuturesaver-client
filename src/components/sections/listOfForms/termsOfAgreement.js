@@ -1,8 +1,8 @@
 import React from 'react'
-import Section from '../../section'
+import Section from '../../Section'
 import applyOnlineContent from '../../../content/applyOnlineContent'
 
-import './termsOfAgreement.css'
+import './TermsOfAgreement.css'
 
 const TermsOfAgreement = () => {
   const { intro, termsOfAgreement } = applyOnlineContent

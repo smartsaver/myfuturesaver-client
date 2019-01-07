@@ -1,14 +1,14 @@
 import React from 'react'
 // import { Link } from 'gatsby'
-import SmartSaverBanner from '../components/smartSaverBanner'
+import SmartSaverBanner from '../components/sections/SmartSaverBanner'
 
-import HomeLayout from '../components/layouts/homeLayout'
+import HomeLayout from '../components/layouts/HomeLayout'
 // import Image from '../components/image'
-import SEO from '../components/seo'
-import ClaimSection from '../components/sections/claim'
-import ParticipateSection from '../components/sections/participate'
-import StepsToApplySection from '../components/sections/stepsToApply'
-import ListOfFormsSection from '../components/sections/listOfForms'
+import SEO from '../components/Seo'
+import ClaimSection from '../components/sections/Claim'
+import ParticipateSection from '../components/sections/Participate'
+import StepsToApplySection from '../components/sections/StepsToApply'
+import ListOfFormsSection from '../components/sections/ListOfForms'
 
 const IndexPage = () => (
   <HomeLayout>

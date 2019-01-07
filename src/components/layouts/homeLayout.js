@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react'
-import Navbar from '../navbar'
+import Navbar from '../Navbar'
 // include bulma library
 import 'bulma/css/bulma.css'
-import './homeLayout.css'
-import Footer from '../footer'
+import './HomeLayout.css'
+import Footer from '../Footer'
 
-const homeLayout = ({ children }) => {
+const HomeLayout = ({ children }) => {
   return (
     <Fragment>
       <Navbar />
@@ -15,4 +15,4 @@ const homeLayout = ({ children }) => {
   )
 }
 
-export default homeLayout
+export default HomeLayout

@@ -1,6 +1,6 @@
 import React from 'react'
-import smartSaverBannerContent from '../content/smartSaverBannerContent'
-import './smartSaverBanner.css'
+import smartSaverBannerContent from '../../content/smartSaverBannerContent'
+import './SmartSaverBanner.css'
 
 const SmartSaverBanner = () => {
   const { title, subtitle, content } = smartSaverBannerContent

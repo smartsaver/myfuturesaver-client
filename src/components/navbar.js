@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import logo from '../images/logo-small.png'
-import './navbar.css'
+import './Navbar.css'
 
 const Burger = ({ isActive, onBurgerClick }) => {
   const isBurgerActive = isActive ? 'is-active' : ''

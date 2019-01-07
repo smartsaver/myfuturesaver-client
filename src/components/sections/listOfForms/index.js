@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import TermsOfAgreementForm from './termsOfAgreement'
+import TermsOfAgreementForm from './TermsOfAgreement'
 
 class ListOfForms extends Component {
   state = {

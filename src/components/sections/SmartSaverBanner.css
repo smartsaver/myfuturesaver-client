@@ -82,7 +82,7 @@
 @media (max-width: 768px) {
   /* put a cover image only on mobile and below */
   .ColumnWithMobileImage {
-    background: url('../images/header-image-no-fade.jpg') no-repeat;
+    background: url('../../images/header-image-no-fade.jpg') no-repeat;
     background-size: cover;
     background-position: center;
   }
@@ -95,7 +95,7 @@
 
 @media (min-width: 769px) {
   .SmartSaverBanner .ColumnWithImage {
-    background: url('../images/header-image-fade-left.png') no-repeat;
+    background: url('../../images/header-image-fade-left.png') no-repeat;
     background-size: cover;
     background-position: left;
     background-position-y: top;
