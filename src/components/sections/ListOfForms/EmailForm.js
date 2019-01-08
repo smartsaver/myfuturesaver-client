@@ -6,7 +6,7 @@ import MailChimpForm from './MailChimpForm'
 const EmailForm = ({ isEnabled }) => {
   const { intro, heading, helpNoEmail, helpWhyEmail } = email
   return (
-    <Section className="Section--blue" name="email-survey">
+    <Section className="Section--blue" name="email-form">
       <header>
         <h2 className="title">{heading}</h2>
       </header>

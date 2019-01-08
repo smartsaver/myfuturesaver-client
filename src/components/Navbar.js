@@ -73,10 +73,13 @@ class NavbarDropdown extends Component {
         <div
           className={`navbar-dropdown js-navbar-dropdown ${isDropdownHidden}`}
         >
-          <NavbarItem text="Terms of agreement" href="#" />
-          <NavbarItem text="Email" href="#" />
-          <NavbarItem text="Questionnaire" href="#" />
-          <NavbarItem text="RESP/CLB Application" href="#" />
+          <NavbarItem text="Terms of agreement" href="/#terms-of-agreement" />
+          <NavbarItem text="Email" href="/#email-form" />
+          <NavbarItem text="Questionnaire" href="/#questionnaire" />
+          <NavbarItem
+            text="RESP/CLB Application"
+            href="/#resp-clb-application"
+          />
           <NavbarItem text="BMO Participants" href="#" />
           <NavbarItem text="WealthSimple Participants" href="#" />
           <NavbarItem text="Not a BMO or WealthSimple Family?" href="#" />

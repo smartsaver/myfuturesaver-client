@@ -6,7 +6,7 @@ import { respSurvey } from '../../../content/surveyFormsContent'
 const RespForm = ({ isEnabled }) => {
   const { heading, intro, footer, url } = respSurvey
   return (
-    <Section className="Section--blue">
+    <Section name="resp-clb-application" className="Section--blue">
       <header>
         <h2 className="title">{heading}</h2>
       </header>

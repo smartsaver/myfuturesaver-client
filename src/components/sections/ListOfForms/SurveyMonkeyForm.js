@@ -6,7 +6,7 @@ import { informationSurvey } from '../../../content/surveyFormsContent'
 const SurveyMonkeyForm = ({ isEnabled }) => {
   const { heading, intro, footer, url } = informationSurvey
   return (
-    <Section className="Section--blue">
+    <Section name="questionnaire" className="Section--blue">
       <header>
         <h2 className="title">{heading}</h2>
       </header>
