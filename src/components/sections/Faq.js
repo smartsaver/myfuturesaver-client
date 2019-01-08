@@ -16,7 +16,7 @@ const Faq = () => {
             dangerouslySetInnerHTML={{ __html: intro }}
           />
           <a href={download} className="button is-primary" download>
-            Download {"FAQ's"}
+            <i className="fa fa-download" /> Download {"FAQ's"}
           </a>
         </div>
       </div>

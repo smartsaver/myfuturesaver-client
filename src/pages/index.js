@@ -1,7 +1,7 @@
 import React from 'react'
 import SmartSaverBanner from '../components/sections/SmartSaverBanner'
 import HomeLayout from '../components/layouts/HomeLayout'
-import SEO from '../components/Seo'
+import SEO from '../components/Seo/SeoWithGlobalScripts'
 import ClaimSection from '../components/sections/Claim'
 import ParticipateSection from '../components/sections/Participate'
 import StepsToApplySection from '../components/sections/StepsToApply'
@@ -9,6 +9,7 @@ import ListOfFormsSection from '../components/sections/ListOfForms'
 import BmoSection from '../components/sections/Bmo'
 import WealthsimpleSection from '../components/sections/Wealthsimple'
 import NoSponsorshipSection from '../components/sections/NoSponorship'
+import RespSubmissionSection from '../components/sections/RespSubmission'
 import FaqSection from '../components/sections/Faq'
 
 const IndexPage = () => {
@@ -23,6 +24,7 @@ const IndexPage = () => {
       <BmoSection />
       <WealthsimpleSection />
       <NoSponsorshipSection />
+      <RespSubmissionSection />
       <FaqSection />
     </HomeLayout>
   )

@@ -19,7 +19,7 @@ const Bmo = () => {
             dangerouslySetInnerHTML={{ __html: intro }}
           />
           <a href={download} className="button is-warning">
-            Download PDF
+            <i className="fa fa-download" /> Download PDF
           </a>
         </div>
       </div>
