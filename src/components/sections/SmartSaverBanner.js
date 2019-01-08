@@ -5,7 +5,7 @@ import './SmartSaverBanner.css'
 const SmartSaverBanner = () => {
   const { title, subtitle, content } = smartSaverBannerContent
   return (
-    <header className="SmartSaverBanner ColumnWithMobileImage">
+    <header id="smartsaver" className="SmartSaverBanner ColumnWithMobileImage">
       <div className="Banner__container">
         <div className="columns">
           <div className="column is-half Title__column">
@@ -15,7 +15,7 @@ const SmartSaverBanner = () => {
             </div>
             <div className="Title__footer">
               <p className="subtitle is-5">{content}</p>
-              <a href="/#claim" className="button" role="button">
+              <a href="/#claim" className="button is-warning" role="button">
                 Show Me How
               </a>
             </div>

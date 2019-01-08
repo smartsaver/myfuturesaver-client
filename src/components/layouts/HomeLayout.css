@@ -4,3 +4,25 @@ body {
     'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
     'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 }
+
+.HomeLayout .button.is-warning {
+  background-color: #fabc09;
+  border-color: #fabc09;
+  color: whitesmoke;
+}
+
+.HomeLayout .button.is-primary {
+  background-color: #003b59;
+  border-color: #003b59;
+}
+
+.HomeLayout .button.is-primary:hover {
+  background-color: #004568;
+  border-color: #004568;
+}
+
+.HomeLayout .button.is-warning:hover {
+  background-color: #e9b108;
+  border-color: #e9b108;
+  color: whitesmoke;
+}

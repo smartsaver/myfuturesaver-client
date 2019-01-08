@@ -31,8 +31,15 @@ We collect your information for two reasons:
 2. To learn how to help more families like yours to start saving for their child’s/children’s education. The information shared with researchers is anonymized and does not include names or individual records.
 
 If you do not agree to the pilot participant terms, you are not eligible to participate. You can still open an RESP and start saving for your child’s/children’s education. Visit: [smartsaver.org.](http://smartsaver.org)
-
   `),
 }
 
+const notParticipant = {
+  heading: 'Not a Bank of Montreal (BMO) or Weathsimple family?',
+  intro: processMarkdown(
+    'You’ve completed this step in the 4-step easy process! You will receive an email confirming your application to open a no-cost RESP and apply for the Canada Learning Bond for your child.'
+  ),
+}
+
+export { notParticipant }
 export default applyOnline

@@ -73,12 +73,6 @@
   margin-top: 3rem;
 }
 
-.Title__footer .button {
-  background-color: #fabc09;
-  border-color: #fabc09;
-  color: whitesmoke;
-}
-
 @media (max-width: 768px) {
   /* put a cover image only on mobile and below */
   .ColumnWithMobileImage {

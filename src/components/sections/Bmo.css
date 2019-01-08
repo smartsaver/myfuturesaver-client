@@ -1,0 +1,23 @@
+.Section.Bmo {
+  background-color: #0078c1;
+}
+
+.Section.Bmo .content,
+.Section.Bmo .title,
+.Section.Bmo h1,
+.Section.Bmo h2,
+.Section.Bmo h3,
+.Section.Bmo h4,
+.Section.Bmo h5,
+.Section.Bmo h6,
+.Section.Bmo strong {
+  color: whitesmoke;
+}
+
+.Section.Bmo a {
+  color: #fabc09;
+}
+
+.Section.Bmo img {
+  max-height: 8rem;
+}

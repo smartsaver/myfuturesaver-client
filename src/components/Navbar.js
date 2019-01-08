@@ -80,9 +80,12 @@ class NavbarDropdown extends Component {
             text="RESP/CLB Application"
             href="/#resp-clb-application"
           />
-          <NavbarItem text="BMO Participants" href="#" />
-          <NavbarItem text="WealthSimple Participants" href="#" />
-          <NavbarItem text="Not a BMO or WealthSimple Family?" href="#" />
+          <NavbarItem text="BMO Participants" href="/#bmo" />
+          <NavbarItem text="WealthSimple Participants" href="/#wealthsimple" />
+          <NavbarItem
+            text="Not a BMO or WealthSimple Family?"
+            href="/#non-participant"
+          />
         </div>
       </div>
     )
@@ -106,7 +109,7 @@ const Navbar = ({ isActive, onBurgerClick }) => {
             <NavbarItem text="Steps to Apply" href="/#steps-to-apply" />
             <NavbarDropdown />
             <NavbarItem text="FAQ" href="/#faq" />
-            <NavbarItem text="Claim" href="/#contact" />
+            <NavbarItem text="Contact" href="/#contact" />
           </div>
         </div>
       </div>
