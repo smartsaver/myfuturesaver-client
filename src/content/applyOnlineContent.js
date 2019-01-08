@@ -1,6 +1,7 @@
 import processMarkdown from '../libs/marked'
 
 const applyOnline = {
+  heading: 'Participate in this 4-step process',
   intro: processMarkdown(`
 Please take a moment to read and accept the terms of agreement.
   `),
