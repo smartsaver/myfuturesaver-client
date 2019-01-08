@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import TermsOfAgreementForm from './TermsOfAgreement'
+import EmailForm from './EmailForm'
 
 class ListOfForms extends Component {
   state = {
@@ -14,12 +15,14 @@ class ListOfForms extends Component {
   }
 
   render() {
+    const { isTermsOfAgreementAccepted } = this.state
     return (
       <div className="ListOfForms">
         <TermsOfAgreementForm
-          isAccepted={this.state.isTermsOfAgreementAccepted}
+          isAccepted={isTermsOfAgreementAccepted}
           onSubmit={this.handleTermsOfAgreementSubmit}
         />
+        <EmailForm isDisabled={isTermsOfAgreementAccepted} />
       </div>
     )
   }
