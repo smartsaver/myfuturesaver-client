@@ -3,6 +3,8 @@ import processMarkdown from '../libs/marked'
 const participateContent = {
   title: 'Who can participate?',
   content: processMarkdown(`
+_MyFutureSAVER is currently open only to families in the Ottawa or Thorncliffe Park areas thanks to the generosity of local donors._
+
 **Child/Children:**
 
 - Born on or after January 1, 2004.
@@ -14,6 +16,7 @@ const participateContent = {
 - Annual net family income under $46,000
 - Has a Social Insurance Number.
 - Has filed taxes (for at least one year of the child's life).
+- Reside in the Ottawa area or Thorncliffe Park neighbourhood.
   `),
 }
 
