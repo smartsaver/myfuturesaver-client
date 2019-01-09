@@ -1,17 +1,44 @@
-import React, { Component, createRef } from 'react'
+import React, { Component } from 'react'
 import Section from '../Section'
 import respSubmissionContent from '../../content/respSubmissionContent'
+import axios from 'axios'
 
+/* eslint-disable no-undef, no-console */
 class RespSubmission extends Component {
   state = {
     name: '',
     email: '',
-    fileName: '',
+    files: '',
   }
 
-  fileRef = createRef()
-
-  handleFormSubmit = () => {}
+  handleFormSubmit = event => {
+    event.preventDefault()
+    const email = this.state.email
+    axios({
+      method: 'post',
+      url: `${process.env.GATSBY_MAILGUN_BASE_URL}/${
+        process.env.GATSBY_MAILGUN_DOMAIN_NAME
+      }/messages`,
+      auth: {
+        username: 'api',
+        password: `${process.env.GATSBY_MAILGUN_DEV_API_KEY}`,
+      },
+      params: {
+        from: `Awesome Development Team <noreply@${
+          process.env.GATSBY_MAILGUN_DOMAIN_NAME
+        }>`,
+        to: email,
+        subject: 'Hello',
+        text: 'Welcome to the team!',
+      },
+    })
+      .then(response => {
+        console.log('success response', response)
+      })
+      .catch(reject => {
+        console.log('fail response', reject)
+      })
+  }
 
   updateName = event => {
     const { value } = event.target
@@ -25,31 +52,25 @@ class RespSubmission extends Component {
 
   handleFileChange = event => {
     if (!event.target.files) return ''
-    const fileName = event.target.files[0].name
-    this.setState(() => ({ fileName }))
+    const files = event.target.files
+    this.setState(() => ({ files }))
   }
 
   displayFileName = () => {
-    const fileName = this.state.fileName
-    if (fileName === '') return 'No file Selected'
-    return fileName
+    const fileName = this.state.files
+    if (fileName === '') return 'No file Selected.'
+    return fileName[0].name
   }
 
   render() {
     const { intro, heading } = respSubmissionContent
     const { name, email } = this.state
-    const {
-      updateName,
-      updateEmail,
-      fileRef,
-      displayFileName,
-      handleFileChange,
-    } = this
+    const { updateName, updateEmail, displayFileName, handleFileChange } = this
     return (
       <Section className="Section--blue">
         <h2 className="title">{heading}</h2>
         <div className="content" dangerouslySetInnerHTML={{ __html: intro }} />
-        <form onSubmit={this.handleFormSubmit}>
+        <form method="POST" onSubmit={this.handleFormSubmit}>
           <div className="field">
             <div className="control">
               <label htmlFor="name" className="label">
@@ -67,15 +88,16 @@ class RespSubmission extends Component {
           </div>
           <div className="field">
             <div className="control">
-              <label htmlFor="name" className="label">
+              <label htmlFor="email" className="label">
                 Email:
                 <input
                   type="email"
-                  id="name"
+                  id="email"
                   className="input"
                   placeholder="Enter your email..."
                   value={email}
                   onChange={updateEmail}
+                  required
                 />
               </label>
             </div>
@@ -90,7 +112,6 @@ class RespSubmission extends Component {
                     className="file-input"
                     type="file"
                     name="file"
-                    ref={fileRef}
                     onChange={handleFileChange}
                   />
                   <span className="file-cta">
