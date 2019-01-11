@@ -13,31 +13,15 @@ class RespSubmission extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault()
+    const name = this.state.name
     const email = this.state.email
-    axios({
-      method: 'post',
-      url: `${process.env.GATSBY_MAILGUN_BASE_URL}/${
-        process.env.GATSBY_MAILGUN_DOMAIN_NAME
-      }/messages`,
-      auth: {
-        username: 'api',
-        password: `${process.env.GATSBY_MAILGUN_DEV_API_KEY}`,
-      },
-      params: {
-        from: `Awesome Development Team <noreply@${
-          process.env.GATSBY_MAILGUN_DOMAIN_NAME
-        }>`,
-        to: email,
-        subject: 'Hello',
-        text: 'Welcome to the team!',
-      },
-    })
-      .then(response => {
-        console.log('success response', response)
+    axios
+      .post('http://localhost:3000/api/messages', {
+        name,
+        email,
       })
-      .catch(reject => {
-        console.log('fail response', reject)
-      })
+      .then(response => console.log(response))
+      .catch(reject => console.log(reject))
   }
 
   updateName = event => {
