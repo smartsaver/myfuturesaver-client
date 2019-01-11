@@ -15,6 +15,15 @@ class RespSubmissionForm extends Component {
     files: '',
   }
 
+  // derived state from the file name
+  displayFileName = () => {
+    const fileName = this.state.files
+    if (fileName === '') return 'No file Selected.'
+    return fileName[0].name
+  }
+
+  // form handlers
+
   handleFormSubmit = event => {
     // prevent from from html submitting
     event.preventDefault()
@@ -22,7 +31,6 @@ class RespSubmissionForm extends Component {
     this.props.onSubmit(this.state)
   }
 
-  // form handlers
   handleNameChange = event => {
     const { value } = event.target
     this.setState(() => ({ name: value }))
@@ -47,13 +55,6 @@ class RespSubmissionForm extends Component {
     if (!event.target.files) return ''
     const files = event.target.files
     this.setState(() => ({ files }))
-  }
-
-  // derived state from the file name
-  displayFileName = () => {
-    const fileName = this.state.files
-    if (fileName === '') return 'No file Selected.'
-    return fileName[0].name
   }
 
   render() {
@@ -87,7 +88,7 @@ class RespSubmissionForm extends Component {
             Email:
           </label>
           <input
-            type="resp-form-email"
+            type="email"
             id="resp-form-email"
             className="input"
             placeholder="Enter your email"
