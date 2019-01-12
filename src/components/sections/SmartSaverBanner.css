@@ -24,7 +24,7 @@
 .Banner__container,
 .Banner__container .Title__column,
 .SmartSaverBanner .columns {
-  height: 94vh;
+  min-height: 94vh;
 }
 
 @media (min-width: 769px) {
@@ -32,27 +32,7 @@
   .Banner__container,
   .Banner__container .Title__column,
   .SmartSaverBanner .columns {
-    height: 31rem;
-    max-height: 31rem;
-  }
-}
-
-.Banner__overlay {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .Banner__overlay {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #003b59;
-    opacity: 0.3;
+    min-height: 31rem;
   }
 }
 
@@ -88,14 +68,9 @@
 @media (max-width: 768px) {
   /* put a cover image only on mobile and below */
   .ColumnWithMobileImage {
-    background: url('../../images/header-image-no-fade.jpg') no-repeat;
+    background: url('../../images/header-image-no-fade-overlay.jpg') no-repeat;
     background-size: cover;
     background-position: center;
-  }
-
-  .SmartSaverBanner .columns {
-    position: absolute;
-    z-index: 1;
   }
 }
 

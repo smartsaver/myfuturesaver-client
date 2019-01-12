@@ -23,7 +23,6 @@ const SmartSaverBanner = () => {
           <div className="column is-half is-hidden-mobile ColumnWithImage" />
         </div>
       </div>
-      <span className="Banner__overlay" />
     </header>
   )
 }
