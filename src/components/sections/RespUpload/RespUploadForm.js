@@ -45,6 +45,7 @@ class RespUploadForm extends Component {
   handleFormSubmit = event => {
     // disable event
     event.preventDefault()
+    // submit the form to the parent component
     this.props.onSubmit(this.state)
   }
 

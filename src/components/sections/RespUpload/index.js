@@ -24,27 +24,55 @@ class RespSubmission extends Component {
     this.setState(() => ({ isFormSuccess: booleanValue }))
   }
 
+  makeEmailTemplate(formData) {
+    // make email template based on FormData API
+    const { name, email, kidsNames, respStatementType, files } = formData
+    const from = 'Myfuturesaver.org <noreply@myfuturesaver.org>'
+    const to = process.env.GATSBY_MAIL_RECIPIENT_EMAIL
+    const subject = 'FutureSAVER Statement Submission'
+    const text = `A FutureSAVER applicant has submitted their CLB Statement
+
+Name: ${name}
+Email: ${email}
+Children: ${kidsNames}
+Type of Statement: ${respStatementType}
+
+Attachment Below.
+Thank you.
+    `
+    const emailTemplate = new FormData()
+    emailTemplate.append('from', from)
+    emailTemplate.append('to', to)
+    emailTemplate.append('subject', subject)
+    emailTemplate.append('text', text)
+    emailTemplate.append('attachment', files[0])
+    return emailTemplate
+  }
+
   handleFormSubmit = async formData => {
+    const { setIsFormLoading, setIsFormSuccess, makeEmailTemplate } = this
     try {
-      const { setIsFormLoading, setIsFormSuccess } = this
+      const baseURL = process.env.GATSBY_MAIL_SERVICE_BASE_URL
+      const url = process.env.GATSBY_MAIL_URL
       // set form loading
       setIsFormLoading(true)
-      await axios.post('http://localhost:3000/api/', formData)
-      setIsFormLoading(false)
+      // make the request to the server
+      const resolve = await axios({
+        method: 'post',
+        baseURL,
+        url,
+        data: makeEmailTemplate(formData),
+        headers: { 'Content-Type': 'multipart/form-data' },
+      })
+      console.log(resolve)
+      // disable form loading in 'finally', and set form success
       setIsFormSuccess(true)
-      // const { name, email, kidsNames, respStatementType, files } = formData
-      // axios({
-      //   baseURL: 'http://localhost:3000',
-      //   url: '/api/messages',
-      //   data: { name, email, kidsNames, respStatementType, files },
-      //   headers: {
-      //     'Content-Type': 'multipart/form',
-      //   },
-      // })
-      //   .then(response => console.log(response))
-      //   .catch(reject => console.log(reject))
-    } catch (error) {
-      console.log(error)
+    } catch (reject) {
+      // when things go wrong, stop form loading
+      console.log(reject)
+    } finally {
+      // stop form loading
+      setIsFormLoading(false)
     }
   }
 
