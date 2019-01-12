@@ -9,6 +9,13 @@ Submit your RESP Statement from your bank OR your CESP Statement of Account from
 
 Please fill out the form to upload your statement:
   `),
+  footer: processMarkdown(`
+Thank you for submitting your statement!
+
+You will receive an email within 2-3 days. The email will confirm your eligibility to receive a gift from SmartSAVER for completing the process.
+
+__Having Problems?__ You can submit your RESP statement from your bank OR your CESP Statement of Account from the government by scanning or taking a snapshot of the statement with your phone and emailing it to us at info@smartsaver.org. Please include your first and last name in the body of the email.
+  `),
 }
 
 export default respSubmission

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Section from '../../Section'
-import RespSubmissionForm from './RespSubmissionForm'
-import respSubmissionContent from '../../../content/respSubmissionContent'
+import RespUploadForm from './RespUploadForm'
+import respUploadContent from '../../../content/respUploadContent'
 // import axios from 'axios'
 
 /* eslint-disable no-undef, no-console, jsx-a11y/label-has-for */
@@ -18,7 +18,7 @@ class RespSubmission extends Component {
   }
 
   render() {
-    const { heading, intro } = respSubmissionContent
+    const { heading, intro, footer } = respUploadContent
     const { handleFormSubmit } = this
     return (
       <Section className="Section--blue">
@@ -26,9 +26,10 @@ class RespSubmission extends Component {
         <div className="content" dangerouslySetInnerHTML={{ __html: intro }} />
         <div className="columns">
           <div className="column is-half">
-            <RespSubmissionForm onSubmit={handleFormSubmit} />
+            <RespUploadForm onSubmit={handleFormSubmit} />
           </div>
         </div>
+        <div className="content" dangerouslySetInnerHTML={{ __html: footer }} />
       </Section>
     )
   }
