@@ -6,13 +6,31 @@ import PropTypes from 'prop-types'
 // This form only keeps the form state and passes it to it's parent.
 
 /* eslint-disable jsx-a11y/label-has-for */
-class RespSubmissionForm extends Component {
+class RespUploadForm extends Component {
   state = {
-    name: '',
-    email: '',
-    kidsNames: '',
-    respStatementType: '',
+    name: 'John Smith',
+    email: 'john@smith.com',
+    kidsNames: 'Jane smith, Joe Smith',
+    respStatementType: 'RESP Statement from my bank',
     files: '',
+  }
+
+  componentDidUpdate(prevProps) {
+    // prevent bug and call stack overflow
+    if (this.props.isFormSuccess !== prevProps.isFormSuccess) {
+      // reset form data if Form Successfuly submitted
+      if (this.props.isFormSuccess) this.resetFormData()
+    }
+  }
+
+  resetFormData = () => {
+    this.setState(() => ({
+      name: '',
+      email: '',
+      kidsNames: '',
+      respStatementType: '',
+      files: '',
+    }))
   }
 
   // derived state from the file name
@@ -25,9 +43,8 @@ class RespSubmissionForm extends Component {
   // form handlers
 
   handleFormSubmit = event => {
-    // prevent from from html submitting
+    // disable event
     event.preventDefault()
-    // form data to parent's submit method
     this.props.onSubmit(this.state)
   }
 
@@ -59,6 +76,7 @@ class RespSubmissionForm extends Component {
 
   render() {
     const { name, email, kidsNames, respStatementType } = this.state
+    const { isLoading, isFormSuccess } = this.props
     const {
       handleNameChange,
       handleEmailChange,
@@ -67,6 +85,8 @@ class RespSubmissionForm extends Component {
       handleRespStatementTypeChange,
       handleKidsNamesChange,
     } = this
+    const isButtonLoading = isLoading ? 'is-loading' : ''
+    const isFormFieldDisabled = isLoading
     return (
       <Form name="resp-form" method="POST" onSubmit={this.handleFormSubmit}>
         <FormField>
@@ -81,6 +101,8 @@ class RespSubmissionForm extends Component {
             placeholder="Enter your name"
             value={name}
             onChange={handleNameChange}
+            disabled={isFormFieldDisabled}
+            required
           />
         </FormField>
         <FormField>
@@ -94,6 +116,7 @@ class RespSubmissionForm extends Component {
             placeholder="Enter your email"
             value={email}
             onChange={handleEmailChange}
+            disabled={isFormFieldDisabled}
             required
           />
         </FormField>
@@ -108,6 +131,8 @@ class RespSubmissionForm extends Component {
             placeholder="Enter your children's first name and last names"
             value={kidsNames}
             onChange={handleKidsNamesChange}
+            disabled={isFormFieldDisabled}
+            required
           />
         </FormField>
         <FormField>
@@ -121,6 +146,7 @@ class RespSubmissionForm extends Component {
               value={respStatementType}
               onBlur={handleRespStatementTypeChange}
               onChange={handleRespStatementTypeChange}
+              disabled={isFormFieldDisabled}
             >
               <option value="RESP Statement from my bank">
                 RESP Statement from my bank
@@ -140,6 +166,8 @@ class RespSubmissionForm extends Component {
                 className="file-input"
                 type="file"
                 onChange={handleFileChange}
+                disabled={isFormFieldDisabled}
+                required
               />
               <span className="file-cta">
                 <span className="file-icon">
@@ -152,7 +180,11 @@ class RespSubmissionForm extends Component {
           </div>
         </FormField>
         <FormField>
-          <button className="button" type="submit">
+          <button
+            className={`button ${isButtonLoading}`}
+            type="submit"
+            disabled={isFormSuccess}
+          >
             Submit
           </button>
         </FormField>
@@ -161,8 +193,10 @@ class RespSubmissionForm extends Component {
   }
 }
 
-RespSubmissionForm.propTypes = {
+RespUploadForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,
+  isLoading: PropTypes.bool.isRequired,
+  isFormSuccess: PropTypes.bool.isRequired,
 }
 
-export default RespSubmissionForm
+export default RespUploadForm
