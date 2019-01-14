@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   font-family: 'Century Gothic', BlinkMacSystemFont, -apple-system, 'Segoe UI',

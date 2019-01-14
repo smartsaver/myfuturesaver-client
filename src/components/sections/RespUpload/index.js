@@ -38,8 +38,7 @@ Children: ${kidsNames}
 Type of Statement: ${respStatementType}
 
 Attachment Below.
-Thank you.
-    `
+Thank you.`
     const emailTemplate = new FormData()
     emailTemplate.append('from', from)
     emailTemplate.append('to', to)
@@ -53,7 +52,7 @@ Thank you.
     const { setIsFormLoading, setIsFormSuccess, makeEmailTemplate } = this
     try {
       const baseURL = process.env.GATSBY_MAIL_SERVICE_BASE_URL
-      const url = process.env.GATSBY_MAIL_URL
+      const url = `${process.env.GATSBY_MAIL_URL}/clb-statement`
       // set form loading
       setIsFormLoading(true)
       // make the request to the server

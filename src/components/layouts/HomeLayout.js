@@ -4,6 +4,8 @@ import Navbar from '../Navbar'
 import 'bulma/css/bulma.css'
 import './HomeLayout.css'
 import Footer from '../Footer'
+import GoogleAnalyticsScript from '../scripts/GoogleAnalytics'
+import FontAwesomeScript from '../scripts/FontAwesome'
 
 const HomeLayout = ({ children }) => {
   return (
@@ -11,6 +13,8 @@ const HomeLayout = ({ children }) => {
       <Navbar />
       <main>{children}</main>
       <Footer />
+      <GoogleAnalyticsScript />
+      <FontAwesomeScript />
     </div>
   )
 }
