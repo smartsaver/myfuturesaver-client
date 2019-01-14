@@ -13,6 +13,9 @@ const googleAnalyticsScript = `
 class GoogleAnalytics extends Component {
   componentDidMount() {
     /* eslint-disable no-undef */
+    // dont add google analytics on development
+    const DEVELOPMENT = process.env.NODE_ENV === 'development'
+    if (DEVELOPMENT) return
     const script = document.createElement('script')
     script.src = googleAnalyticsUrl
     script.async = true
