@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import TermsOfAgreementForm from './TermsOfAgreement'
 import EmailForm from './EmailForm'
-import SurveyMokeyForm from './SurveyMonkeyForm'
+import CLBSurveyForm from './ClbSurveyForm'
 import RespForm from './RespForm'
 
 class ListOfForms extends Component {
@@ -25,7 +25,7 @@ class ListOfForms extends Component {
           onSubmit={this.handleTermsOfAgreementSubmit}
         />
         <EmailForm isEnabled={isTermsOfAgreementAccepted} />
-        <SurveyMokeyForm isEnabled={isTermsOfAgreementAccepted} />
+        <CLBSurveyForm isEnabled={isTermsOfAgreementAccepted} />
         <RespForm isEnabled={isTermsOfAgreementAccepted} />
       </div>
     )
