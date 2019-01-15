@@ -9,7 +9,7 @@ import ListOfFormsSection from '../components/sections/ListOfForms'
 import BmoSection from '../components/sections/Bmo'
 import WealthsimpleSection from '../components/sections/Wealthsimple'
 import NoSponsorshipSection from '../components/sections/NoSponorship'
-// import RespUploadSection from '../components/sections/RespUpload'
+import RespUploadSection from '../components/sections/RespUpload'
 import FaqSection from '../components/sections/Faq'
 
 const IndexPage = () => {
@@ -21,10 +21,10 @@ const IndexPage = () => {
       <ParticipateSection />
       <StepsToApplySection />
       <ListOfFormsSection />
+      <RespUploadSection />
       <BmoSection />
       <WealthsimpleSection />
       <NoSponsorshipSection />
-      {/* <RespUploadSection /> */}
       <FaqSection />
     </HomeLayout>
   )

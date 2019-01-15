@@ -80,6 +80,8 @@ class NavbarDropdown extends Component {
             text="RESP/CLB Application"
             href="/#resp-clb-application"
           />
+          <NavbarItem text="Submission" href="/#submission-form" />
+          <NavbarItem text="Submit CLB" href="/#upload-clb" />
           <NavbarItem text="BMO Participants" href="/#bmo" />
           <NavbarItem text="WealthSimple Participants" href="/#wealthsimple" />
           <NavbarItem

@@ -21,7 +21,7 @@ at 1-855-737-7252 or by email at info@smartsaver.org before March 31, 2019.
   footer: processMarkdown(`
 __Questions?__ Call us at 1-855-737-7252 or email info@smartsaver.org
 
-Did you complete the survey by clicking the DONE button? Scroll down to the next section below:
+Did you complete the survey by clicking the __DONE__ button? Scroll down to the next section below:
 Submit Your CLB Statement.
   `),
 }
