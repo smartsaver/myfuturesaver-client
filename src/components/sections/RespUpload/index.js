@@ -63,7 +63,10 @@ Thank you.`
         baseURL,
         url,
         data: makeEmailTemplate(formData),
-        headers: { 'Content-Type': 'multipart/form-data' },
+        headers: {
+          'Content-Type': 'multipart/form-data',
+          'Access-Control-Allow-Origin': 'https://myfuturesaver.org',
+        },
       })
       console.log(resolve)
       // disable form loading in 'finally', and set form success
