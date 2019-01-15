@@ -8,9 +8,9 @@ import PropTypes from 'prop-types'
 /* eslint-disable jsx-a11y/label-has-for */
 class RespUploadForm extends Component {
   state = {
-    name: 'John Smith',
-    email: 'john@smith.com',
-    kidsNames: 'Jane smith, Joe Smith',
+    name: '',
+    email: '',
+    kidsNames: '',
     respStatementType: 'RESP Statement from my bank',
     files: '',
   }

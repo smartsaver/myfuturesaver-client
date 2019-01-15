@@ -5,6 +5,8 @@ import RespUploadForm from './RespUploadForm'
 import respUploadContent from '../../../content/respUploadContent'
 import axios from 'axios'
 
+import './RespUpload.css'
+
 /* eslint-disable no-undef, no-console, jsx-a11y/label-has-for */
 class RespSubmission extends Component {
   state = {
@@ -80,7 +82,7 @@ Thank you.`
     const { handleFormSubmit } = this
     const { isFormLoading, isFormSuccess } = this.state
     return (
-      <Section className="Section--blue">
+      <Section name="upload-clb" className="RespUpload Section--blue">
         <h2 className="title">{heading}</h2>
         <div className="content" dangerouslySetInnerHTML={{ __html: intro }} />
         <div className="columns">
