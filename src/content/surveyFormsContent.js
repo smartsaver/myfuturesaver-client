@@ -14,7 +14,7 @@ __Don't have an email address?__ You can participate in the pilot by contacting 
         `),
   },
   informationSurvey: {
-    heading: 'Questionnaire',
+    heading: '1. Questionnaire',
     url: 'https://www.surveymonkey.com/r/3VJ2CN3',
     intro: processMarkdown(`
 You'll be amazed at how quickly your child's/children's education savings will add up.
@@ -33,7 +33,7 @@ Did you complete the survey by clicking the __DONE__ button? Scroll down to the 
     `),
   },
   respSurvey: {
-    heading: 'RESP and CLB Application',
+    heading: '2. RESP and CLB Application',
     url: 'https://www.smartsaver.org/startmyresp/',
     intro: processMarkdown(`
 ___Remember!___ You can open a no-cost RESP and apply for your child’s/children’s education savings without contributing any of your own money, but that you can always choose to add your own money, let’s say $5 from a birthday gift from an aunt or uncle. That money will help your child’s education savings to grow!

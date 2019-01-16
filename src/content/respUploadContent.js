@@ -1,7 +1,7 @@
 import processMarkdown from '../libs/marked'
 
 const respSubmission = {
-  heading: 'Submit Your CLB Statement',
+  heading: '3. B. Submit Your CLB Statement',
   intro: processMarkdown(`
 It’s time to show us that your child received the Canada Learning Bond!
 

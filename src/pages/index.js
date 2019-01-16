@@ -21,10 +21,10 @@ const IndexPage = () => {
       <ParticipateSection />
       <StepsToApplySection />
       <ListOfFormsSection />
-      <RespUploadSection />
       <BmoSection />
       <WealthsimpleSection />
       <NoSponsorshipSection />
+      <RespUploadSection />
       <FaqSection />
     </HomeLayout>
   )
