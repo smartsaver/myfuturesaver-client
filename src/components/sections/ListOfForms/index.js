@@ -3,7 +3,6 @@ import TermsOfAgreementForm from './TermsOfAgreement'
 import EmailForm from './EmailForm'
 import CLBSurveyForm from './ClbSurveyForm'
 import RespForm from './RespForm'
-import SubmissionSurveyForm from './SubmissionSurveyForm'
 
 class ListOfForms extends Component {
   state = {
@@ -28,7 +27,6 @@ class ListOfForms extends Component {
         <EmailForm isEnabled={isTermsOfAgreementAccepted} />
         <CLBSurveyForm isEnabled={isTermsOfAgreementAccepted} />
         <RespForm isEnabled={isTermsOfAgreementAccepted} />
-        <SubmissionSurveyForm isEnabled={isTermsOfAgreementAccepted} />
       </div>
     )
   }
