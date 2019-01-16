@@ -19,7 +19,7 @@ class SubmissionSurveyForm extends Component {
 
   render() {
     const { heading, intro, url, footer } = submissionContent
-    const isFormEnabled = this.props.isEnabled || this.state.isFormEnabled
+    const { isFormEnabled } = this.state
     const { handleButtonClick } = this
     return (
       <Section
@@ -31,7 +31,7 @@ class SubmissionSurveyForm extends Component {
         </header>
         <div className="content" dangerouslySetInnerHTML={{ __html: intro }} />
         <button className="button is-warning" onClick={handleButtonClick}>
-          I read the terms and ready to submit
+          I am ready to submit
         </button>
         <SurveyForm isEnabled={isFormEnabled}>
           <iframe title="Submission" src={url} />
