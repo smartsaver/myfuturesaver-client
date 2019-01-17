@@ -26,9 +26,9 @@ class RespSubmission extends Component {
     this.setState(() => ({ isFormSuccess: booleanValue }))
   }
 
-  makeEmailTemplate(formData) {
+  makeEmailTemplate(jsonData) {
     // make email template based on FormData API
-    const { name, email, kidsNames, respStatementType, files } = formData
+    const { name, email, kidsNames, respStatementType, files } = jsonData
     const from = 'Myfuturesaver.org <noreply@myfuturesaver.org>'
     const to = process.env.GATSBY_MAIL_RECIPIENT_EMAIL
     const subject = 'FutureSAVER Statement Submission'
@@ -50,32 +50,69 @@ Thank you.`
     return emailTemplate
   }
 
-  handleFormSubmit = async formData => {
-    const { setIsFormLoading, setIsFormSuccess, makeEmailTemplate } = this
+  sendEmailWithAttachment = async senderDetails => {
+    const baseURL = process.env.GATSBY_MAIL_SERVICE_BASE_URL
+    const url = `${process.env.GATSBY_MAIL_URL}/clb-statement`
+    return await axios({
+      method: 'post',
+      baseURL,
+      url,
+      data: this.makeEmailTemplate(senderDetails),
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    })
+  }
+
+  sendSuccessEmail = async senderDetails => {
+    const baseURL = process.env.GATSBY_MAIL_SERVICE_BASE_URL
+    const url = `${process.env.GATSBY_MAIL_URL}/clb-statement-success`
+    const { email } = senderDetails
+    const data = {
+      from: 'Myfuturesaver.org <noreply@myfuturesaver.org>',
+      to: email,
+      subject: 'Thank you for Submitting your CLB Statement',
+      text: `Dear Family,
+
+Thank you for submitting your statement!
+
+You will receive an email within 2-3 days. The email will confirm your eligibility to receive a gift from SmartSAVER for completing the process, and how to receive the funds.
+
+Questions? Call all us at 1-855-737-7252 or by email at info@smartsaver.org.
+
+The SmartSAVER Team`,
+    }
+    return await axios({
+      method: 'post',
+      baseURL,
+      url,
+      data,
+    })
+  }
+
+  handleFormSubmit = async senderDetails => {
+    const {
+      setIsFormLoading,
+      setIsFormSuccess,
+      sendEmailWithAttachment,
+      sendSuccessEmail,
+    } = this
     try {
-      const baseURL = process.env.GATSBY_MAIL_SERVICE_BASE_URL
-      const url = `${process.env.GATSBY_MAIL_URL}/clb-statement`
       // set form loading
       setIsFormLoading(true)
       // make the request to the server
-      const resolve = await axios({
-        method: 'post',
-        baseURL,
-        url,
-        data: makeEmailTemplate(formData),
-        headers: {
-          'Content-Type': 'multipart/form-data',
-          'Access-Control-Allow-Origin': 'https://myfuturesaver.org',
-        },
-      })
+      const resolve = await sendEmailWithAttachment(senderDetails)
       console.log(resolve)
-      // disable form loading in 'finally', and set form success
+      // disable form loading, and set form success to true
+      setIsFormLoading(false)
       setIsFormSuccess(true)
+      // send success email
+      await sendSuccessEmail(senderDetails)
     } catch (reject) {
       // when things go wrong, stop form loading
       console.log(reject)
     } finally {
-      // stop form loading
+      // stop form loading when something goes wrong
       setIsFormLoading(false)
     }
   }
