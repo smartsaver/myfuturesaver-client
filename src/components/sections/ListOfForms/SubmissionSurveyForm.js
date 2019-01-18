@@ -33,7 +33,10 @@ class SubmissionSurveyForm extends Component {
         <button className="button is-warning" onClick={handleButtonClick}>
           I am ready to submit
         </button>
-        <SurveyForm isEnabled={isFormEnabled}>
+        <SurveyForm
+          isEnabled={isFormEnabled}
+          overlayText={'Click "I am ready to submit" button to proceed.'}
+        >
           <iframe title="Submission" src={url} />
         </SurveyForm>
         <footer

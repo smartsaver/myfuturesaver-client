@@ -11,7 +11,10 @@ const SurveyMonkeyForm = ({ isEnabled }) => {
         <h2 className="title">{heading}</h2>
       </header>
       <div className="content" dangerouslySetInnerHTML={{ __html: intro }} />
-      <SurveyForm isEnabled={isEnabled}>
+      <SurveyForm
+        isEnabled={isEnabled}
+        overlayText="Read and agree to the terms of agreement before proceeding."
+      >
         <iframe title="Questionnaire" src={url} />
       </SurveyForm>
       <footer
