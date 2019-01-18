@@ -65,7 +65,10 @@ class MailChimpForm extends Component {
   render() {
     const { isEnabled } = this.props
     return (
-      <SurveyForm isEnabled={isEnabled}>
+      <SurveyForm
+        isEnabled={isEnabled}
+        overlayText="Read and agree to the terms of agreement before proceeding."
+      >
         <div className="js-mailChimpForm" />
       </SurveyForm>
     )
