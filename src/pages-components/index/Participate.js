@@ -1,6 +1,6 @@
 import React from 'react'
 import Section from '../../components/Section'
-import participateContent from '../../content/participateContent'
+import participateContent from './content/participateContent'
 
 const Participate = () => {
   const { title, content } = participateContent

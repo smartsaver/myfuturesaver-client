@@ -1,6 +1,6 @@
 import React from 'react'
 import Section from '../../../components/Section'
-import { email } from '../../../content/surveyFormsContent'
+import { email } from '../content/surveyFormsContent'
 import MailChimpForm from './MailChimpForm'
 
 const EmailForm = ({ isEnabled }) => {

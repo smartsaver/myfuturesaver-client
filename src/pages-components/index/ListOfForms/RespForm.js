@@ -1,7 +1,7 @@
 import React from 'react'
 import SurveyForm from '../../../components/SurveyForm'
 import Section from '../../../components/Section'
-import { respSurvey } from '../../../content/surveyFormsContent'
+import { respSurvey } from '../content/surveyFormsContent'
 
 const RespForm = ({ isEnabled }) => {
   const { heading, intro, footer, url } = respSurvey

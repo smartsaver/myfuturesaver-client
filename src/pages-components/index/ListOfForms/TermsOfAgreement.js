@@ -1,6 +1,6 @@
 import React from 'react'
 import Section from '../../../components/Section'
-import applyOnlineContent from '../../../content/applyOnlineContent'
+import applyOnlineContent from '../content/applyOnlineContent'
 
 import './TermsOfAgreement.css'
 

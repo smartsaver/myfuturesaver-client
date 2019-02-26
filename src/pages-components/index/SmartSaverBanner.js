@@ -1,5 +1,5 @@
 import React from 'react'
-import smartSaverBannerContent from '../../content/smartSaverBannerContent'
+import smartSaverBannerContent from './content/smartSaverBannerContent'
 import './SmartSaverBanner.css'
 
 const SmartSaverBanner = () => {

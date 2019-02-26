@@ -1,6 +1,6 @@
 import React from 'react'
 import Section from '../../components/Section'
-import { bmo } from '../../content/sponsorsContent'
+import { bmo } from './content/sponsorsContent'
 
 import './Bmo.css'
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import Section from '../../components/Section'
-import claimContent from '../../content/claimContent'
+import claimContent from './content/claimContent'
 
 const Claim = () => {
   const { title, content } = claimContent

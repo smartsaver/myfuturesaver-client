@@ -1,6 +1,6 @@
 import React from 'react'
 import Section from '../../components/Section'
-import { notParticipant } from '../../content/applyOnlineContent'
+import { notParticipant } from './content/applyOnlineContent'
 
 const NoSponsorship = () => {
   const { heading, intro } = notParticipant

@@ -1,6 +1,6 @@
 import React from 'react'
 import Section from '../../components/Section'
-import faqContent from '../../content/faqContent'
+import faqContent from './content/faqContent'
 
 const Faq = () => {
   const { heading, intro, download } = faqContent

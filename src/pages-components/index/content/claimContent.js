@@ -1,4 +1,4 @@
-import processMarkdown from './index'
+import { processMarkdown } from './index'
 
 const claim = {
   title: 'Two things you can claim for your children',

@@ -1,0 +1,29 @@
+.SurveyForm {
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.SurveyForm iframe {
+  width: 100%;
+  height: 40rem;
+}
+
+span.SurveyForm__overlay {
+  padding: 1rem;
+}
+
+.SurveyForm span.SurveyForm__overlay {
+  display: none;
+}
+
+.SurveyForm.SurveyForm--disabled span.SurveyForm__overlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #eee;
+  background-color: rgba(238, 238, 238, 0.9);
+}

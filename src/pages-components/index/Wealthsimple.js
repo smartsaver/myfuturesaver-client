@@ -1,6 +1,6 @@
 import React from 'react'
 import Section from '../../components/Section'
-import { wealthsimple as wealthsimpleContent } from '../../content/sponsorsContent'
+import { wealthsimple as wealthsimpleContent } from './content/sponsorsContent'
 
 import './Wealthsimple.css'
 

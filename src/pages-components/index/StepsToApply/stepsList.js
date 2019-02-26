@@ -1,5 +1,5 @@
 import React from 'react'
-import { stepsList } from '../../../content/stepsToApplyContent'
+import { stepsList } from '../content/stepsToApplyContent'
 
 const Step = ({ content, title, image }) => {
   return (
