@@ -1,12 +1,12 @@
 import React from 'react'
-import SurveyForm from '../../SurveyForm'
-import Section from '../../Section'
-import { respSurvey } from '../../../content/surveyFormsContent'
+import SurveyForm from '../../../components/SurveyForm'
+import Section from '../../../components/Section'
+import { informationSurvey } from '../../../content/surveyFormsContent'
 
-const RespForm = ({ isEnabled }) => {
-  const { heading, intro, footer, url } = respSurvey
+const SurveyMonkeyForm = ({ isEnabled }) => {
+  const { heading, intro, footer, url } = informationSurvey
   return (
-    <Section name="resp-clb-application" className="Section--blue">
+    <Section name="questionnaire" className="Section--blue">
       <header>
         <h2 className="title">{heading}</h2>
       </header>
@@ -15,7 +15,7 @@ const RespForm = ({ isEnabled }) => {
         isEnabled={isEnabled}
         overlayText="Read and agree to the terms of agreement before proceeding."
       >
-        <iframe title="Resp Application" src={url} />
+        <iframe title="Questionnaire" src={url} />
       </SurveyForm>
       <footer
         className="content"
@@ -25,4 +25,4 @@ const RespForm = ({ isEnabled }) => {
   )
 }
 
-export default RespForm
+export default SurveyMonkeyForm

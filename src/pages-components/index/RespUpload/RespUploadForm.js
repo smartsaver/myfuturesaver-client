@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Form from '../../Form'
-import FormField from '../../Form/FormFieldControl'
+import Form from '../../../components/Form'
+import FormField from '../../../components/Form/FormFieldControl'
 import PropTypes from 'prop-types'
 
 // This form only keeps the form state and passes it to it's parent.

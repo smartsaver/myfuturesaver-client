@@ -1,11 +1,11 @@
 import React from 'react'
-import Section from '../Section'
-import participateContent from '../../content/participateContent'
+import Section from '../../components/Section'
+import claimContent from '../../content/claimContent'
 
-const Participate = () => {
-  const { title, content } = participateContent
+const Claim = () => {
+  const { title, content } = claimContent
   return (
-    <Section className="Section--blue" name="participate">
+    <Section className="Section--blue" name="claim">
       <div className="columns">
         <div className="column is-one-third">
           <h2 className="title">{title}</h2>
@@ -22,4 +22,4 @@ const Participate = () => {
   )
 }
 
-export default Participate
+export default Claim

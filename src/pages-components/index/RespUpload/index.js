@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Section from '../../Section'
-import Notification from '../../Notification'
+import Section from '../../../components/Section'
+import Notification from '../../../components/Notification'
 import RespUploadForm from './RespUploadForm'
 import respUploadContent from '../../../content/respUploadContent'
 import axios from 'axios'

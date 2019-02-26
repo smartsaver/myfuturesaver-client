@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import SurveyForm from '../../SurveyForm'
-import Section from '../../Section'
+import SurveyForm from '../../../components/SurveyForm'
+import Section from '../../../components/Section'
 import submissionContent from '../../../content/submissionContent'
 
 class SubmissionSurveyForm extends Component {
