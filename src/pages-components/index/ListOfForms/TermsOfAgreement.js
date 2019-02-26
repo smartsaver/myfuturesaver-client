@@ -1,5 +1,5 @@
 import React from 'react'
-import Section from '../../../components/Section'
+import Section from '../SmartsaverSection'
 import applyOnlineContent from '../content/applyOnlineContent'
 
 import './TermsOfAgreement.css'
@@ -9,10 +9,7 @@ const TermsOfAgreement = ({ onSubmit, isAccepted }) => {
   const isFormHidden = isAccepted ? 'is-hidden' : ''
   const isSuccessHidden = !isAccepted ? 'is-hidden' : ''
   return (
-    <Section
-      name="terms-of-agreement"
-      className="TermsOfAgreement Section--blue"
-    >
+    <Section name="terms-of-agreement" className="TermsOfAgreement">
       <h2 className="title is-3">{heading}</h2>
       <div className="content" dangerouslySetInnerHTML={{ __html: intro }} />
       <article

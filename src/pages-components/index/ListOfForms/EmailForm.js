@@ -1,12 +1,12 @@
 import React from 'react'
-import Section from '../../../components/Section'
+import Section from '../SmartsaverSection'
 import { email } from '../content/surveyFormsContent'
 import MailChimpForm from './MailChimpForm'
 
 const EmailForm = ({ isEnabled }) => {
   const { intro, heading, helpNoEmail, helpWhyEmail } = email
   return (
-    <Section className="Section--blue" name="email-form">
+    <Section name="email-form">
       <header>
         <h2 className="title">{heading}</h2>
       </header>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Section from '../../../components/Section'
+import Section from '../SmartsaverSection'
 import Notification from '../../../components/Notification'
 import RespUploadForm from './RespUploadForm'
 import respUploadContent from '../content/respUploadContent'
@@ -122,7 +122,7 @@ The SmartSAVER Team`,
     const { handleFormSubmit } = this
     const { isFormLoading, isFormSuccess } = this.state
     return (
-      <Section name="upload-clb" className="RespUpload Section--blue">
+      <Section name="upload-clb" className="RespUpload">
         <h2 className="title">{heading}</h2>
         <div className="content" dangerouslySetInnerHTML={{ __html: intro }} />
         <div className="columns">

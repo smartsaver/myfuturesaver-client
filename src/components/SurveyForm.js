@@ -1,6 +1,7 @@
 import React from 'react'
 
 import './SurveyForm.css'
+import style from './SurveyForm.module.css'
 
 /**
  * @function SurveyForm - Component
@@ -14,7 +15,14 @@ const SurveyForm = ({ isEnabled, children, overlayText = '', name = '' }) => {
   return (
     <div className={`SurveyForm ${isFormDisabled}`} id={name}>
       {children}
-      <span className="SurveyForm__overlay has-text-danger">{overlayText}</span>
+      <span
+        className={`
+          SurveyForm__overlay has-text-danger
+          ${style.OverlayText}
+        `}
+      >
+        {overlayText}
+      </span>
     </div>
   )
 }

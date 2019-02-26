@@ -1,11 +1,11 @@
 import React from 'react'
-import Section from '../../components/Section'
+import Section from './SmartsaverSection'
 import faqContent from './content/faqContent'
 
 const Faq = () => {
   const { heading, intro, download } = faqContent
   return (
-    <Section className="Section--blue" name="faq">
+    <Section name="faq">
       <div className="columns">
         <div className="column is-one-third">
           <h3 className="title">{heading}</h3>

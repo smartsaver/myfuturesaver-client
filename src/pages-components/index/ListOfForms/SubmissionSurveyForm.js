@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import SurveyForm from '../../../components/SurveyForm'
-import Section from '../../../components/Section'
+import Section from '../SmartsaverSection'
 import submissionContent from '../content/submissionContent'
 
 class SubmissionSurveyForm extends Component {
@@ -22,10 +22,7 @@ class SubmissionSurveyForm extends Component {
     const { isFormEnabled } = this.state
     const { handleButtonClick } = this
     return (
-      <Section
-        name="submission-form"
-        className="SubmissionSurveyForm Section--blue"
-      >
+      <Section name="submission-form" className="SubmissionSurveyForm">
         <header>
           <h2 className="title">{heading}</h2>
         </header>

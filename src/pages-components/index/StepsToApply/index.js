@@ -1,5 +1,5 @@
 import React from 'react'
-import Section from '../../../components/Section'
+import Section from '../SmartsaverSection'
 import stepsToApplyContent from '../content/stepsToApplyContent'
 import StepsList from './stepsList'
 import logo from '../../../images/logo-for-white.jpg'
@@ -9,7 +9,7 @@ import './stepsToApply.css'
 const StepsToApply = () => {
   const { title, content, note, footer } = stepsToApplyContent
   return (
-    <Section className="Section--blue StepsToApply" name="steps-to-apply">
+    <Section className="StepsToApply" name="steps-to-apply">
       <div className="columns is-multiline">
         <div className="column is-12">
           <h2 className="title">{title}</h2>

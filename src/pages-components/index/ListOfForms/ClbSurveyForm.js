@@ -1,12 +1,12 @@
 import React from 'react'
 import SurveyForm from '../../../components/SurveyForm'
-import Section from '../../../components/Section'
+import Section from '../SmartsaverSection'
 import { informationSurvey } from '../content/surveyFormsContent'
 
 const SurveyMonkeyForm = ({ isEnabled }) => {
   const { heading, intro, footer, url } = informationSurvey
   return (
-    <Section name="questionnaire" className="Section--blue">
+    <Section name="questionnaire">
       <header>
         <h2 className="title">{heading}</h2>
       </header>

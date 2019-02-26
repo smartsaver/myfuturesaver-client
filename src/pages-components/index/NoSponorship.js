@@ -1,11 +1,11 @@
 import React from 'react'
-import Section from '../../components/Section'
+import Section from './SmartsaverSection'
 import { notParticipant } from './content/applyOnlineContent'
 
 const NoSponsorship = () => {
   const { heading, intro } = notParticipant
   return (
-    <Section className="Section--blue" name="non-participant">
+    <Section name="non-participant">
       <div className="columns">
         <div className="column is-one-third">
           <h3 className="title">{heading}</h3>
