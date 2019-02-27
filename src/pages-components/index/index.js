@@ -1,5 +1,6 @@
 import React from 'react'
 import HomeLayout from './HomeLayout'
+import CertificateApp from '../certificate-app'
 // import SEO from '../../components/Seo'
 // import SmartSaverBanner from './SmartSaverBanner'
 // import ClaimSection from './Claim'
@@ -35,7 +36,7 @@ import HomeLayout from './HomeLayout'
 const IndexPage = () => {
   return (
     <HomeLayout>
-      <h2 className="title">Hello</h2>
+      <CertificateApp />
     </HomeLayout>
   )
 }
