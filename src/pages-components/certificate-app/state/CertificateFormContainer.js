@@ -1,24 +1,18 @@
 import React, { Component } from 'react'
 import CertificateForm from '../components/CertificateForm'
-import CertificateContext from './CertificateContext'
+import CertificateConsumer from './CertificateConsumer'
 
 class CertificateFormContainer extends Component {
   render() {
+    const { recepient, sender, message } = this.props.certificateValues
     return (
-      <CertificateContext.Consumer>
-        {({ certificateValues }) => {
-          const { recepient, sender, message } = certificateValues
-          return (
-            <CertificateForm
-              recepient={recepient}
-              sender={sender}
-              message={message}
-            />
-          )
-        }}
-      </CertificateContext.Consumer>
+      <CertificateForm
+        recepient={recepient}
+        sender={sender}
+        message={message}
+      />
     )
   }
 }
 
-export default CertificateFormContainer
+export default CertificateConsumer(CertificateFormContainer)
