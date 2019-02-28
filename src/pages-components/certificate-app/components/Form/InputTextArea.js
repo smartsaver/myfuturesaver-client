@@ -15,9 +15,8 @@ const InputTextArea = ({ labelText, name, value, onChange }) => {
           id={name}
           onChange={onChange}
           className="textarea"
-        >
-          {value}
-        </textarea>
+          value={value}
+        />
       }
     />
   )
