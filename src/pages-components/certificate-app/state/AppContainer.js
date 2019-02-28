@@ -12,13 +12,14 @@ const AppContainer = WrappedComponent => {
       ...defaultCertificateState,
       certificateActions: {
         updateRecepient: value => this.updateRecepient(value),
+        updateSender: value => this.updateSender(value),
+        updateMessage: value => this.updateCertificateMessage(value),
       },
     }
 
     updateRecepient = recepient => {
-      this.setState(currentState => {
+      this.setState(() => {
         return {
-          currentState,
           certificateValues: {
             recepient,
           },
@@ -27,11 +28,23 @@ const AppContainer = WrappedComponent => {
     }
 
     updateSender = sender => {
-      this.updateCertificateValue({ sender })
+      this.setState(() => {
+        return {
+          certificateValues: {
+            sender,
+          },
+        }
+      })
     }
 
     updateCertificateMessage = message => {
-      this.updateCertificateValue({ message })
+      this.setState(() => {
+        return {
+          certificateValues: {
+            message,
+          },
+        }
+      })
     }
 
     render() {

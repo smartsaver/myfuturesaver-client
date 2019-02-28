@@ -6,7 +6,9 @@ const CertificateForm = ({
   sender,
   recepient,
   message,
-  onRecepientChange = () => {},
+  onRecepientChange,
+  onSenderChange,
+  onMessageChange,
 }) => {
   return (
     <form>
@@ -16,11 +18,17 @@ const CertificateForm = ({
         value={recepient}
         onChange={onRecepientChange}
       />
-      <InputField name="certificate-sender" labelText="From" value={sender} />
+      <InputField
+        name="certificate-sender"
+        labelText="From"
+        value={sender}
+        onChange={onSenderChange}
+      />
       <InputTextArea
         name="certificate-message"
         labelText="Message"
         value={message}
+        onChange={onMessageChange}
       />
     </form>
   )
