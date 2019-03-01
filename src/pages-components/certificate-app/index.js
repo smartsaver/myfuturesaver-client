@@ -12,7 +12,7 @@ const CertificateApp = ({ /*certificateValues,*/ updateCertificateValues }) => {
         <div className="column is-5">
           <CertificateForm onSubmit={updateCertificateValues} />
         </div>
-        <div className="column is-7">Preview Here</div>
+        <div className="column is-7" />
       </div>
     </Section>
   )

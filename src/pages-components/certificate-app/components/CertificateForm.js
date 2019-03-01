@@ -3,6 +3,10 @@ import InputField from './Form/InputField'
 import InputTextArea from './Form/InputTextArea'
 import debounce from 'lodash/debounce'
 
+/**
+ * @param {function} onSubmit - submit the form with the values.
+ */
+
 class CertificateForm extends Component {
   state = {
     message: '',

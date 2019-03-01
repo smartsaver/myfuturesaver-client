@@ -1,5 +1,10 @@
 import React, { Component } from 'react'
-import debounce from 'lodash/debounce'
+
+/**
+ *
+ * @param {Object} WrappedComponent - react component
+ * @returns - component with state
+ */
 
 const AppContainer = WrappedComponent => {
   return class extends Component {
