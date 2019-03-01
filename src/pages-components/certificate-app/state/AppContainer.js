@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import CertificateContext, {
-  defaultCertificateState,
-} from './CertificateContext'
+import debounce from 'lodash/debounce'
 
 const AppContainer = WrappedComponent => {
   return class extends Component {
@@ -9,49 +7,29 @@ const AppContainer = WrappedComponent => {
       WrappedComponent.name})`
 
     state = {
-      ...defaultCertificateState,
-      certificateActions: {
-        updateRecepient: value => this.updateRecepient(value),
-        updateSender: value => this.updateSender(value),
-        updateMessage: value => this.updateCertificateMessage(value),
+      certificateValues: {
+        message: '',
+        sender: '',
+        recepient: '',
       },
     }
 
-    updateRecepient = recepient => {
-      this.setState(() => {
-        return {
-          certificateValues: {
-            recepient,
-          },
-        }
-      })
-    }
-
-    updateSender = sender => {
-      this.setState(() => {
-        return {
-          certificateValues: {
-            sender,
-          },
-        }
-      })
-    }
-
-    updateCertificateMessage = message => {
-      this.setState(() => {
-        return {
-          certificateValues: {
-            message,
-          },
-        }
-      })
+    updateCertificateValues = certificateValues => {
+      this.setState(currentState => ({
+        ...currentState,
+        certificateValues: {
+          ...currentState.certificateValues,
+          ...certificateValues,
+        },
+      }))
     }
 
     render() {
       return (
-        <CertificateContext.Provider value={this.state}>
-          <WrappedComponent />
-        </CertificateContext.Provider>
+        <WrappedComponent
+          {...this.state}
+          updateCertificateValues={this.updateCertificateValues}
+        />
       )
     }
   }
