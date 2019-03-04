@@ -14,27 +14,26 @@ class CertificateForm extends Component {
     sender: '',
   }
 
+  componentDidUpdate(__, prevState) {
+    if (this.state !== prevState) {
+      this.debouncedCallOnSubmit()
+    }
+  }
+
   handleRecepientChange = event => {
-    const recepient = event.target.value
-    this.setState(() => ({ recepient }))
+    this.setState({ recepient: event.target.value })
   }
 
   handleSenderChange = event => {
-    const sender = event.target.value
-    this.setState(() => ({ sender }))
+    this.setState({ sender: event.target.value })
   }
 
   handleMessageChange = event => {
-    const message = event.target.value
-    this.setState(() => ({ message }))
+    this.setState({ message: event.target.value })
   }
 
   handleFormSubmit = event => {
     event.preventDefault()
-  }
-
-  handleFormChange = () => {
-    this.debouncedCallOnSubmit()
   }
 
   debouncedCallOnSubmit = debounce(() => {
@@ -48,10 +47,9 @@ class CertificateForm extends Component {
       handleSenderChange,
       handleMessageChange,
       handleFormSubmit,
-      handleFormChange,
     } = this
     return (
-      <form onChange={handleFormChange} onSubmit={handleFormSubmit}>
+      <form onSubmit={handleFormSubmit}>
         <InputField
           name="certficate-recepient"
           labelText="To"
