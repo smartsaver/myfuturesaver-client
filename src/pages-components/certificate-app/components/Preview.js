@@ -16,7 +16,7 @@ const Preview = ({ sender = '', recepient = '', message = '' }) => {
     <embed
       className={style.PreviewFrame}
       src={doc.output('datauristring')}
-      title="Pdf Preview"
+      type="application/pdf"
     />
   )
 }
