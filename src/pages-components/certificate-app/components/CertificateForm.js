@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import InputField from './Form/InputField'
 import InputTextArea from './Form/InputTextArea'
-import debounce from 'lodash/debounce'
 
 /**
+ * @name CertificateForm
  * @param {function} onSubmit - submit the form with the values.
  */
 
@@ -12,12 +12,6 @@ class CertificateForm extends Component {
     message: '',
     recepient: '',
     sender: '',
-  }
-
-  componentDidUpdate(__, prevState) {
-    if (this.state !== prevState) {
-      this.debouncedCallOnSubmit()
-    }
   }
 
   handleRecepientChange = event => {
@@ -34,11 +28,8 @@ class CertificateForm extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault()
+    this.props.onSubmit(event)
   }
-
-  debouncedCallOnSubmit = debounce(() => {
-    this.props.onSubmit(this.state)
-  }, 500)
 
   render() {
     const { recepient, sender, message } = this.state
@@ -68,6 +59,9 @@ class CertificateForm extends Component {
           value={message}
           onChange={handleMessageChange}
         />
+        <button className="button" type="submit">
+          See Preview
+        </button>
       </form>
     )
   }
