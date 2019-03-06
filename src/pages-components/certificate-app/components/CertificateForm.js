@@ -45,7 +45,7 @@ class CertificateForm extends Component {
     const { images } = this.props
     return (
       <form onSubmit={handleFormSubmit}>
-        <ImagePicker images={images} />
+        <ImagePicker labelText="Pick an image" images={images} />
         <InputField
           name="certficate-recepient"
           labelText="To"

@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { isEmpty, uniqueId } from 'lodash'
+import style from './ImagePicker.module.css'
 
 const Image = ({ url, alt = 'Futuresaver Certificate' }) => {
-  return <img className={`image`} src={url} alt={alt} />
+  return <img className={`image ${style.Image}`} src={url} alt={alt} />
 }
 
 /**
@@ -24,8 +25,8 @@ class ImagePicker extends Component {
   render() {
     return (
       <div>
-        <p className="label">Pick a certificate</p>
-        {this.renderImages()}
+        <p className="label">{this.props.labelText}</p>
+        <div className={style.ImagesContainer}>{this.renderImages()}</div>
       </div>
     )
   }
