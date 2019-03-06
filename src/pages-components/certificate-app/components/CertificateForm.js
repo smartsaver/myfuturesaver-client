@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import InputField from './Form/InputField'
 import InputTextArea from './Form/InputTextArea'
+import ImagePicker from './ImagePicker'
 
 /**
  * @name CertificateForm
  * @param {function} onSubmit - submit the form with the values.
+ * @param {string[]} images - images array for the imagepicker
  */
 
 class CertificateForm extends Component {
@@ -12,6 +14,7 @@ class CertificateForm extends Component {
     message: '',
     recepient: '',
     sender: '',
+    selectedImageUrl: '',
   }
 
   handleRecepientChange = event => {
@@ -39,8 +42,10 @@ class CertificateForm extends Component {
       handleMessageChange,
       handleFormSubmit,
     } = this
+    const { images } = this.props
     return (
       <form onSubmit={handleFormSubmit}>
+        <ImagePicker images={images} />
         <InputField
           name="certficate-recepient"
           labelText="To"

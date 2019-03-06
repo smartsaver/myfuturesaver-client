@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import jsPdf from 'jspdf'
+import images from './images'
 
 const CertificateFormContainer = WrappedComponent => {
   return class extends Component {
@@ -23,6 +24,7 @@ const CertificateFormContainer = WrappedComponent => {
     render() {
       const props = {
         onSubmit: this.onSubmit,
+        images,
       }
       return <WrappedComponent {...props} />
     }
