@@ -7,7 +7,7 @@ const CertificateFormContainer = WrappedComponent => {
     static displayName = `CertificateFormContainer(${WrappedComponent.displayName ||
       WrappedComponent.name})`
 
-    onSubmit = ({ recepient, sender, message }) => {
+    handleSubmit = ({ recepient, sender, message }) => {
       const makeLandscapePdf = () => {
         const doc = new jsPdf({
           orientation: 'landscape',
@@ -22,11 +22,7 @@ const CertificateFormContainer = WrappedComponent => {
     }
 
     render() {
-      const props = {
-        onSubmit: this.onSubmit,
-        images,
-      }
-      return <WrappedComponent {...props} />
+      return <WrappedComponent onSubmit={this.handleSubmit} images={images} />
     }
   }
 }

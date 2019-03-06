@@ -1,4 +1,6 @@
 .Image {
+  padding: 0;
+  border: none;
   cursor: pointer;
   flex: 1 0 10rem;
 }
@@ -8,11 +10,15 @@
 }
 
 .Image:hover {
-  filter: drop-shadow(0px 0px 7px rgba(0, 59, 89, 0.44));
+  filter: drop-shadow(0px 0px 7px rgba(17, 115, 165, 0.44));
 }
 
 .Image.Selected {
-  filter: drop-shadow(0px 0px 7px #fabc0966);
+  filter: grayscale(0.65) drop-shadow(0px 0px 7px rgba(17, 115, 165, 0.44));
+}
+
+.Image:active {
+  filter: drop-shadow(0px 0px 7px rgba(0, 59, 89, 0.44));
 }
 
 .ImagesContainer {
