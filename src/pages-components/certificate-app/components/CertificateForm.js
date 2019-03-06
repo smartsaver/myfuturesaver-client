@@ -28,7 +28,7 @@ class CertificateForm extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault()
-    this.props.onSubmit(event)
+    this.props.onSubmit(this.state)
   }
 
   render() {
