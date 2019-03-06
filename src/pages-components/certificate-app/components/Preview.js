@@ -1,8 +1,8 @@
 import React from 'react'
-import * as jsPdf from 'jspdf'
+import jsPdf from 'jspdf'
 import style from './Preview.module.css'
 
-const Preview = ({ sender = '', recepient = '', message = '' }) => {
+function previewPdf({ sender, recepient, message }) {
   const doc = new jsPdf({
     orientation: 'landscape',
     format: 'letter',
@@ -11,11 +11,14 @@ const Preview = ({ sender = '', recepient = '', message = '' }) => {
   doc.text(sender, 20, 20)
   doc.text(recepient, 20, 40)
   doc.text(message, 20, 50)
+  return doc.output('datauristring')
+}
 
+const Preview = ({ sender = '', recepient = '', message = '' }) => {
   return (
     <embed
       className={style.PreviewFrame}
-      src={doc.output('datauristring')}
+      src={previewPdf({ sender, recepient, message })}
       type="application/pdf"
     />
   )
