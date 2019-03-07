@@ -7,7 +7,7 @@ const CertificateFormContainer = WrappedComponent => {
     static displayName = `CertificateFormContainer(${WrappedComponent.displayName ||
       WrappedComponent.name})`
 
-    handleSubmit = ({ recepient, sender, message }) => {
+    handleSubmit = ({ recepient, sender, message, selectedImageUrl }) => {
       const makeLandscapePdf = () => {
         const doc = new jsPdf({
           orientation: 'landscape',

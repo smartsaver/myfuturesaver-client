@@ -27,7 +27,9 @@ const Image = ({
 
 /**
  * @name ImagePicker
+ * @param {string[]} labelText - text for the label
  * @param {string[]} images - image urls
+ * @param {function} onImageClick - passes an image url up.
  *
  */
 
@@ -45,8 +47,10 @@ class ImagePicker extends Component {
     return { ...state, selectedUrl: props.images[0] }
   }
 
-  handleImageClick = ({ url }) => {
-    this.setState({ selectedUrl: url })
+  handleImageClick = async ({ url }) => {
+    if (this.state.selectedUrl === url) return
+    await this.setState({ selectedUrl: url })
+    this.props.onImageClick(this.state.selectedUrl)
   }
 
   renderImages = () => {
@@ -62,7 +66,7 @@ class ImagePicker extends Component {
         url={imageUrl}
         key={isTestEnvironment}
         onClick={this.handleImageClick}
-        selected={!!(this.state.selectedUrl === imageUrl)}
+        selected={this.state.selectedUrl === imageUrl}
       />
     )
   }
