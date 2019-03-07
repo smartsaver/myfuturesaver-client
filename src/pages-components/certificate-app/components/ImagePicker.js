@@ -8,8 +8,10 @@ const Image = ({
   onClick,
   selected = false,
 }) => {
-  const handleOnClick = () => {
-    onClick({ url })
+  const handleOnClick = async event => {
+    await event.persist()
+    // pass image DOM
+    onClick(event.target, { url })
   }
 
   const isImageSelected = selected ? style.Selected : ''
@@ -47,10 +49,20 @@ class ImagePicker extends Component {
     return { ...state, selectedUrl: props.images[0] }
   }
 
-  handleImageClick = async ({ url }) => {
+  componentDidMount() {
+    this.emitInitialImage()
+  }
+
+  emitInitialImage = () => {
+    if (this.state.selectedUrl === '') return
+    const image = document.querySelector(`img[src="${this.state.selectedUrl}"]`)
+    this.props.onImageClick(image)
+  }
+
+  handleImageClick = async (image, { url }) => {
     if (this.state.selectedUrl === url) return
     await this.setState({ selectedUrl: url })
-    this.props.onImageClick(this.state.selectedUrl)
+    this.props.onImageClick(image)
   }
 
   renderImages = () => {

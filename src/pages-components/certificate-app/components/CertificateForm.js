@@ -14,7 +14,7 @@ class CertificateForm extends Component {
     message: '',
     recepient: '',
     sender: '',
-    selectedImageUrl: '',
+    selectedImage: null,
   }
 
   handleRecepientChange = event => {
@@ -34,8 +34,8 @@ class CertificateForm extends Component {
     this.props.onSubmit(this.state)
   }
 
-  handleImageUrlChange = url => {
-    this.setState({ selectedImageUrl: url })
+  handleSelectedImageChange = image => {
+    this.setState({ selectedImage: image })
   }
 
   render() {
@@ -45,13 +45,13 @@ class CertificateForm extends Component {
       handleSenderChange,
       handleMessageChange,
       handleFormSubmit,
-      handleImageUrlChange,
+      handleSelectedImageChange,
     } = this
     const { images } = this.props
     return (
       <form onSubmit={handleFormSubmit}>
         <ImagePicker
-          onImageClick={handleImageUrlChange}
+          onImageClick={handleSelectedImageChange}
           labelText="Pick an image"
           images={images}
         />
