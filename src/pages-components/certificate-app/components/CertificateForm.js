@@ -34,6 +34,10 @@ class CertificateForm extends Component {
     this.props.onSubmit(this.state)
   }
 
+  handleDownload = () => {
+    this.props.onDownload(this.state)
+  }
+
   handleSelectedImageChange = image => {
     this.setState({ selectedImage: image })
   }
@@ -44,8 +48,9 @@ class CertificateForm extends Component {
       handleRecepientChange,
       handleSenderChange,
       handleMessageChange,
-      handleFormSubmit,
       handleSelectedImageChange,
+      handleFormSubmit,
+      handleDownload,
     } = this
     const { images } = this.props
     return (
@@ -73,9 +78,21 @@ class CertificateForm extends Component {
           value={message}
           onChange={handleMessageChange}
         />
-        <button className="button" type="submit">
-          See Preview
-        </button>
+
+        <div className="field">
+          <button className="button is-info" type="submit">
+            See Preview
+          </button>
+        </div>
+        <div className="field">
+          <button
+            onClick={handleDownload}
+            className="button is-warning"
+            type="button"
+          >
+            Download
+          </button>
+        </div>
       </form>
     )
   }

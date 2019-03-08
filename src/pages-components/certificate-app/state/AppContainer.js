@@ -12,18 +12,16 @@ const AppContainer = WrappedComponent => {
       WrappedComponent.name})`
 
     state = {
-      certificateValues: {
-        message: '',
-        sender: '',
-        recepient: '',
+      certificate: {
+        previewUrl: '',
       },
     }
 
     updateCertificateValues = certificateValues => {
       this.setState(currentState => ({
         ...currentState,
-        certificateValues: {
-          ...currentState.certificateValues,
+        certificate: {
+          ...currentState.certificate,
           ...certificateValues,
         },
       }))

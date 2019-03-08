@@ -2,28 +2,55 @@ import React, { Component } from 'react'
 import jsPdf from 'jspdf'
 import images from './images'
 
+/**
+ * @name CertificateFormContainer
+ * @param {function} onUpdatePreview - spits out preview url
+ * @param {Object} WrappedComponent - react element
+ */
+
 const CertificateFormContainer = WrappedComponent => {
   return class extends Component {
     static displayName = `CertificateFormContainer(${WrappedComponent.displayName ||
       WrappedComponent.name})`
 
-    handleSubmit = ({ recepient, sender, message, selectedImage }) => {
-      this.makeLandscapePdf({ recepient, sender, message, selectedImage })
+    handleSubmit = certificateValues => {
+      this.props.onUpdatePreview(this.makePreviewUrl(certificateValues))
     }
 
-    makeLandscapePdf = ({ recepient, sender, message, selectedImage }) => {
+    handleDownload = certificateValues => {
+      this.downloadCertificate(certificateValues)
+    }
+
+    makePreviewUrl = certificateValues => {
+      return this.makeCertificate(certificateValues).output(
+        'datauristring',
+        'Myfuturesaver Certificate.pdf'
+      )
+    }
+
+    downloadCertificate = certificateValues => {
+      this.makeCertificate(certificateValues).save(
+        'Myfuturesaver Certificate.pdf'
+      )
+    }
+
+    makeCertificate({ recepient, sender, message, selectedImage }) {
       const doc = new jsPdf({
         orientation: 'landscape',
         format: 'letter',
+        lineHeight: 1.4,
       })
       doc.setProperties({
         title: 'Myfuturesaver Certificate',
         author: 'Smartsaver.org',
       })
-      doc.setFontSize(30)
+      doc.setTextColor(50, 140, 198)
+      doc.setFontSize(25)
       doc.addImage(this.base64Image(selectedImage), 'JPEG', 0, 0, 0, 215)
-      doc.text(recepient, 100, 115)
-      doc.output('dataurlnewwindow', 'Myfuturesaver Certificate.pdf')
+      doc.text(recepient, 137, 112, 'center')
+      doc.text(message, 137, 124, 'center')
+      doc.text(sender, 137, 175, 'center')
+      return doc
     }
 
     base64Image(image) {
@@ -40,7 +67,13 @@ const CertificateFormContainer = WrappedComponent => {
     }
 
     render() {
-      return <WrappedComponent onSubmit={this.handleSubmit} images={images} />
+      return (
+        <WrappedComponent
+          onDownload={this.handleDownload}
+          onSubmit={this.handleSubmit}
+          images={images}
+        />
+      )
     }
   }
 }
