@@ -8,13 +8,17 @@ import content from './content'
 
 const CertForm = CertificateFormContainer(CertificateForm)
 
-const CertificateApp = ({ certificate, updateCertificateValues }) => {
+const CertificateApp = ({
+  certificate,
+  updateCertificateValues,
+  sectionName = '',
+}) => {
   const handleUpdatePreview = previewUrl => {
     updateCertificateValues({ previewUrl })
   }
 
   return (
-    <Section>
+    <Section name={sectionName}>
       <h2 className="title">MyFutureSaver Certificate</h2>
       <div className="columns">
         <div className="column">
