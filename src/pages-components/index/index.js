@@ -12,26 +12,7 @@ import SubmissionSurveyForm from './ListOfForms/SubmissionSurveyForm'
 import RespUploadSection from './RespUpload'
 import StepsToApplySection from './StepsToApply'
 import FaqSection from './Faq'
-import ErrorBoundary from '../../components/ErrorBoundary'
-
-const CertificateApp = lazy(() => import('../certificate-app/index'))
-
-const LazyCertificateApp = () => {
-  const FallbackCertificateSection = () => {
-    return (
-      <section className="section" id="certificate">
-        <p>Loading...</p>
-      </section>
-    )
-  }
-  return (
-    <ErrorBoundary>
-      <Suspense fallback={<FallbackCertificateSection />}>
-        <CertificateApp sectionName="certificate" />
-      </Suspense>
-    </ErrorBoundary>
-  )
-}
+import CertificateApp from '../certificate-app'
 
 const IndexPage = () => {
   return (
@@ -47,7 +28,7 @@ const IndexPage = () => {
       <NoSponsorshipSection />
       <SubmissionSurveyForm />
       <RespUploadSection />
-      <LazyCertificateApp />
+      <CertificateApp sectionName="certificate" />
       <FaqSection />
     </HomeLayout>
   )
