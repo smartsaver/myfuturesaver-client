@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import HomeLayout from './HomeLayout'
-import CertificateApp from '../certificate-app'
 import SEO from '../../components/Seo'
 import SmartSaverBanner from './SmartSaverBanner'
 import ClaimSection from './Claim'
@@ -13,6 +12,19 @@ import SubmissionSurveyForm from './ListOfForms/SubmissionSurveyForm'
 import RespUploadSection from './RespUpload'
 import StepsToApplySection from './StepsToApply'
 import FaqSection from './Faq'
+import ErrorBoundary from '../../components/ErrorBoundary'
+
+const CertificateApp = lazy(() => import('../certificate-app/index'))
+
+const LazyCertificateApp = () => {
+  return (
+    <ErrorBoundary>
+      <Suspense fallback={<p>Loading...</p>}>
+        <CertificateApp sectionName="certificate" />
+      </Suspense>
+    </ErrorBoundary>
+  )
+}
 
 const IndexPage = () => {
   return (
@@ -28,7 +40,7 @@ const IndexPage = () => {
       <NoSponsorshipSection />
       <SubmissionSurveyForm />
       <RespUploadSection />
-      <CertificateApp sectionName="certificate" />
+      <LazyCertificateApp />
       <FaqSection />
     </HomeLayout>
   )

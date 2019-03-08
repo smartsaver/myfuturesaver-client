@@ -31,6 +31,7 @@ const AppContainer = WrappedComponent => {
       return (
         <WrappedComponent
           {...this.state}
+          {...this.props}
           updateCertificateValues={this.updateCertificateValues}
         />
       )
