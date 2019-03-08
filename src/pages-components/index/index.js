@@ -17,9 +17,16 @@ import ErrorBoundary from '../../components/ErrorBoundary'
 const CertificateApp = lazy(() => import('../certificate-app/index'))
 
 const LazyCertificateApp = () => {
+  const FallbackCertificateSection = () => {
+    return (
+      <section className="section" id="certificate">
+        <p>Loading...</p>
+      </section>
+    )
+  }
   return (
     <ErrorBoundary>
-      <Suspense fallback={<p>Loading...</p>}>
+      <Suspense fallback={<FallbackCertificateSection />}>
         <CertificateApp sectionName="certificate" />
       </Suspense>
     </ErrorBoundary>

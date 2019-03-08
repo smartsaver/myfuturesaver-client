@@ -26,6 +26,7 @@ const defaultNavbarEnd = (
       <NavbarItem text="3. A. Submission" href="/#submission-form" />
       <NavbarItem text="3. B. Submit CLB" href="/#upload-clb" />
     </NavbarDropdown>
+    <NavbarItem text="Certificate" href="/#certificate" />
     <NavbarItem text="FAQ" href="/#faq" />
     <NavbarItem text="Contact" href="/#contact" />
   </Fragment>
