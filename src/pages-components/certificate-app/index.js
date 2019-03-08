@@ -4,6 +4,7 @@ import CertificateForm from './components/CertificateForm'
 import Preview from './components/Preview'
 import AppContainer from './state/AppContainer'
 import CertificateFormContainer from './state/CertificateFormContainer'
+import content from './content'
 
 const CertForm = CertificateFormContainer(CertificateForm)
 
@@ -20,7 +21,10 @@ const CertificateApp = ({ certificate, updateCertificateValues }) => {
           <CertForm onUpdatePreview={handleUpdatePreview} />
         </div>
         <div className="column">
-          <Preview url={certificate.previewUrl} />
+          <Preview
+            text={content.certificateInstructions}
+            url={certificate.previewUrl}
+          />
         </div>
       </div>
     </Section>
