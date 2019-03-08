@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react'
+import React from 'react'
 import HomeLayout from './HomeLayout'
 import SEO from '../../components/Seo'
 import SmartSaverBanner from './SmartSaverBanner'
