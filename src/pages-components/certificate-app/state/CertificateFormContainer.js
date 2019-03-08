@@ -46,10 +46,17 @@ const CertificateFormContainer = WrappedComponent => {
       })
       doc.setTextColor(50, 140, 198)
       doc.setFontSize(25)
-      doc.addImage(this.base64Image(selectedImage), 'JPEG', 0, 0, 0, 215)
-      doc.text(recepient, 137, 112, 'center')
-      doc.text(message, 137, 124, 'center')
-      doc.text(sender, 137, 175, 'center')
+      doc.addImage(
+        this.base64Image(selectedImage),
+        'JPEG',
+        0,
+        0,
+        doc.internal.pageSize.getWidth(),
+        doc.internal.pageSize.getHeight()
+      )
+      doc.text(recepient, 138, 113, 'center')
+      doc.text(message, 138, 125, 'center')
+      doc.text(sender, 138, 176.5, 'center')
       return doc
     }
 
