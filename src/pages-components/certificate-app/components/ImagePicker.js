@@ -54,6 +54,7 @@ class ImagePicker extends Component {
   }
 
   emitInitialImage = () => {
+    /* eslint-disable no-undef */
     if (this.state.selectedUrl === '') return
     const image = document.querySelector(`img[src="${this.state.selectedUrl}"]`)
     this.props.onImageClick(image)

@@ -54,6 +54,7 @@ const CertificateFormContainer = WrappedComponent => {
     }
 
     base64Image(image) {
+      /* eslint-disable no-undef */
       let base64Uri
       const canvas = document.createElement('canvas')
       document.body.appendChild(canvas)
