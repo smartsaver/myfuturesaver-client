@@ -3,6 +3,7 @@ import InputField from './Form/InputField'
 
 /**
  * Email Certificate Form
+ * @param {function} onSubmit - form submit event
  */
 
 class EmailCertificateForm extends Component {
@@ -12,6 +13,7 @@ class EmailCertificateForm extends Component {
 
   handleSubmit = event => {
     event.preventDefault()
+    this.props.onSubmit(this.state.email)
   }
 
   handleEmail = event => {
