@@ -17,6 +17,7 @@ const InputField = ({
   className = '',
   onChange,
   value,
+  required = false,
 }) => {
   return (
     <div
@@ -35,6 +36,7 @@ const InputField = ({
           className="input"
           onChange={onChange}
           value={value}
+          required={required}
         />
       </div>
     </div>
