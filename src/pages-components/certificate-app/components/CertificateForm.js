@@ -6,6 +6,7 @@ import ImagePicker from './ImagePicker'
 /**
  * @name CertificateForm
  * @param {function} onSubmit - submit the form with the values.
+ * @param {function} onValuesChange - Do anything you want with the form state
  * @param {string[]} images - images array for the imagepicker
  */
 
@@ -15,6 +16,10 @@ class CertificateForm extends Component {
     recepient: '',
     sender: '',
     selectedImage: null,
+  }
+
+  componentDidUpdate(__, prevState) {
+    if (this.state !== prevState) this.props.onValuesChange(this.state)
   }
 
   handleRecepientChange = event => {

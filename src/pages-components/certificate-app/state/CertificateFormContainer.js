@@ -5,6 +5,7 @@ import images from './images'
 /**
  * @name CertificateFormContainer
  * @param {function} onUpdatePreview - spits out preview url
+ * @param {function} onValuesChange - Do anything when the form changes form values
  * @param {Object} WrappedComponent - react element
  */
 
@@ -79,6 +80,7 @@ const CertificateFormContainer = WrappedComponent => {
         <WrappedComponent
           onDownload={this.handleDownload}
           onSubmit={this.handleSubmit}
+          onValuesChange={this.props.onValuesChange}
           images={images}
         />
       )

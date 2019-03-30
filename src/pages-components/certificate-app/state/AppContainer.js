@@ -13,6 +13,10 @@ const AppContainer = WrappedComponent => {
 
     state = {
       certificate: {
+        message: '',
+        recepient: '',
+        sender: '',
+        selectedImage: null,
         previewUrl: '',
       },
     }

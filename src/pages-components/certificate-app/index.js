@@ -18,12 +18,19 @@ const CertificateApp = ({
     updateCertificateValues({ previewUrl })
   }
 
+  const handleValuesChange = state => {
+    updateCertificateValues(state)
+  }
+
   return (
     <Section name={sectionName}>
       <h2 className="title">MyFutureSaver Certificate</h2>
       <div className="columns is-multiline">
         <div className="column">
-          <CertForm onUpdatePreview={handleUpdatePreview} />
+          <CertForm
+            onValuesChange={handleValuesChange}
+            onUpdatePreview={handleUpdatePreview}
+          />
         </div>
         <div className="column">
           <Preview
