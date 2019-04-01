@@ -4,16 +4,17 @@ import EmailCertificateFormContainer from './state/EmailCertificateFormContainer
 
 /**
  *
- * @param {string} title
+ * @param {string} title - section title
+ * @param {function} onFormSubmit - emits email address to any function handler
  */
 
 const EmailCertForm = EmailCertificateFormContainer(EmailCertificateForm)
 
-const EmailSection = ({ title = 'Email this Certificate' }) => {
+const EmailSection = ({ title = 'Email this Certificate', onFormSubmit }) => {
   return (
     <div>
       <h2 className="title">{title}</h2>
-      <EmailCertForm />
+      <EmailCertForm onSubmit={onFormSubmit} />
     </div>
   )
 }

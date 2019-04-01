@@ -22,6 +22,10 @@ const CertificateApp = ({
     updateCertificateValues(state)
   }
 
+  const handleEmailFormSubmit = email => {
+    console.log('handle Email form submit', email)
+  }
+
   return (
     <Section name={sectionName}>
       <h2 className="title">MyFutureSaver Certificate</h2>
@@ -39,7 +43,7 @@ const CertificateApp = ({
           />
         </div>
         <div className="column is-12">
-          <EmailSection />
+          <EmailSection onFormSubmit={handleEmailFormSubmit} />
         </div>
       </div>
     </Section>

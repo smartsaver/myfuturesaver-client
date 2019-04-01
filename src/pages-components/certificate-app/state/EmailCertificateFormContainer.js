@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 /**
  *
  * @param {Object} WrappedComponent - react component
+ * @param {function} onSubmit - emits email address
  */
 
 const EmailCertificateFormContainer = WrappedComponent =>
@@ -10,12 +11,8 @@ const EmailCertificateFormContainer = WrappedComponent =>
     static displayName = `CertificateFormContainer(${WrappedComponent.displayName ||
       WrappedComponent.name})`
 
-    handleSubmit = email => {
-      console.log(email)
-    }
-
     render() {
-      return <WrappedComponent onSubmit={this.handleSubmit} />
+      return <WrappedComponent onSubmit={this.props.onSubmit} />
     }
   }
 
