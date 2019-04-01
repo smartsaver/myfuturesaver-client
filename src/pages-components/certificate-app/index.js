@@ -12,6 +12,7 @@ const CertForm = CertificateFormContainer(CertificateForm)
 const CertificateApp = ({
   certificate,
   updateCertificateValues,
+  emailCertificateTo,
   sectionName = '',
 }) => {
   const handleUpdatePreview = previewUrl => {
@@ -20,10 +21,6 @@ const CertificateApp = ({
 
   const handleValuesChange = state => {
     updateCertificateValues(state)
-  }
-
-  const handleEmailFormSubmit = email => {
-    console.log('handle Email form submit', email)
   }
 
   return (
@@ -43,7 +40,7 @@ const CertificateApp = ({
           />
         </div>
         <div className="column is-12">
-          <EmailSection onFormSubmit={handleEmailFormSubmit} />
+          <EmailSection onFormSubmit={emailCertificateTo} />
         </div>
       </div>
     </Section>

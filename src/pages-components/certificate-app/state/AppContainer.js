@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import certificate from '../../../libs/certificate'
 
 /**
  *
@@ -31,12 +32,22 @@ const AppContainer = WrappedComponent => {
       }))
     }
 
+    emailCertificateTo = email => {
+      console.log('email certificate to', {
+        email,
+        certificateBase64Url: certificate.makeCertificate(
+          this.state.certificate
+        ),
+      })
+    }
+
     render() {
       return (
         <WrappedComponent
           {...this.state}
           {...this.props}
           updateCertificateValues={this.updateCertificateValues}
+          emailCertificateTo={this.emailCertificateTo}
         />
       )
     }
