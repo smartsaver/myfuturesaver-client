@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import certificate from '../../../libs/certificate'
+import certificate from '../libs/certificate'
 
 /**
  *
@@ -35,9 +35,9 @@ const AppContainer = WrappedComponent => {
     emailCertificateTo = email => {
       console.log('email certificate to', {
         email,
-        certificateBase64Url: certificate.makeCertificate(
-          this.state.certificate
-        ),
+        certificateBase64Url: certificate
+          .makeCertificate(this.state.certificate)
+          .output('datauristring', 'MyFutureSaver Certificate.pdf'),
       })
     }
 
