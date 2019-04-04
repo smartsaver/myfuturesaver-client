@@ -4,7 +4,7 @@ import CertificateForm from './components/CertificateForm'
 import Preview from './components/Preview'
 import AppContainer from './state/AppContainer'
 import CertificateFormContainer from './state/CertificateFormContainer'
-import EmailSection from './EmailSection'
+// import EmailSection from './EmailSection'
 import content from './content'
 
 const CertForm = CertificateFormContainer(CertificateForm)
@@ -12,7 +12,7 @@ const CertForm = CertificateFormContainer(CertificateForm)
 const CertificateApp = ({
   certificate,
   updateCertificateValues,
-  emailCertificateTo,
+  // emailCertificateTo,
   sectionName = '',
 }) => {
   const handleUpdatePreview = previewUrl => {
@@ -39,9 +39,9 @@ const CertificateApp = ({
             url={certificate.previewUrl}
           />
         </div>
-        <div className="column is-12">
+        {/* <div className="column is-12">
           <EmailSection onFormSubmit={emailCertificateTo} />
-        </div>
+        </div> */}
       </div>
     </Section>
   )
