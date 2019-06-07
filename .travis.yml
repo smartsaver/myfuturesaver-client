@@ -1,11 +1,10 @@
 language: node_js
 node_js:
-  - '10'
+  - 'lts/*'
 cache:
+  yarn: true
   directories:
     - node_modules
-script:
-  - echo "skipping tests"
 before_deploy:
   - npm install -g travis-ci-cloudfront-invalidation
   - npm run build

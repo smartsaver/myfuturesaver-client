@@ -1,0 +1,20 @@
+.Primary {
+  color: #003b59 !important;
+}
+
+.Primary h1,
+.Primary h2,
+.Primary h3,
+.Primary h4,
+.Primary h5,
+.Primary h6,
+.Primary strong,
+.Primary p,
+.Primary li,
+.Primary input,
+.Primary label,
+.Primary select,
+.Primary button,
+.Primary span {
+  color: #003b59 !important;
+}

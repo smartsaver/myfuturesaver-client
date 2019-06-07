@@ -1,7 +1,5 @@
 import React from 'react'
 
-import './Form.css'
-
 const Form = props => {
   const { name = '', className = '', method = '', children, onSubmit } = props
   return (

@@ -1,0 +1,27 @@
+/* define smarsaver colors for navbar */
+
+.navbar.Navbar--Smartsaver-theme {
+  background-color: #003b59 !important;
+}
+
+.Navbar--Smartsaver-theme .navbar-brand .navbar-item img {
+  max-height: 2.3rem;
+}
+
+.Navbar--Smartsaver-theme .navbar-brand .navbar-item:hover {
+  background-color: #014263 !important;
+}
+
+@media (min-width: 1088px) {
+  .Navbar--Smartsaver-theme .navbar-end > .navbar-item:hover {
+    background-color: #014263 !important;
+  }
+  .Navbar--Smartsaver-theme.is-dark
+    .navbar-item.has-dropdown:hover
+    .navbar-link,
+  .Navbar--Smartsaver-theme.is-dark
+    .navbar-item.has-dropdown.is-active
+    .navbar-link {
+    background-color: #014263 !important;
+  }
+}
