@@ -1,5 +1,5 @@
 import React from 'react'
-import { render } from 'react-testing-library'
+import { render } from '@testing-library/react'
 import { StaticQuery } from '../../../__mocks__/gatsby'
 import IndexPage from '../index'
 
