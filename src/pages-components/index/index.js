@@ -12,7 +12,7 @@ import SubmissionSurveyForm from './ListOfForms/SubmissionSurveyForm'
 import RespUploadSection from './RespUpload'
 import StepsToApplySection from './StepsToApply'
 import FaqSection from './Faq'
-import CertificateApp from '../certificate-app'
+// import CertificateApp from '../certificate-app'
 
 const IndexPage = () => {
   return (
@@ -28,7 +28,7 @@ const IndexPage = () => {
       <NoSponsorshipSection />
       <SubmissionSurveyForm />
       <RespUploadSection />
-      <CertificateApp sectionName="certificate" />
+      {/* <CertificateApp sectionName="certificate" /> */}
       <FaqSection />
     </HomeLayout>
   )
