@@ -1,32 +1,35 @@
 import React, { Component } from 'react'
 import Burger from './Burger'
-import NavbarDropdown from './NavbarDropdown'
-import NavbarItem from './NavbarItem'
-import logo from '../../images/logo-small.png'
-import './Navbar.css'
 
-const Navbar = ({ isActive, onBurgerClick }) => {
+const Navbar = ({
+  isActive,
+  onBurgerClick,
+  navbarEnd,
+  navbarBrand,
+  className,
+}) => {
   const isMenuActive = isActive ? 'is-active' : ''
   return (
-    <nav className="navbar is-dark Navbar--blue">
+    <nav className={`navbar Navbar ${className}`}>
       <div className="container">
         <div className="navbar-brand">
-          <a href="/#" className="navbar-item">
-            <img src={logo} alt="SmartSAVER" className="image" />
-          </a>
+          {navbarBrand}
           <Burger isActive={isActive} onBurgerClick={onBurgerClick} />
         </div>
         <div className={`navbar-menu ${isMenuActive} js-navbar-menu`}>
-          <div className="navbar-end">
-            <NavbarDropdown text="Application Process" />
-            <NavbarItem text="FAQ" href="/#faq" />
-            <NavbarItem text="Contact" href="/#contact" />
-          </div>
+          <div className="navbar-end">{navbarEnd}</div>
         </div>
       </div>
     </nav>
   )
 }
+
+/**
+ * @class Navbar
+ * @param className - extra css classes
+ * @param navbarBrand - elements to put in the rightmost side. Usually NavbarItem component.
+ * @param navbarEnd - elements put at the leftmost side. Usually NavbarItem components.
+ */
 
 class NavbarContainer extends Component {
   state = {
@@ -63,11 +66,15 @@ class NavbarContainer extends Component {
   }
 
   render() {
+    const { navbarEnd = null, navbarBrand = null, className = '' } = this.props
     return (
       <header>
         <Navbar
+          className={className}
           isActive={this.state.isActive}
           onBurgerClick={this.handleOnBurgerClick}
+          navbarEnd={navbarEnd}
+          navbarBrand={navbarBrand}
         />
       </header>
     )

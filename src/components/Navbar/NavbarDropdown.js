@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import NavbarItem from './NavbarItem'
 
 class NavbarDropdown extends Component {
   state = {
@@ -34,7 +33,7 @@ class NavbarDropdown extends Component {
   }
 
   render() {
-    const { text } = this.props
+    const { text, children } = this.props
     const isDropDownActive = this.state.isActive ? 'is-active' : ''
     const isDropdownHidden = !this.state.isActive ? 'is-hidden' : ''
     return (
@@ -47,13 +46,7 @@ class NavbarDropdown extends Component {
         <div
           className={`navbar-dropdown js-navbar-dropdown ${isDropdownHidden}`}
         >
-          <NavbarItem text="1. Questionnaire" href="/#questionnaire" />
-          <NavbarItem
-            text="2. RESP/CLB Application"
-            href="/#resp-clb-application"
-          />
-          <NavbarItem text="3. A. Submission" href="/#submission-form" />
-          <NavbarItem text="3. B. Submit CLB" href="/#upload-clb" />
+          {children}
         </div>
       </div>
     )

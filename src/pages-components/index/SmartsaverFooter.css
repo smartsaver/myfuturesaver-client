@@ -1,0 +1,21 @@
+.Footer--Smartsaver-theme {
+  background-color: #003b59;
+}
+
+.Footer--Smartsaver-theme,
+.Footer--Smartsaver-theme h1,
+.Footer--Smartsaver-theme h2,
+.Footer--Smartsaver-theme h3,
+.Footer--Smartsaver-theme h4,
+.Footer--Smartsaver-theme h5,
+.Footer--Smartsaver-theme h6,
+.Footer--Smartsaver-theme p,
+.Footer--Smartsaver-theme div,
+.Footer--Smartsaver-theme section,
+.Footer--Smartsaver-theme article {
+  color: whitesmoke;
+}
+
+.Footer--Smartsaver-theme a {
+  color: #fabc09;
+}
