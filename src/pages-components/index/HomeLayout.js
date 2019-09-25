@@ -9,6 +9,7 @@ import FontAwesomeScript from '../../components/scripts/FontAwesome'
 const HomeLayout = ({ children }) => {
   return (
     <div className="HomeLayout">
+      {/* TODO(#1) add a Notification component */}
       <Navbar />
       <main>{children}</main>
       <Footer />
