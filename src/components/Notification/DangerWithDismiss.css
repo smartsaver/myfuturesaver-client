@@ -1,4 +1,5 @@
-.Notification.is-danger {
+.Notification.notification.is-danger {
   background-color: #f8d7da;
   color: #e90000;
+  margin-bottom: 0;
 }
