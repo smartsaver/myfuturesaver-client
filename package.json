@@ -36,11 +36,20 @@
     "format": "prettier --write \"src/**/*.js\"",
     "test": "jest",
     "test:watch": "npm run test -- --watch",
-    "deploy": "npm run build && aws s3 --profile=smartsaver cp public/ s3://myfuturesaver.org --recursive"
+    "deploy": "npm run build && aws s3 --profile=smartsaver cp public/ s3://myfuturesaver.org --recursive",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@storybook/addon-actions": "^5.2.1",
+    "@storybook/addon-links": "^5.2.1",
+    "@storybook/addons": "^5.2.1",
+    "@storybook/react": "^5.2.1",
     "@testing-library/react": "^8.0.1",
     "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
     "babel-preset-gatsby": "^0.1.8",
     "eslint": "^5.14.1",
     "eslint-config-prettier": "^3.6.0",
