@@ -6,7 +6,7 @@ import RespForm from './RespForm'
 
 class ListOfForms extends Component {
   state = {
-    isTermsOfAgreementAccepted: false,
+    isTermsOfAgreementAccepted: true,
   }
 
   handleTermsOfAgreementSubmit = event => {
