@@ -3,10 +3,12 @@ import SurveyForm from '../../../components/SurveyForm'
 import Section from '../SmartsaverSection'
 import { informationSurvey } from '../content/surveyFormsContent'
 
-const SurveyMonkeyForm = ({ isEnabled }) => {
-  const { heading, intro, footer, url } = informationSurvey
+import './ClbSurveyForm.css'
+
+const ClbSurveyForm = ({ isEnabled }) => {
+  const { heading, intro, footer } = informationSurvey
   return (
-    <Section name="questionnaire">
+    <Section className="ClbSurveyForm" name="questionnaire">
       <header>
         <h2 className="title">{heading}</h2>
       </header>
@@ -15,7 +17,7 @@ const SurveyMonkeyForm = ({ isEnabled }) => {
         isEnabled={isEnabled}
         overlayText="Read and agree to the terms of agreement before proceeding."
       >
-        <iframe title="Questionnaire" src={url} />
+        <div className="box"></div>
       </SurveyForm>
       <footer
         className="content"
@@ -25,4 +27,4 @@ const SurveyMonkeyForm = ({ isEnabled }) => {
   )
 }
 
-export default SurveyMonkeyForm
+export default ClbSurveyForm

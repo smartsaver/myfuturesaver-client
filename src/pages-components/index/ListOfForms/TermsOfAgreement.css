@@ -3,6 +3,17 @@
 }
 
 .TermsOfAgreement .box {
+  position: relative;
   max-height: 35rem;
   overflow: auto;
+}
+
+.TermsOfAgreement .box .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 53rem;
+  width: 100%;
+  background: #efefef;
+  background: #efefefd4;
 }
