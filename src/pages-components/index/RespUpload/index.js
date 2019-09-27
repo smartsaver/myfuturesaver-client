@@ -10,7 +10,7 @@ import './RespUpload.css'
 /* eslint-disable no-undef, no-console, jsx-a11y/label-has-for */
 class RespSubmission extends Component {
   state = {
-    isFormLoading: false,
+    isFormLoading: true,
     isFormSuccess: false,
   }
 

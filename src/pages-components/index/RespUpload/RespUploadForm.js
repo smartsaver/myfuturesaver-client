@@ -77,7 +77,7 @@ class RespUploadForm extends Component {
 
   render() {
     const { name, email, kidsNames, respStatementType } = this.state
-    const { isLoading, isFormSuccess } = this.props
+    const { isLoading } = this.props
     const {
       handleNameChange,
       handleEmailChange,
@@ -86,7 +86,6 @@ class RespUploadForm extends Component {
       handleRespStatementTypeChange,
       handleKidsNamesChange,
     } = this
-    const isButtonLoading = isLoading ? 'is-loading' : ''
     const isFormFieldDisabled = isLoading
     return (
       <Form name="resp-form" method="POST" onSubmit={this.handleFormSubmit}>
@@ -179,15 +178,6 @@ class RespUploadForm extends Component {
               <span className="file-name">{displayFileName()}</span>
             </label>
           </div>
-        </FormField>
-        <FormField>
-          <button
-            className={`button ${isButtonLoading}`}
-            type="submit"
-            disabled={isFormSuccess}
-          >
-            Submit
-          </button>
         </FormField>
       </Form>
     )
