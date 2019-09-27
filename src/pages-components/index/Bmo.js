@@ -5,7 +5,7 @@ import { bmo } from './content/sponsorsContent'
 import './Bmo.css'
 
 const Bmo = () => {
-  const { heading, logo, intro, download } = bmo
+  const { heading, logo, intro } = bmo
   return (
     <Section name="bmo" className="Bmo">
       <h3 className="title">{heading}</h3>
@@ -18,9 +18,6 @@ const Bmo = () => {
             className="content"
             dangerouslySetInnerHTML={{ __html: intro }}
           />
-          <a href={download} className="button is-warning">
-            <i className="fa fa-download" /> Download PDF
-          </a>
         </div>
       </div>
     </Section>
